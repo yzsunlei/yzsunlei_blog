@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 小磊哥er的技术博客
+title: 小磊哥er的博客
 shorttitle: 前端工程, 前端基建, 多端技术
 subtitle: JavaScript是世界上最好的语言，没有之一
-description: 小磊哥er新版技术博客, 专注于前端工程化, 跨端技术的知识提炼和总结。期望通过工程体系方式来实现整个大前端工程体系的建设, 让前端开发效率能够得到显著提升！
+description: 小磊哥er的新版博客, 专注于前端工程化, 跨端技术的知识提炼和总结。期望通过工程体系方式来实现整个大前端工程体系的建设, 让前端开发效率能够得到显著提升！
 keywords: 前端工程, 前端基建, 多端技术, 小磊哥er, Vue, React, Webpack, SSR, ServerLess, Hibrid
 author: 小磊哥er
 language: zh-CN
