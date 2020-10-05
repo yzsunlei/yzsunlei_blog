@@ -6,16 +6,13 @@ menu:
     icon: fas fa-home
   前端工程化:
     url: /fed-engineering
-    icon: fas fa-forward
+    icon: fas fa-building
   前端基建:
     url: /fed-construction
-    icon: fas fa-forward
-  性能优化:
-    url: /fed-optimization
-    icon: fas fa-forward
+    icon: fas fa-cubes
   跨端技术:
     url: /fed-multiport
-    icon: fas fa-building
+    icon: fas fa-window-restore
   # Tags:
   #   url: /tags
   #   icon: fas fa-tags
@@ -161,7 +158,7 @@ socialLink:
   email: yzsunlei@qq.com
   qq: 846990846
   weibo: https://weibo.com/yzsunlei
-  rss: true # true、false
+  rss: false # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -222,9 +219,9 @@ clicklove:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /medias/iavatar.jpg
-  career: Front-end Engineer
-  introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+  avatar: /medias/avatar.jpg
+  career: 大前端工程师
+  introduction: 伟大的事业不是靠力气速度和身体的敏捷完成的，而是靠性格意志和知识的力量完成的。
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
@@ -358,7 +355,7 @@ valine:
 githubLink:
   enable: true
   url: https://gitee.com/yzsunlei
-  title: Follow
+  title: 关注
 
 # The password verification feature of read post. To use this feature,
 # activate the configuration item and write the 'password' key and Cipher in the post's Front-matter.
@@ -537,7 +534,6 @@ subtitle:
   backSpeed: 100 # 删除速度
   sub1: 前端工程化 - 提高开发效率，减少不必要的重复工作时间
   sub2: 前端基建 - 只为了能更好的活在未来
-  sub3: 性能优化 - 提高前端代码执行效率
   sub4: 跨端技术 - 走向大前端，技术无边界
 
 # 手机二级菜单.

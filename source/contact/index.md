@@ -22,11 +22,6 @@ layout: "contact"
 - [https://zhuanlan.zhihu.com/yzsunlei](https://zhuanlan.zhihu.com/yzsunlei)
 
 
-## QQ群
-
-![](/medias/qq.png)<br />
-
-
 ## 参与
 
 有问题可以直接在在语雀评论或GitHub回复(^_^)。
