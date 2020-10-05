@@ -1,26 +1,20 @@
 # main menu navigation url and icon
 # 配置菜单导航的名称、路径和图标icon.
 menu:
-  Home:
+  首页:
     url: /
     icon: fas fa-home
-  Egg+React:
-    url: /egg-react
+  前端工程化:
+    url: /fed-engineering
     icon: fas fa-forward
-  Egg+Vue:
-    url: /egg-vue
+  前端基建:
+    url: /fed-construction
     icon: fas fa-forward
-  Egg Framework:
-   icon: fas fa-list
-   children:
-     - name: Res
-       url: /res
-       icon: fas fa-forward
-     - name: Ves
-       url: /ves
-       icon: fas fa-forward
-  Webpack:
-    url: /easywebpack
+  性能优化:
+    url: /fed-optimization
+    icon: fas fa-forward
+  跨端技术:
+    url: /fed-multiport
     icon: fas fa-building
   # Tags:
   #   url: /tags
@@ -31,13 +25,13 @@ menu:
   # Archives:
   #   url: /archives
   #   icon: fas fa-archive
-  Blog:
-    url: /blog
-    icon: fas fa-forward
-  # About:
-  #   url: /about
-  #   icon: fas fa-user-circle
-  Contact:
+  # Blog:
+  #   url: /blog
+  #   icon: fas fa-forward
+  关于:
+    url: /about
+    icon: fas fa-user-circle
+  联系:
     url: /contact
     icon: fas fa-comments
   # Friends:
@@ -64,9 +58,9 @@ menu:
 # 站点运行开始时间.
 time:
   enable: true
-  year: 2019 # 年份
-  month: 11 # 月份
-  date: 24 # 日期
+  year: 2020 # 年份
+  month: 10 # 月份
+  date: 1 # 日期
   hour: 00 # 小时
   minute: 00 # 分钟
   second: 00 # 秒
@@ -91,7 +85,7 @@ dream:
 # Whether to display the musics.
 # 是否在首页显示音乐.
 music:
-  enable: false
+  enable: true
   showTitle: true
   title: 听听音乐
   fixed: false # 开启吸底模式
@@ -160,12 +154,13 @@ vesbtn:
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/easy-team
-  zhihu: https://zhuanlan.zhihu.com/easyjs
-  yuque:  https://yuque.com/easy-team
-  email: hubcarl@126.com
-  qq: 433207205
-  weibo: https://weibo.com/hubcarl
+  github:  https://github.com/yzsunlei
+  gitee: https://gitee.com/yzsunlei
+  zhihu: https://zhuanlan.zhihu.com/yzsunlei
+  yuque:  https://yuque.com/yzsunlei
+  email: yzsunlei@qq.com
+  qq: 846990846
+  weibo: https://weibo.com/yzsunlei
   rss: true # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
@@ -237,42 +232,32 @@ profile:
 easyProjects:
   enable: true
   data:
-    easywebpack:
+    fed-engineering:
       icon: fas fa-cube
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: /easywebpack
-      desc: 基于 Webpack 的前端工程化构建方案
-    Egg Vue SSR 工程方案 :
+      url: /fed-engineering
+      desc: 前端工程化专题
+    fed-construction :
         icon: fas fa-cube
         iconBackground: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
-        url: /egg-vue
-        desc: Egg Vue Server Side Render
-    Egg React SSR 工程方案 :
+        url: /fed-construction
+        desc: 前端基建专题
+    fed-optimization :
         icon: fas fa-file-alt
         iconBackground: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
-        url: /egg-react
-        desc: Egg React Server Side Render
-    Res :
+        url: /fed-optimization
+        desc: 前端优化专题
+    fed-multiport :
         icon: fas fa-cube
         iconBackground: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
-        url: /res
-        desc: Egg React Server Side Render Framework
-    Ves :
-        icon: fas fa-file-alt
-        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: /ves
-        desc: Egg Vue Server Side Render Framework
-    Hybrid :
-        icon: fas fa-cube
-        iconBackground: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
-        url: /blog
-        desc: Flutter && React Native && Weex && Hydrid
+        url: /fed-multiport
+        desc: 前端跨端专题
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 mySkills:
-  enable: true
+  enable: false
   data:
     JavaScript:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
@@ -289,12 +274,12 @@ mySkills:
     Android:
       background: 'linear-gradient(to right, #9900FF 0%, #42A5F5 100%)'
       percent: 60%
-    CSS:
+    HTML&CSS:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-      percent: 70%
+      percent: 90%
     
 easyExamples:
-  enable: true
+  enable: false
   data:
     - /medias/easyjs/egg-vue/egg-vue-case-image-4480375.png
     - /medias/easyjs/egg-vue/egg-vue-case-image-498725.png
@@ -304,7 +289,7 @@ easyExamples:
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myGallery:
-  enable: true
+  enable: false
   data:
     - /medias/easy-team/egg-react-ssr.png
     - /medias/easy-team/egg-react-admin.jpg
@@ -372,7 +357,7 @@ valine:
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
   enable: true
-  url: https://github.com/easy-team
+  url: https://gitee.com/yzsunlei
   title: Follow
 
 # The password verification feature of read post. To use this feature,
@@ -547,12 +532,13 @@ subtitle:
   enable: true
   loop: true # 是否循环
   showCursor: true # 是否显示光标
-  startDelay: 0 # 开始延迟
-  typeSpeed: 50 # 打字速度
-  backSpeed: 50 # 删除速度
-  sub1: Res - Egg React Server Side Render(SSR) / Client Side Render(CSR)
-  sub2: Ves - Egg Vue Server Side Render(SSR) / Client Side Render(CSR)
-  sub3: easywebpack - Webpack 前端构建工程化方案, 从此不再为写配置而抓狂😫
+  startDelay: 20 # 开始延迟
+  typeSpeed: 100 # 打字速度
+  backSpeed: 100 # 删除速度
+  sub1: 前端工程化 - 提高开发效率，减少不必要的重复工作时间
+  sub2: 前端基建 - 只为了能更好的活在未来
+  sub3: 性能优化 - 提高前端代码执行效率
+  sub4: 跨端技术 - 走向大前端，技术无边界
 
 # 手机二级菜单.
 navMenu:
@@ -572,4 +558,4 @@ banner:
 icp:
   enable: true
   url: http://www.beian.miit.gov.cn/
-  text: 粤ICP备19144149号
+  text: 鄂ICP备14015590号-8

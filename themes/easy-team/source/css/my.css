@@ -59,7 +59,7 @@
 
 .doc-left-nav-title {
     flex-direction: column;
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);font-size: 40px; 
+    background-image: linear-gradient(to right, #4398ED 0%, #0f9d58 100%);font-size: 40px; 
     font-weight: bolder; height: 100px; display: flex; align-items: center; justify-content: center; 
     text-align: center; color: white;
 }
@@ -154,7 +154,7 @@ pre {
 
 .mobile-left-menu {
     display: flex; height: 56px;
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #4398ED 0%, #0f9d58 100%);
 }
 
 #mobile-main-menu {

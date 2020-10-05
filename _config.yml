@@ -10,7 +10,7 @@ description: 小磊哥er新版技术博客, 专注于前端工程化, 跨端技�
 keywords: 前端工程, 前端基建, 多端技术, 小磊哥er, Vue, React, Webpack, SSR, ServerLess, Hibrid
 author: 小磊哥er
 language: zh
-timezone:
+timezone: 8
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

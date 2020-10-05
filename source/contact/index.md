@@ -9,6 +9,10 @@ layout: "contact"
 
 - [https://github.com/yzsunlei](https://github.com/yzsunlei)
 
+## Gitee
+
+- [https://gitee.com/yzsunlei](https://gitee.com/yzsunlei)
+
 ## 文档
 
 - [https://yuque.com/yzsunlei](https://yuque.com/yzsunlei)
