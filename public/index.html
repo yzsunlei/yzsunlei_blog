@@ -324,16 +324,74 @@
 
 </header>
 
-    <style type="text/css">
-    /* don't remove. */
-    .about-cover {
-        height: 75vh;
+    
+
+    <style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color:rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+    
+    html, body {
+        height:100%;
+    }
+
+    #page {
+        height:100%;
+        min-height: 100%;
+        width:100%;
     }
 </style>
 
-<div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
+
+
+<div id="page" class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+    <div id="prev-cover" class="left waves-effect carousel-control">
+        <i class="icon fas fa-angle-left"></i>
+    </div>
+    <div id="next-cover" class="right waves-effect carousel-control">
+        <i class="icon fas fa-angle-right"></i>
+    </div>
+    
+
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container" style="right: 0px;left: 0px;">
+            <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <h1 class="title center-align">
@@ -367,142 +425,447 @@
 </script>
 
 
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fas fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                <a href="https://github.com/easy-team" class="waves-effect waves-light btn" target="_blank">
+                    <i class="fab fa-github-alt"></i>Github
+                </a>
+                
+            </div>
+            <div class="index-cover-social-link">
+    <a href="https://github.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="https://zhuanlan.zhihu.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://zhuanlan.zhihu.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="mailto:yzsunlei@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=846990846" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 846990846" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+</div>
+        </div>
     </div>
-</div>
 
-<main class="content">
+    
+    
 
-    <div id="aboutme" class="container about-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="row">
-                    <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
-                        
-<div class="statis">
-    <span class="count"><a href="/">3</a></span>
-    <span class="name">文章</span>
-</div>
-
-
-
-
-
-
-                    </div>
-                    <div class="col s12 m12 l4">
-                        <div class="profile center-align">
-                            <div class="avatar">
-                                <img src="/medias/avatar.jpg" alt="小磊哥er"
-                                     class="circle responsive-img avatar-img">
-                            </div>
-                            <div class="author">
-                                <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
-                                    
-<div class="statis">
-    <span class="count"><a href="/">3</a></span>
-    <span class="name">文章</span>
-</div>
-
-
-
-
-
-
-                                </div>
-                                <div class="title">小磊哥er</div>
-                                <div class="career">大前端工程师</div>
-                                <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
-                                    
-    <a href="https://github.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="https://zhuanlan.zhihu.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://zhuanlan.zhihu.com/yzsunlei" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="mailto:yzsunlei@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=846990846" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 846990846" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-    <a href="https://weibo.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/yzsunlei" data-position="top" data-delay="50">
-        <i class="fab fa-weibo"></i>
-    </a>
-
-
-
-
-                                </div>
-                            </div>
+    
+    
+    
+    <div class="carousel-item white-text bg-cover about-cover" style="background-image: url('/medias/featureimages/6.jpg');">
+        <div class="container" style="right: 0px;left: 0px;">
+            <div class="row">
+                <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                    <div class="brand">
+                        <div class="title main-title center-align">
+                            前端工程化
                         </div>
-                    </div>
-                    <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
-                        <div class="social-link">
-                            
-    <a href="https://github.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="https://zhuanlan.zhihu.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://zhuanlan.zhihu.com/yzsunlei" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="mailto:yzsunlei@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=846990846" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 846990846" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-    <a href="https://weibo.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/yzsunlei" data-position="top" data-delay="50">
-        <i class="fab fa-weibo"></i>
-    </a>
-
-
-
-
+                        <div class="description center-align">
+                            前端工程, Node/Egg
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="cover-btns">
+                <a href="/fed-engineering/intro" class="waves-effect waves-light btn">
+                    <i class="fas fa-angle-double-down"></i>开始阅读
+                </a>
 
-                <div class="introduction center-align" data-aos="fade-up">伟大的事业不是靠力气速度和身体的敏捷完成的，而是靠性格意志和知识的力量完成的。</div>
+                <a href="https://gitee.com/yzsunlei" class="waves-effect waves-light btn" target="_blank">
+                    <i class="fab fa-github-alt"></i>Github
+                </a>
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
+
+
+    <a href="https://zhuanlan.zhihu.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://zhuanlan.zhihu.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="mailto:yzsunlei@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=846990846" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 846990846" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+</div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="carousel-item white-text bg-cover about-cover" style="background-image: url('/medias/featureimages/5.jpg');">
+        <div class="container" style="right: 0px;left: 0px;">
+            <div class="row">
+                <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                    <div class="brand">
+                        <div class="title main-title center-align">
+                            前端基建
+                        </div>
+                        <div class="description center-align">
+                            前端工程, Node/Egg
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-btns">
+                <a href="/fed-construction/intro" class="waves-effect waves-light btn">
+                    <i class="fas fa-angle-double-down"></i>开始阅读
+                </a>
+
+                <a href="https://gitee.com/yzsunlei" class="waves-effect waves-light btn" target="_blank">
+                    <i class="fab fa-github-alt"></i>Github
+                </a>
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="https://zhuanlan.zhihu.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://zhuanlan.zhihu.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="mailto:yzsunlei@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=846990846" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 846990846" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+</div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="carousel-item white-text bg-cover about-cover" style="background-image: url('/medias/featureimages/7.jpg');">
+        <div class="container" style="right: 0px;left: 0px;">
+            <div class="row">
+                <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                    <div class="brand">
+                        <div class="title main-title center-align">
+                            前端跨端技术
+                        </div>
+                        <div class="description center-align">
+                            跨端技术, Node/Egg
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-btns">
+                <a href="/fed-multiport/intro" class="waves-effect waves-light btn">
+                    <i class="fas fa-angle-double-down"></i>开始阅读
+                </a>
+
+                <a href="https://gitee.com/yzsunlei" class="waves-effect waves-light btn" target="_blank">
+                    <i class="fab fa-github-alt"></i>Github
+                </a>
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="https://zhuanlan.zhihu.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://zhuanlan.zhihu.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="mailto:yzsunlei@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=846990846" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 846990846" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/yzsunlei" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/yzsunlei" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+</div>
+        </div>
+    </div>
+    
+    
+</div>
+
+<script>
+$(function () {
+    let coverSlider = $('.carousel');
+    coverSlider.carousel({
+        duration: Number('120'),
+        fullWidth: true,
+        indicators: 'true' === 'true'
+    });
+
+    let carouselIntervalId;
+    
+    // Loop to call the next cover article picture.
+    let autoCarousel = function() {
+        carouselIntervalId = setInterval(function () {
+            coverSlider.carousel('next');
+        }, 8000);
+    };
+    // autoCarousel();
+    
+
+    let restartPlay = function () {
+        
+        clearInterval(carouselIntervalId);
+        // autoCarousel();
+        
+    };
+
+    
+    // prev and next cover post.
+    $('#prev-cover').click(function () {
+        coverSlider.carousel('prev');
+        restartPlay();
+    });
+    $('#next-cover').click(function () {
+        coverSlider.carousel('next');
+        restartPlay();
+    });
+    
+});
+</script>
+
+
+
+<main class="content">
+
+    
+       
+<div class="my-projects">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="fas fa-gift"></i>&nbsp;&nbsp;专题
+    </div>
+    <div class="row">
+        
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="/fed-engineering" class="icon"
+                   style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" target="_blank">
+                    <i class="fas fa-cube"></i>
+                </a>
+                <div class="info-title">
+                    <a href="/fed-engineering" target="_blank">fed-engineering</a>
+                </div>
+                <div class="info-desc">前端工程化专题</div>
+            </div>
+        </div>
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="/fed-construction" class="icon"
+                   style="background: linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)" target="_blank">
+                    <i class="fas fa-cube"></i>
+                </a>
+                <div class="info-title">
+                    <a href="/fed-construction" target="_blank">fed-construction</a>
+                </div>
+                <div class="info-desc">前端基建专题</div>
+            </div>
+        </div>
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="/fed-multiport" class="icon"
+                   style="background: linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)" target="_blank">
+                    <i class="fas fa-cube"></i>
+                </a>
+                <div class="info-title">
+                    <a href="/fed-multiport" target="_blank">fed-multiport</a>
+                </div>
+                <div class="info-desc">前端跨端专题</div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+    
+
+    
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+
+                    
+
+                    
+
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐阅读</div>
+<div class="row">
+
+    
+    
+    <div class="col s12" >
+        <div class="post-card" style="background-image: url('/medias/featureimages/20.jpg')">
+            <div class="post-body">
                 
-
-                
-
+                <a href="/fed-construction/intro">
+                    <h3 class="post-title">认识前端基建</h3>
+                </a>
+                <p class="post-description">业务支撑是活在当下，基建设施是活在未来...</p>
+                <a href="/fed-construction/intro" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
             </div>
         </div>
     </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        <div class="post-card" style="background-image: url('/medias/featureimages/12.jpg')">
+            <div class="post-body">
+                
+                <a href="/fed-engineering/intro">
+                    <h3 class="post-title">认识前端工程化</h3>
+                </a>
+                <p class="post-description">前端工程化实质上是解决效率问题...</p>
+                <a href="/fed-engineering/intro" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        <div class="post-card" style="background-image: url('/medias/featureimages/2.jpg')">
+            <div class="post-body">
+                
+                <a href="/fed-multiport/intro">
+                    <h3 class="post-title">认识前端跨端技术</h3>
+                </a>
+                <p class="post-description">前端跨端势不可免...</p>
+                <a href="/fed-multiport/intro" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+ 
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+        </div>
+    </article>
+
 </main>
 
     <footer class="page-footer bg-color">

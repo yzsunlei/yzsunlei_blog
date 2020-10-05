@@ -1,18 +1,50 @@
 {
-  "blog":{
-    "title": "博客",
-    "subtitle": "Egg/前端工程/多端技术",
-    "shortDesc": "Egg/前端工程/多端技术",
+  "fed-construction":{
+    "title": "前端基建",
+    "subtitle": "前端基建/前端工程/多端技术",
+    "shortDesc": "前端基建/前端工程/多端技术",
     "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "前端工程, Node/Egg, Flutter/Hybrid/小程序多端技术学习",
-    "cover": "/medias/featureimages/5.jpg",
+    "description": "前端工程, Node/Egg",
+    "coverImg": "/medias/featureimages/5.jpg",
     "btn": {
       "name": "Github",
       "icon": "fab fa-github-alt",
-      "url": "https://github.com/hubcarl",
-      "yuque": "https://yuque.com/hubcarl",
-      "text": "startRead",
-      "doc": "/blog/cdal6o/"
+      "url": "https://gitee.com/yzsunlei",
+      "yuque": "https://yuque.com/yzsunlei",
+      "text": "开始阅读",
+      "doc": "/fed-construction/intro"
+    }
+  },
+  "fed-engineering":{
+    "title": "前端工程化",
+    "subtitle": "前端工程/前端基建/多端技术",
+    "shortDesc": "前端工程/前端基建/多端技术",
+    "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
+    "description": "前端工程, Node/Egg",
+    "coverImg": "/medias/featureimages/6.jpg",
+    "btn": {
+      "name": "Github",
+      "icon": "fab fa-github-alt",
+      "url": "https://gitee.com/yzsunlei",
+      "yuque": "https://yuque.com/yzsunlei",
+      "text": "开始阅读",
+      "doc": "/fed-engineering/intro"
+    }
+  },
+  "fed-multiport":{
+    "title": "前端跨端技术",
+    "subtitle": "多端技术/前端基建/前端工程",
+    "shortDesc": "多端技术/前端基建/前端工程",
+    "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
+    "description": "跨端技术, Node/Egg",
+    "coverImg": "/medias/featureimages/7.jpg",
+    "btn": {
+      "name": "Github",
+      "icon": "fab fa-github-alt",
+      "url": "https://gitee.com/yzsunlei",
+      "yuque": "https://yuque.com/yzsunlei",
+      "text": "开始阅读",
+      "doc": "/fed-multiport/intro"
     }
   }
 }

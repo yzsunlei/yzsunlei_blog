@@ -439,6 +439,7 @@ header .side-nav .mobile-head img {
 header .side-nav .mobile-head .logo-name {
     padding-left: 10px;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 header .side-nav .mobile-head .logo-desc {

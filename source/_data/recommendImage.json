@@ -1,44 +1,44 @@
 {
-  "egg-react":[
+  "fed-construction":[
     {
-      "id": 3415456,
-      "space": "egg-react",
-      "slug": "learn",
-      "url": "/egg-react/learn",
-      "title": "工程介绍",
-      "summary": "Egg React 工程解决方案特性支持Node 端基于 Egg 开发，遵循 Egg 开发规范和 Egg 生态，支持 Egg 所有特性，比如插件机制，多进程机制。使用 TypeScript 或 JavaScript 编写前端和Node端代码，支持 ts-node 无编译 和 Webpack 编...",
-      "coverImage": "/medias/easy-team/egg-react-webpack-framework.png",
-      "createTime": "2019-11-30T06:47:31.000Z",
-      "updateTime": "2019-11-30T06:47:32.000Z",
-      "wordCount": 2079
+      "id": "685681",
+      "space": "fed-construction",
+      "slug": "intro",
+      "url": "/fed-construction/intro",
+      "title": "认识前端基建",
+      "summary": "业务支撑是活在当下，基建设施是活在未来...",
+      "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561109060469-0f8a49ed-e433-4a9c-a154-47a888a9757f.png",
+      "createTime": "2020-10-01T06:07:04.000Z",
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     }
   ],
-  "egg-vue":[
+  "fed-engineering":[
     {
-      "id": 946940,
-      "space": "egg-vue",
-      "slug": "learn",
-      "url": "/egg-vue/learn",
-      "title": "工程介绍",
-      "summary": "Egg Vue 工程解决方案特性支持Node 端基于 Egg 开发，遵循 Egg 开发规范和 Egg 生态，支持 Egg 所有特性，比如插件机制，多进程机制。使用 TypeScript 或 JavaScript 编写前端和Node端代码，支持 ts-node 无编译 和 Webpack 编译开...",
-      "coverImage": "/medias/easy-team/egg-vue-webpack-framework.png",
-      "createTime": "2019-11-30T06:48:54.000Z",
-      "updateTime": "2019-11-30T06:48:54.000Z",
-      "wordCount": 2152
+      "id": "685682",
+      "space": "fed-engineering",
+      "slug": "intro",
+      "url": "/fed-engineering/intro",
+      "title": "认识前端工程化",
+      "summary": "前端工程化实质上是解决效率问题...",
+      "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561109060469-0f8a49ed-e433-4a9c-a154-47a888a9757f.png",
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     }
   ],
-  "easywebpack":[
+  "fed-multiport":[
     {
-      "id": 685522,
-      "space": "easywebpack",
-      "slug": "index",
-      "url": "/easywebpack/index",
-      "title": "方案介绍",
-      "summary": "easywebpack 是什么easywebpack 是基于 webpack 的前端工程化解决方案。旨在解决 webpack 项目构建复杂,使用成本高,复用低,维护成本高等工程效率问题。基于 easywebpack 工程化方案, 你能非常简单容易的对各种前端项目进行工程化建设，及时享受最新的特...",
-      "coverImage": "/medias/easy-team/easywebpack.png",
-      "createTime": "2019-10-05T07:50:54.000Z",
-      "updateTime": "2019-10-05T07:50:54.000Z",
-      "wordCount": 1408
+      "id": "685683",
+      "space": "fed-multiport",
+      "slug": "intro",
+      "url": "/fed-multiport/intro",
+      "title": "认识前端跨端技术",
+      "summary": "前端跨端势不可免...",
+      "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561109060469-0f8a49ed-e433-4a9c-a154-47a888a9757f.png",
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     }
   ]
 }

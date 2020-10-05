@@ -1,90 +1,154 @@
 {
   "home":[
     {
-      "id": 685522,
-      "space": "easywebpack",
-      "slug": "index",
-      "url": "/easywebpack/index",
-      "title": " Webpack 前端工程解决方案",
-      "summary": "easywebpack 是基于 webpack 的前端工程化解决方案。旨在解决 webpack 项目构建复杂,使用成本高,复用低,维护成本高等工程效率问题。基于 easywebpack 工程化方案, 你能非常简单容易的对各种前端项目进行工程化建设，及时享受最新的特性。",
-      "coverImage": null,
-      "createTime": "2019-10-05T07:50:54.000Z",
-      "updateTime": "2019-10-05T07:50:54.000Z",
-      "wordCount": 1408
+      "id": "685681",
+      "space": "fed-construction",
+      "slug": "intro",
+      "url": "/fed-construction/intro",
+      "title": "认识前端基建",
+      "summary": "业务支撑是活在当下，基建设施是活在未来...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z",
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     },
     {
-      "id": 946940,
-      "space": "egg-vue",
-      "slug": "learn",
-      "url": "/egg-vue/learn",
-      "title": "Egg Vue SSR/CSR 解决方案",
-      "summary": "Egg Vue SSR/CSR工程解决方案, 支持多种渲染模式。整个设计实现遵循插件化，可组装，可扩展，可替换思路进行设计实现，充分利用 Egg，Vue，Webpack 相关周边生态，同时又可以自由组合以及扩展；重点解决各种技术框架整合复杂性，开发流程与体验，可扩展性等工程化问题",
-      "coverImage": null,
-      "createTime": "2019-11-30T06:48:54.000Z",
-      "updateTime": "2019-11-30T06:48:54.000Z",
-      "wordCount": 2152
+      "id": "685682",
+      "space": "fed-engineering",
+      "slug": "intro",
+      "url": "/fed-engineering/intro",
+      "title": "认识前端工程化",
+      "summary": "前端工程化实质上是解决效率问题...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     },
     {
-      "id": 2865291,
-      "space": "res",
-      "slug": "introduction",
-      "url": "/res/introduction",
-      "title": "Res - Node React Web Framework",
-      "summary": "res -- Node React Application Web Framework. 支持 React Server Side Render 和 Client Side Render; 基于 Egg 开发，遵循 Egg 开发规范和 Egg 生态，支持 Egg 所有特性，比如插件机制，多进程机制...",
-      "coverImage": null,
-      "createTime": "2019-10-15T12:42:44.000Z",
-      "updateTime": "2019-10-15T12:42:44.000Z",
-      "wordCount": 198
-    },
-    {
-      "id": 922183,
-      "space": "ves",
-      "slug": "introduction",
-      "url": "/ves/introduction",
-      "title": "Ves - Node Vue Web Framework",
-      "summary": "ves 基于 Egg + Vue 的Node 应用基础框架; 支持 Vue Server Side Render 和 Client Side Render; 基于 Egg 开发，遵循 Egg 开发规范和 Egg 生态，支持 Egg 所有特性，比如插件机制，多进程机制使用 TypeScr...",
-      "coverImage": null,
-      "createTime": "2019-03-13T02:38:02.000Z",
-      "updateTime": "2019-05-30T01:24:25.000Z",
-      "wordCount": 165
+      "id": "685683",
+      "space": "fed-multiport",
+      "slug": "intro",
+      "url": "/fed-multiport/intro",
+      "title": "认识前端跨端技术",
+      "summary": "前端跨端势不可免...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     }
   ],
-  "blog":[
+  "fed-construction":[
     {
-      "id": 2229810,
-      "space": "blog",
-      "slug": "cdal6o",
-      "url": "/blog/cdal6o",
-      "title": "Egg + Web 自定义前端渲染",
-      "summary": "背景在 前端渲染模式 和 asset 渲染模式 章节讲到了基于 React 的前端渲染模式，但都依赖  egg-view-react-ssr 插件，那如何基于已有 egg 模板引擎 (egg-view-nunjucks 或 egg-view-ejs) + Webpack 完全自定义前端方案呢？...",
-      "coverImage": null,
-      "createTime": "2019-07-29T10:31:41.000Z",
-      "updateTime": "2019-07-29T10:31:41.000Z",
-      "wordCount": 625
+      "id": "685681",
+      "space": "fed-construction",
+      "slug": "intro",
+      "url": "/fed-construction/intro",
+      "title": "认识前端基建",
+      "summary": "业务支撑是活在当下，基建设施是活在未来...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z",
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     },
     {
-      "id": 1917532,
-      "space": "blog",
-      "slug": "ruv09m",
-      "url": "/blog/ruv09m",
-      "title": "Egg Webpack 内存编译热更新实现",
-      "summary": "1. 背景在用 Node.js + Webpack 构建的方式进行开发时, 我们希望能实现修改代码能实时刷新页面UI的效果. 这个特性 Webpack本身是支持的, 而且基于koa也有现成的 koa-webpack-hot-middleware 和 koa-webpack-dev-middle...",
-      "coverImage": "https://cdn.nlark.com/yuque/0/2019/png/116733/1560616044583-df8c99ac-297d-44d0-a824-212947d3ef6d.png",
-      "createTime": "2019-06-15T16:29:11.000Z",
-      "updateTime": "2019-06-15T16:29:11.000Z",
-      "wordCount": 1589
+      "id": "685682",
+      "space": "fed-engineering",
+      "slug": "intro",
+      "url": "/fed-engineering/intro",
+      "title": "认识前端工程化",
+      "summary": "前端工程化实质上是解决效率问题...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     },
     {
-      "id": 2107007,
-      "space": "blog",
-      "slug": "lsrssy",
-      "url": "/blog/lsrssy",
-      "title": "Flutter  Android  混合工程实践",
-      "summary": "在 Flutter 混合工程体系 一文中，阐述了Flutter 三种开发模式，在实际业务中搭建持续集成时，我们更希望发本地开发使用混合模式，持续集成使用解耦模式， 主要是解决以下两个问题： 混合模式：开发调试方便，包括热更新， Native 与 Flutter 开发源码断点调试 解耦模式：不侵...",
-      "coverImage": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561088548020-8053b68f-c617-48d3-865e-fc426f098107.png",
-      "createTime": "2019-07-12T16:12:51.000Z",
-      "updateTime": "2019-07-12T16:13:43.000Z",
-      "wordCount": 2125
+      "id": "685683",
+      "space": "fed-multiport",
+      "slug": "intro",
+      "url": "/fed-multiport/intro",
+      "title": "认识前端跨端技术",
+      "summary": "前端跨端势不可免...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
+    }
+  ],
+  "fed-multiport":[
+    {
+      "id": "685681",
+      "space": "fed-construction",
+      "slug": "intro",
+      "url": "/fed-construction/intro",
+      "title": "认识前端基建",
+      "summary": "业务支撑是活在当下，基建设施是活在未来...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z",
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
+    },
+    {
+      "id": "685682",
+      "space": "fed-engineering",
+      "slug": "intro",
+      "url": "/fed-engineering/intro",
+      "title": "认识前端工程化",
+      "summary": "前端工程化实质上是解决效率问题...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
+    },
+    {
+      "id": "685683",
+      "space": "fed-multiport",
+      "slug": "intro",
+      "url": "/fed-multiport/intro",
+      "title": "认识前端跨端技术",
+      "summary": "前端跨端势不可免...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
+    }
+  ],
+  "fed-engineering":[
+    {
+      "id": "685681",
+      "space": "fed-construction",
+      "slug": "intro",
+      "url": "/fed-construction/intro",
+      "title": "认识前端基建",
+      "summary": "业务支撑是活在当下，基建设施是活在未来...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z",
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
+    },
+    {
+      "id": "685682",
+      "space": "fed-engineering",
+      "slug": "intro",
+      "url": "/fed-engineering/intro",
+      "title": "认识前端工程化",
+      "summary": "前端工程化实质上是解决效率问题...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
+    },
+    {
+      "id": "685683",
+      "space": "fed-multiport",
+      "slug": "intro",
+      "url": "/fed-multiport/intro",
+      "title": "认识前端跨端技术",
+      "summary": "前端跨端势不可免...",
+      "coverImg": null,
+      "createTime": "2020-10-01T06:07:04.000Z", 
+      "upateTime": "2020-10-01T10:42:49.000Z",
+      "wordCount": "349"
     }
   ]
 }

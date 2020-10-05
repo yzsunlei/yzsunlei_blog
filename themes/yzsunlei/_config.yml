@@ -89,7 +89,7 @@ music:
   showTitle: true
   title: 听听音乐
   fixed: false # 开启吸底模式
-  autoplay: false # 是否自动播放
+  autoplay: true # 是否自动播放
   theme: '#42b983'
   loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
@@ -132,23 +132,6 @@ indexbtn:
   name: Github
   icon: fab fa-github-alt
   url: https://github.com/easy-team
-
-res:
-  title: res
-  description: Node React Web Framework for Egg + React
-  cover: /medias/featureimages/0.jpg
-  btn:
-    enable: true
-    name: Github
-    icon: fab fa-github-alt
-    url: https://github.com/easy-team/res
-    doc: https://yuque.com/easy-team/res
-
-vesbtn:
-  enable: true
-  name: Github
-  icon: fab fa-github-alt
-  url: https://github.com/easy-team/ves
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
@@ -238,20 +221,15 @@ easyProjects:
       url: /fed-engineering
       desc: 前端工程化专题
     fed-construction :
-        icon: fas fa-cube
-        iconBackground: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
-        url: /fed-construction
-        desc: 前端基建专题
-    fed-optimization :
-        icon: fas fa-file-alt
-        iconBackground: 'linear-gradient(to bottom right, #2196F3 0%, #42A5F5 100%)'
-        url: /fed-optimization
-        desc: 前端优化专题
+      icon: fas fa-cube
+      iconBackground: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
+      url: /fed-construction
+      desc: 前端基建专题
     fed-multiport :
-        icon: fas fa-cube
-        iconBackground: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
-        url: /fed-multiport
-        desc: 前端跨端专题
+      icon: fas fa-cube
+      iconBackground: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
+      url: /fed-multiport
+      desc: 前端跨端专题
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
