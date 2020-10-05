@@ -4,18 +4,7 @@
     "expand": true,
     "coverImg": null,
     "children": [
-      {
-        "id": 624202,
-        "space": "blog",
-        "slug": "kiygy5",
-        "url": "/blog/kiygy5",
-        "title": "Egg Vue SSR 组件加载",
-        "summary": "Node 端渲染提示 window/document 没有定义业务场景首先来看一个简单的 Vue 组件test.vue&lt;template&gt;   &lt;div&gt;     &lt;h2&gt;clientHeight: {{ clientHeight }} px &lt;/h2&gt;   &lt;/div&gt; &lt;/template&gt;  &lt;script type=&quot;text/babel&quot;&gt;   export default...",
-        "coverImg": null,
-        "createTime": "2018-04-28T08:22:27.000Z",
-        "updateTime": "2019-07-04T00:18:57.000Z",
-        "wordCount": 808
-      }
+
     ]
   },
   {
@@ -23,18 +12,7 @@
     "expand": true,
     "coverImg": null,
     "children": [
-      {
-        "id": 1917539,
-        "space": "blog",
-        "slug": "sg8avg",
-        "url": "/blog/sg8avg",
-        "title": "Webpack Babel SSR 构建优化",
-        "summary": "在进行 Egg + Vue 进行 SSR 模式开发时，运行 npm run dev  后你会看到如下界面， 启动了两个 Webpack 构建实例：Node 模式 和 Web 模式。SSR 运行需要 Webapck 单独构建 target: node   和 target: web  主要的差异...",
-        "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1560616304692-20f027c3-90d3-4ba1-b406-7c71f0838826.png",
-        "createTime": "2019-06-15T16:31:45.000Z",
-        "updateTime": "2019-06-15T16:31:45.000Z",
-        "wordCount": 727
-      }
+
     ]
   },
   {
@@ -42,19 +20,7 @@
     "expand": true,
     "coverImg": null,
     "children": [
-      {
-        "id": 2107012,
-        "space": "blog",
-        "slug": "wydpi1",
-        "url": "/blog/wydpi1",
-        "title": "Flutter 动态更新",
-        "keywords": "Flutter 动态更新, Flutter 更新机制",
-        "summary": "关于动态更新Google 考虑自家 Android 应用安全和苹果策略， 本来在 2019 的 roadmap 里面有这样一项，roadmap公布后，过一段时间后面又移除了这一项，目前不是主航道。 Android 目前可以通过整包方式实现动态更新， iOS 目前还不支持。Android Flu...",
-        "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561109060469-0f8a49ed-e433-4a9c-a154-47a888a9757f.png",
-        "createTime": "2019-07-12T16:13:29.000Z",
-        "updateTime": "2019-07-12T16:14:42.000Z",
-        "wordCount": 1143
-      }
+
     ]
   }
 ]

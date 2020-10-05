@@ -121,7 +121,7 @@ recommend:
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: /favicon.png
+favicon: /favicon.ico
 # logo: /medias/logo.png
 
 # The configuration of the second button in the home banner,
@@ -131,7 +131,7 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/easy-team
+  url: https://github.com/yzsunlei
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
@@ -139,12 +139,10 @@ indexbtn:
 socialLink:
   github:  https://github.com/yzsunlei
   gitee: https://gitee.com/yzsunlei
-  zhihu: https://zhuanlan.zhihu.com/yzsunlei
+  zhihu: https://www.zhihu.com/people/yzsunlei
   yuque:  https://yuque.com/yzsunlei
   email: yzsunlei@qq.com
-  qq: 846990846
-  weibo: https://weibo.com/yzsunlei
-  rss: false # true、false
+  rss: true # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -269,15 +267,15 @@ easyExamples:
 myGallery:
   enable: false
   data:
-    - /medias/easy-team/egg-react-ssr.png
-    - /medias/easy-team/egg-react-admin.jpg
-    - /medias/easy-team/egg-vue-ssr.png
-    - /medias/easy-team/egg-vue-admin.png
-    - /medias/easy-team/egg-webpack.png
-    - /medias/easy-team/egg-react-webpack.png
-    - /medias/easy-team/ves-admin-ui.png
-    - /medias/easy-team/ves-front-end-ts.png
-    - /medias/easy-team/easy-init.png
+    # - /medias/easy-team/egg-react-ssr.png
+    # - /medias/easy-team/egg-react-admin.jpg
+    # - /medias/easy-team/egg-vue-ssr.png
+    # - /medias/easy-team/egg-vue-admin.png
+    # - /medias/easy-team/egg-webpack.png
+    # - /medias/easy-team/egg-react-webpack.png
+    # - /medias/easy-team/ves-admin-ui.png
+    # - /medias/easy-team/ves-front-end-ts.png
+    # - /medias/easy-team/easy-init.png
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
@@ -515,7 +513,7 @@ subtitle:
   backSpeed: 100 # 删除速度
   sub1: 前端工程化 - 提高开发效率，减少不必要的重复工作时间
   sub2: 前端基建 - 只为了能更好的活在未来
-  sub4: 跨端技术 - 走向大前端，技术无边界
+  sub3: 跨端技术 - 拥抱大前端，技术无边界
 
 # 手机二级菜单.
 navMenu:

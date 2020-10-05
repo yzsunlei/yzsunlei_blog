@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yzsunlei.gitee.io/"/>
-  <updated>2020-10-05T11:49:47.922Z</updated>
+  <updated>2020-10-05T15:25:13.229Z</updated>
   <id>https://yzsunlei.gitee.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>认识前端跨端技术</title>
+    <title>认识跨端技术</title>
     <link href="https://yzsunlei.gitee.io/fed-multiport/intro/"/>
     <id>https://yzsunlei.gitee.io/fed-multiport/intro/</id>
     <published>2020-10-05T11:15:50.264Z</published>
-    <updated>2020-10-05T11:49:47.922Z</updated>
+    <updated>2020-10-05T15:25:13.229Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前端跨端"><a href="#前端跨端" class="headerlink" title="前端跨端"></a>前端跨端</h2><ul><li>文档整理中。。。</li></ul>]]></content>
     

@@ -1,10 +1,10 @@
 {
   "fed-construction":{
     "title": "前端基建",
-    "subtitle": "前端基建/前端工程/多端技术",
-    "shortDesc": "前端基建/前端工程/多端技术",
+    "subtitle": "",
+    "shortDesc": "",
     "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "前端工程, Node/Egg",
+    "description": "文档规范、脚手架、组件库、流程自动化、业务监控",
     "coverImg": "/medias/featureimages/5.jpg",
     "btn": {
       "name": "Github",
@@ -17,10 +17,10 @@
   },
   "fed-engineering":{
     "title": "前端工程化",
-    "subtitle": "前端工程/前端基建/多端技术",
-    "shortDesc": "前端工程/前端基建/多端技术",
+    "subtitle": "",
+    "shortDesc": "",
     "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "前端工程, Node/Egg",
+    "description": "模块化、组件化、规范化、自动化",
     "coverImg": "/medias/featureimages/6.jpg",
     "btn": {
       "name": "Github",
@@ -33,10 +33,10 @@
   },
   "fed-multiport":{
     "title": "前端跨端技术",
-    "subtitle": "多端技术/前端基建/前端工程",
-    "shortDesc": "多端技术/前端基建/前端工程",
+    "subtitle": "",
+    "shortDesc": "",
     "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "跨端技术, Node/Egg",
+    "description": "跨移动端、跨服务端、跨桌面端、跨硬件端",
     "coverImg": "/medias/featureimages/7.jpg",
     "btn": {
       "name": "Github",
