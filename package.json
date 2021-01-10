@@ -7,6 +7,8 @@
     "dev": "npm run server",
     "start": "npm run server",
     "build": "hexo generate",
+    "build:alioss": "hexo generate && node deployToAliyun.js",
+    "build:tencentCos": "hexo generate && node deployTotencentCos.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
@@ -48,5 +50,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://gitee.com/yzsunlei/yzsunlei.gitee.io.git"
+  },
+  "devDependencies": {
+    "ali-oss": "^6.13.1",
+    "cos-nodejs-sdk-v5": "^2.8.5"
   }
 }
