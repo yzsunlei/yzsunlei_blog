@@ -7,7 +7,7 @@
     "dev": "npm run server",
     "start": "npm run server",
     "build": "hexo generate",
-    "build:alioss": "hexo generate && node deployToAliyun.js",
+    "build:alioss-disabled": "hexo generate && node deployToAliyun.js",
     "build:tencentCos": "hexo generate && node deployTotencentCos.js",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
