@@ -13,10 +13,10 @@ menu:
   跨端技术:
     url: /fed-multiport
     icon: fas fa-window-restore
-  更多前端笔记:
-    url: https://notes.yzsunlei.com
+  学习笔记:
+    url: https://notes.yzsunlei.com/index.html
     icon: fas fa-history
-  旧版博客入口:
+  旧版入口:
     url: https://2020.yzsunlei.com
     icon: fas fa-history
   # Tags:
