@@ -9,7 +9,7 @@
     "btn": {
       "name": "Github",
       "icon": "fab fa-github-alt",
-      "url": "https://gitee.com/yzsunlei",
+      "url": "https://github.com/yzsunlei",
       "yuque": "https://yuque.com/yzsunlei",
       "text": "开始阅读",
       "doc": "/fed-engineering/intro"
@@ -25,7 +25,7 @@
     "btn": {
       "name": "Github",
       "icon": "fab fa-github-alt",
-      "url": "https://gitee.com/yzsunlei",
+      "url": "https://github.com/yzsunlei",
       "yuque": "https://yuque.com/yzsunlei",
       "text": "开始阅读",
       "doc": "/fed-construction/intro"
@@ -41,7 +41,7 @@
     "btn": {
       "name": "Github",
       "icon": "fab fa-github-alt",
-      "url": "https://gitee.com/yzsunlei",
+      "url": "https://github.com/yzsunlei",
       "yuque": "https://yuque.com/yzsunlei",
       "text": "开始阅读",
       "doc": "/fed-multiport/intro"
