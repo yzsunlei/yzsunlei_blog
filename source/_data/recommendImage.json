@@ -7,7 +7,7 @@
       "url": "/fed-engineering/intro",
       "title": "认识前端工程化",
       "summary": "前端工程化实质上是解决效率问题...",
-      "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561109060469-0f8a49ed-e433-4a9c-a154-47a888a9757f.png",
+      "coverImg": "/medias/cover/cover1.jpg",
       "createTime": "2020-10-01T06:07:04.000Z", 
       "upateTime": "2020-10-01T10:42:49.000Z",
       "wordCount": "349"
@@ -21,7 +21,7 @@
       "url": "/fed-construction/intro",
       "title": "认识前端基建",
       "summary": "业务支撑是活在当下，基建设施是活在未来...",
-      "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561109060469-0f8a49ed-e433-4a9c-a154-47a888a9757f.png",
+      "coverImg": "/medias/cover/cover2.jpg",
       "createTime": "2020-10-01T06:07:04.000Z",
       "upateTime": "2020-10-01T10:42:49.000Z",
       "wordCount": "349"
@@ -35,7 +35,7 @@
       "url": "/fed-multiport/intro",
       "title": "认识跨端技术",
       "summary": "拥抱大前端，跨端跨栈技术无边界...",
-      "coverImg": "https://cdn.nlark.com/yuque/0/2019/png/116733/1561109060469-0f8a49ed-e433-4a9c-a154-47a888a9757f.png",
+      "coverImg": "/medias/cover/cover3.jpg",
       "createTime": "2020-10-01T06:07:04.000Z", 
       "upateTime": "2020-10-01T10:42:49.000Z",
       "wordCount": "349"
