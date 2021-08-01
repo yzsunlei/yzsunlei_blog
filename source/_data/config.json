@@ -1,10 +1,10 @@
 {
-  "fed-construction":{
-    "title": "前端基建",
+  "fed-engineering":{
+    "title": "前端工程化",
     "subtitle": "",
     "shortDesc": "",
     "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "文档规范、脚手架、组件库、流程自动化、业务监控",
+    "description": "模块化、组件化、规范化、自动化",
     "coverImg": "/medias/featureimages/5.jpg",
     "btn": {
       "name": "Github",
@@ -12,15 +12,15 @@
       "url": "https://gitee.com/yzsunlei",
       "yuque": "https://yuque.com/yzsunlei",
       "text": "开始阅读",
-      "doc": "/fed-construction/intro"
+      "doc": "/fed-engineering/intro"
     }
   },
-  "fed-engineering":{
-    "title": "前端工程化",
+  "fed-construction":{
+    "title": "前端基建",
     "subtitle": "",
     "shortDesc": "",
     "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "模块化、组件化、规范化、自动化",
+    "description": "脚手架、组件库、低代码编辑器、业务监控",
     "coverImg": "/medias/featureimages/6.jpg",
     "btn": {
       "name": "Github",
@@ -28,7 +28,7 @@
       "url": "https://gitee.com/yzsunlei",
       "yuque": "https://yuque.com/yzsunlei",
       "text": "开始阅读",
-      "doc": "/fed-engineering/intro"
+      "doc": "/fed-construction/intro"
     }
   },
   "fed-multiport":{
