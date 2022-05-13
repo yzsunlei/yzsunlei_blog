@@ -13,12 +13,12 @@ menu:
   跨端技术:
     url: /fed-multiport
     icon: fas fa-window-restore
-  学习笔记:
-    url: https://notes.yzsunlei.com/index.html
+  前端笔记:
+    url: http://notes.yzsunlei.com/index.html
     icon: fas fa-history
-  旧版入口:
+  旧版博客:
     url: https://2020.yzsunlei.com
-    icon: fas fa-history
+    icon: fas fa-anchor
   # Tags:
   #   url: /tags
   #   icon: fas fa-tags
@@ -31,12 +31,12 @@ menu:
   # Blog:
   #   url: /blog
   #   icon: fas fa-forward
-  关于:
-    url: /about
-    icon: fas fa-user-circle
-  联系:
-    url: /contact
-    icon: fas fa-comments
+  # 关于:
+  #   url: /about
+  #   icon: fas fa-user-circle
+  # 联系:
+  #   url: /contact
+  #   icon: fas fa-comments
   # Friends:
   #   url: /friends
   #   icon: fas fa-address-book
@@ -535,5 +535,5 @@ banner:
 #ICP备案信息尾部显示
 icp:
   enable: true
-  url: http://www.beian.miit.gov.cn/
+  url: https://beian.miit.gov.cn/
   text: 鄂ICP备14015590号-8
