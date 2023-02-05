@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+db.json
+config.js
+*.log
+node_modules/
+public/
+.deploy*/
+docs/
+
+source/_data/book.yml
