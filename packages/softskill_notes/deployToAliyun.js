@@ -35,15 +35,16 @@ const getAllFile = (dir) => {
 
 /**
  * 上传指定目录下的所有文件
- * @param {*} dir 
+ * @param {*} sourceDir 
+ * @param {*} targetDir 
  * @param {*} files 
  */
-const putOss = (dir, files) => {
+ const putOss = (sourceDir, targetDir, files) => {
   for (let i = 0; i < files.length; i++) {
-    const file = files[i]
-    const target = `${file}`.replace(dir, '')
-    // console.log(file)
-    client.put(target, file).then(res => {
+    const source = files[i]
+    const target = `${source}`.replace(sourceDir, targetDir)
+    // console.log(target, source)
+    client.put(target, source).then(res => {
       // console.log(res);
     }).catch(err => {
       console.error(err)
@@ -51,7 +52,8 @@ const putOss = (dir, files) => {
   }
 }
 
-const dir = 'docs/.vuepress/dist'
-getAllFile(dir).then((files) => {
-  putOss(dir, files);
+const sourceDir = 'docs/.vuepress/dist'
+const targetDir = "softskill_notes"
+getAllFile(sourceDir).then((files) => {
+  putOss(sourceDir, targetDir, files);
 })
