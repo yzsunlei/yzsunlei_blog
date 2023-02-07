@@ -1,5 +1,5 @@
 const OSS = require('ali-oss')
-const ossConfig = require('./config')
+const ossConfig = require('./ossConfig')
 const fs = require('fs');
 const path = require('path');
 
@@ -9,7 +9,6 @@ let client = new OSS({
   accessKeySecret: ossConfig.alioss.accessKeySecret,
   bucket: ossConfig.alioss.bucket,
 });
-
 
 /**
  * 遍历指定目录下的所有文件

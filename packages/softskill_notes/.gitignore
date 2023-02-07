@@ -1,4 +1,4 @@
 node_modules
-/config.js
+/ossConfig.js
 docs/.vuepress/dist
 .DS_Store
