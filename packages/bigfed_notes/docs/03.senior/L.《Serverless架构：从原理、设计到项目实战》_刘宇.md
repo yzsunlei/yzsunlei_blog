@@ -89,5 +89,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1jopDlJRUkNXoPovX8jgSug(提取码：i9wx)](https://pan.baidu.com/s/1jopDlJRUkNXoPovX8jgSug)
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/L.《Serverless架构：从原理、设计到项目实战》.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/L.《Serverless架构：从原理、设计到项目实战》.svg)
 - 得到电子书地址：[点击阅读](https://www.dedao.cn/eBook/5kMLgX2vKGy7x5M8YRoDQbLgqkEeAw257y3BNn2r6ljVPO1mX9ad4JZpzZn1RbeE)

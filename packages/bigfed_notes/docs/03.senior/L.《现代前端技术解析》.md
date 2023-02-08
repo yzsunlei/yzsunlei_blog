@@ -240,5 +240,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：后面补上
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/L.《现代前端技术解析》_张成文_201704.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/L.《现代前端技术解析》_张成文_201704.svg)
 - 得到电子书地址：[点击阅读](https://www.dedao.cn/eBook/ekM2z5Kexap9AKyJEz8DOYn6GNrV20KYlE3dgbRXq1Qvlj7P5ZmoMkLB47y6ONAv)

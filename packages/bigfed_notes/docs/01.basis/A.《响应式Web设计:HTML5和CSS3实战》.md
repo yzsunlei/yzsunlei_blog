@@ -363,5 +363,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1rZGRe0gzyEKiV9y5qmsgbg(提取码：fo49)](https://pan.baidu.com/s/1rZGRe0gzyEKiV9y5qmsgbg)
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/A.《响应式Web设计_HTML5和CSS3实战》第二版_Ben_Frain_奇舞团.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/A.《响应式Web设计_HTML5和CSS3实战》第二版_Ben_Frain_奇舞团.svg)
 - 得到电子书地址：[点击阅读](https://www.dedao.cn/eBook/VEDA2bKO27MKbRardAGJ1N4ln9BLVwg7nDw8ZQyXmYqg5PpkEjxovze6DB84dpj6)

@@ -311,5 +311,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：暂无，后面补上
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/L.《云原生架构进阶实战》_王玉平_202003.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/L.《云原生架构进阶实战》_王玉平_202003.svg)
 - 得到电子书地址：[点击阅读](https://www.dedao.cn/eBook/VEDA2bKO27MKbRardAGJ1N4ln9BLVwg48408ZQyXmYqg5PpkEjxovze6DB84dpj6)

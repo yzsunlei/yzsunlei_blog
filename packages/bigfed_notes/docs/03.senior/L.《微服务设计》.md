@@ -162,5 +162,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：暂无，后面补上
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/L.《微服务设计》_SamNewMan_崔力强.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/L.《微服务设计》_SamNewMan_崔力强.svg)
 - 得到电子书地址：[点击阅读](https://www.dedao.cn/ebook/A1De6QkaNRMlK5yxrdmnEBXY97ZL23n7NNwo6zvGDekj1QgA84VbpqJOPLgxEJlY)

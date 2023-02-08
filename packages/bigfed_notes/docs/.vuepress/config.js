@@ -38,7 +38,7 @@ module.exports = {
       {
         text: "资深系列",
         items: [
-          { text: 'L.《深入浅出Serverless-技术原理与应用实践》', link: '/bigfed_notes/03.senior/《深入浅出Serverless-技术原理与应用实践》.html', target:'_blank' },
+          { text: 'L.《深入浅出Serverless-技术原理与应用实践》', link: '/bigfed_notes/03.senior/L.《深入浅出Serverless-技术原理与应用实践》.html', target:'_blank' },
           { text: 'L.《算法图解》', link: '/bigfed_notes/03.senior/L.《算法图解》.html', target:'_blank'},
           { text: 'L.《图解TCP_IP_第5版》', link: '/bigfed_notes/03.senior/L.《图解TCP_IP_第5版》.html', target:'_blank'},
           { text: 'L.《微服务设计》', link: '/bigfed_notes/03.senior/L.《微服务设计》.html', target:'_blank'},
@@ -53,9 +53,14 @@ module.exports = {
         ]
       },
       {
-        text: "个人总结系列",
+        text: "归纳整理系列",
         items: [
-
+          { text: '01.数据结构', link: '/bigfed_notes/04.classify/01.数据结构.html', target:'_blank'},
+          { text: '02.基本算法', link: '/bigfed_notes/04.classify/02.基本算法.html', target:'_blank'},
+          { text: '03.布局渲染', link: '/bigfed_notes/04.classify/03.布局渲染.html', target:'_blank'},
+          { text: '04.JS核心', link: '/bigfed_notes/04.classify/04.JS核心.html', target:'_blank'},
+          { text: '05.JS函数手写', link: '/bigfed_notes/04.classify/05.JS函数手写.html', target:'_blank'},
+          { text: '06.JS设计模式', link: '/bigfed_notes/04.classify/06.JS设计模式.html', target:'_blank'},
         ]
       }
     ],

@@ -240,5 +240,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：暂无，后面补上
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/L.《深入浅出Serverless-技术原理与应用实践》_陈耿_202003.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/L.《深入浅出Serverless-技术原理与应用实践》_陈耿_202003.svg)
 - 得到电子书地址：[点击阅读](https://www.dedao.cn/ebook/5kMLgX2vKGy7x5M8YRoDQbLgqkEeAw2ZazwBNn2r6ljVPO1mX9ad4JZpzZn1RbeE)

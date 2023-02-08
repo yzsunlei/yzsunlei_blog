@@ -287,5 +287,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：后面补上
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/L.《Electron实战：入门、进阶与性能优化》.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/L.《Electron实战：入门、进阶与性能优化》.svg)
 - 得到电子书地址：[点击阅读]()

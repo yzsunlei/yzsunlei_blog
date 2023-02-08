@@ -387,5 +387,5 @@
 
 ### 写在后面
 - pdf书籍、笔记思维导图、随书代码打包下载地址：暂无，后面补上
-- 思维导图在线查看：[点击打开](/assets/attachment/fed-book/L.《云原生：运用容器、函数计算和数据构建下一代应用》.svg)
+- 思维导图在线查看：[点击打开](/bigfed_notes/attachment/L.《云原生：运用容器、函数计算和数据构建下一代应用》.svg)
 - 得到电子书地址：[点击阅读](https://www.dedao.cn/ebook/rJRdy1qe4xAVBgZrvdGmz8ykaop6QWXzZOwEJnD7LR51qb2KY9NPMXOljVa28m5K)
