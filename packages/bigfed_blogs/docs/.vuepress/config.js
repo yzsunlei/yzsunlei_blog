@@ -5,23 +5,40 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: "首页",
+        text: "博文",
         link: "/",
       },
       {
-        text: "博文",
-        items: [
-          { text: 'B.《CSS世界》', link: '/bigfed_notes/01.basis/B.《CSS世界》.html', target:'_blank' }
-        ],
+        text: "阅读",
+        link: "/02.read/",
+      },
+    ],
+    directories: [
+      {
+        id: 'blog',
+        dirname: '01.blog',
+        path: '/',
+        title: "博文"
       },
       {
-        text: "阅读",
-        items: [
-          { text: 'E.《JavaScript异步编程》', link: '/bigfed_notes/02.advance/E.《JavaScript异步编程》.html', target:'_blank' },
-        ],
+        id: 'read',
+        dirname: '02.read',
+        path: '/02.read/',
+        title: "阅读"
       },
     ],
     sidebar: 'auto',
-    sidebarDepth: 1
+    sidebarDepth: 1,
+    globalPagination: {
+      prevText: "上一页",
+      nextText: "下一页",
+    },
+    footer: {
+      copyright: [
+        {
+          text: "MIT Licensed | Copyright © 2023-present 小磊哥er"
+        }
+      ]
+    }
   },
 };
