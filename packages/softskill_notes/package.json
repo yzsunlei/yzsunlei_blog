@@ -1,6 +1,7 @@
 {
-  "name": "soft-skills.yzsunlei.com",
+  "name": "softskill_notes",
   "version": "1.0.0",
+  "description": "大前端学习笔记",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
