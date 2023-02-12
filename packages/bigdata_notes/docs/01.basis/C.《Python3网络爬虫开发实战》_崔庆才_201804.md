@@ -1,1160 +1,627 @@
-<a id="_____"></a><a id="_Toc515962800"></a>《Python 3网络爬虫开发实战》
 
-[1\.	第一章 开发环境配置	1](#_101)
+### 写在前面
+- 书籍介绍：暂无。
+- 我的简评：暂无。
+- ！！福利：文末有书籍地址、笔记思维导图、相关资料下载地址哦
 
-[1\.1\.	1\.1\.Python3的安装	1](#_116)
+### 第一章 开发环境配置
 
-[1\.1\.1\.	windows、linux、mac	1](#_191)
+#### 1.1.Python3的安装
 
-[1\.1\.2\.	windows下安装有2种：通过Anaconda安装；直接下载安装包安装	1](#_241)
+- windows、linux、mac
 
-[1\.1\.3\.	Linux下的安装：命令安装；源码安装；Anaconda安装	1](#_242)
+- windows下安装有2种：通过Anaconda安装；直接下载安装包安装
 
-[1\.1\.4\.	Mac下安装：Homebrew；安装包安装；Anaconda安装	1](#_243)
+- Linux下的安装：命令安装；源码安装；Anaconda安装
 
-[1\.2\.	1\.2\.请求库的安装	1](#_117)
+- Mac下安装：Homebrew；安装包安装；Anaconda安装
 
-[1\.2\.1\.	requests、Selenium、ChromeDriver、GeckoDriver、PhantomJS、aiohttp	1](#_190)
+#### 1.2.请求库的安装
 
-[1\.2\.2\.	爬虫可以简单分为几步：抓取页面；分析页面；存储页面	1](#_244)
+- requests、Selenium、ChromeDriver、GeckoDriver、PhantomJS、aiohttp
 
-[1\.2\.3\.	requests属于第三方库，Python默认不会自带这个库	1](#_245)
+- 爬虫可以简单分为几步：抓取页面；分析页面；存储页面
 
-[1\.2\.4\.	Selenium是一个自动化测试工具，利用它我们可以驱动浏览器执行特定的动作，如点击、下拉等操作	1](#_246)
+- requests属于第三方库，Python默认不会自带这个库
 
-[1\.2\.5\.	Selenium需要浏览器来配合使用，只有安装ChromeDriver，才能驱动Chrome浏览器完成相应的操作，对于Firefox也可以使用同样的方式完成Selenium的对接	1](#_247)
+- Selenium是一个自动化测试工具，利用它我们可以驱动浏览器执行特定的动作，如点击、下拉等操作
 
-[1\.2\.6\.	目前最新的Chrome浏览器版本已经支持无界面模式了	1](#_249)
+- Selenium需要浏览器来配合使用，只有安装ChromeDriver，才能驱动Chrome浏览器完成相应的操作，对于Firefox也可以使用同样的方式完成Selenium的对接
 
-[1\.2\.7\.	PhantomJS是一个无界面的、可脚本编程的WebKit浏览器引擎，它原生支持多种Web标准：DOM操作、CSS选择器、JSON、Canvas以及SVG	1](#_248)
+- 目前最新的Chrome浏览器版本已经支持无界面模式了
 
-[1\.2\.8\.	aiohttp是一个提供异步Web服务的库，从Python3\.5版本开始，Python加入了async/await关键字，使得回调的写法更加直观和人性化	1](#_250)
+- PhantomJS是一个无界面的、可脚本编程的WebKit浏览器引擎，它原生支持多种Web标准：DOM操作、CSS选择器、JSON、Canvas以及SVG
 
-[1\.3\.	1\.3\.解析库的安装	2](#_118)
+- aiohttp是一个提供异步Web服务的库，从Python3.5版本开始，Python加入了async/await关键字，使得回调的写法更加直观和人性化
 
-[1\.3\.1\.	lxml、Beautiful Soup、pyquery、tesserocr	2](#_192)
+#### 1.3.解析库的安装
 
-[1\.3\.2\.	lxml是Python的一个解析库，支持HTML和XML的解析，支持XPath解析方式，而且解析效率非常高	2](#_251)
+- lxml、Beautiful Soup、pyquery、tesserocr
 
-[1\.3\.3\.	Beautiful Soup是Python的一个HTML或XML的解析库，可以用它来方便的从网页中提取数据	2](#_252)
+- lxml是Python的一个解析库，支持HTML和XML的解析，支持XPath解析方式，而且解析效率非常高
 
-[1\.3\.4\.	pyquery同样是一个强大的网页解析工具，他提供了和jQuery类似的语法来解析HTML文档	2](#_253)
+- Beautiful Soup是Python的一个HTML或XML的解析库，可以用它来方便的从网页中提取数据
 
-[1\.3\.5\.	tesserocr是Python的一个OCR识别库	2](#_254)
+- pyquery同样是一个强大的网页解析工具，他提供了和jQuery类似的语法来解析HTML文档
 
-[1\.4\.	1\.4\.数据库的安装	2](#_119)
+- tesserocr是Python的一个OCR识别库
 
-[1\.4\.1\.	mysql、mongodb、redis	2](#_193)
+#### 1.4.数据库的安装
 
-[1\.4\.2\.	MySQL是一个轻量级的关系型数据库	2](#_255)
+- mysql、mongodb、redis
 
-[1\.4\.3\.	MongoDB是由C\+\+语言编写的非关系型数据库，是一个基于分布式文件存储的开源数据库系统，其内容存储形式类似JSON对象，它的字段值可以包含其他文档、数组及文档数组	2](#_256)
+- MySQL是一个轻量级的关系型数据库
 
-[1\.4\.4\.	Redis是一个基于内存的高效的非关系型数据库。推荐下载Redis Desktop Manager可视化管理工具，来管理Redis	2](#_257)
+- MongoDB是由C++语言编写的非关系型数据库，是一个基于分布式文件存储的开源数据库系统，其内容存储形式类似JSON对象，它的字段值可以包含其他文档、数组及文档数组
 
-[1\.5\.	1\.5\.存储库的安装	2](#_120)
+- Redis是一个基于内存的高效的非关系型数据库。推荐下载Redis Desktop Manager可视化管理工具，来管理Redis
 
-[1\.5\.1\.	PyMySQL、PyMongo、redis\-py、RedisDump	2](#_194)
+#### 1.5.存储库的安装
 
-[1\.5\.2\.	MySQL需要安装PyMySQL、MongoDB需要安装PyMongo	2](#_258)
+- PyMySQL、PyMongo、redis-py、RedisDump
 
-[1\.5\.3\.	对于Redis来说，我们要使用redis\-py库莱与其交互	2](#_259)
+- MySQL需要安装PyMySQL、MongoDB需要安装PyMongo
 
-[1\.5\.4\.	RedisDump是一个用于Redis数据导入/导出的工具，是基于Ruby实现的	2](#_260)
+- 对于Redis来说，我们要使用redis-py库莱与其交互
 
-[1\.6\.	1\.6\.Web库的安装	3](#_121)
+- RedisDump是一个用于Redis数据导入/导出的工具，是基于Ruby实现的
 
-[1\.6\.1\.	Flask、Tornado	3](#_195)
+#### 1.6.Web库的安装
 
-[1\.6\.2\.	Flask是一个轻量级的Web服务程序，它简单、易用、灵活	3](#_261)
+- Flask、Tornado
 
-[1\.6\.3\.	Tornado是一个支持异步的Web框架，通过使用非阻塞I/O流，可以支撑成千上万的开放连接，效率非常高	3](#_262)
+- Flask是一个轻量级的Web服务程序，它简单、易用、灵活
 
-[1\.7\.	1\.7\.App爬取相关库的安装	3](#_122)
+- Tornado是一个支持异步的Web框架，通过使用非阻塞I/O流，可以支撑成千上万的开放连接，效率非常高
 
-[1\.7\.1\.	Charles、mitmproxy、Appium	3](#_196)
+#### 1.7.App爬取相关库的安装
 
-[1\.7\.2\.	Charles是一个网络抓包工具，相比Fiddler，其功能更为强大，而且跨平台支持得更好，可以选用它作为主要的移动端抓包工具	3](#_263)
+- Charles、mitmproxy、Appium
 
-[1\.7\.3\.	mitmproxy是一个支持HTTP和HTTPS的抓包程序，类似Fiddler、Charles的功能，只不过它通过控制台的形式操作	3](#_264)
+- Charles是一个网络抓包工具，相比Fiddler，其功能更为强大，而且跨平台支持得更好，可以选用它作为主要的移动端抓包工具
 
-[1\.7\.4\.	Appium是移动端的自动化测试工具，类似前面所说的Selenium，利用它可以驱动Android、iOS等设备完成自动化测试，比如模拟点击、滑动、输入等操作	3](#_265)
+- mitmproxy是一个支持HTTP和HTTPS的抓包程序，类似Fiddler、Charles的功能，只不过它通过控制台的形式操作
 
-[1\.8\.	1\.8\.爬虫框架的安装	3](#_123)
+- Appium是移动端的自动化测试工具，类似前面所说的Selenium，利用它可以驱动Android、iOS等设备完成自动化测试，比如模拟点击、滑动、输入等操作
 
-[1\.8\.1\.	pyspider、Scrapyd、Scrapy\-Splash、Scripy\-Redis	3](#_197)
+#### 1.8.爬虫框架的安装
 
-[1\.8\.2\.	pyspider是国人binux编写的强大的网络爬虫框架，它带有强大的WebUI、脚本编辑器、任务监控器、项目管理器以及结果处理器，同时支持多种数据库后端、多种消息队列，另外还支持JavaScript渲染页面的爬取	3](#_266)
+- pyspider、Scrapyd、Scrapy-Splash、Scripy-Redis
 
-[1\.8\.3\.	Scrapy是一个十分强大的爬虫框架，依赖的库比较多，至少需要依赖的库有Twisted14\.0、lxml3\.4和pyOpenSSL0\.14	3](#_267)
+- pyspider是国人binux编写的强大的网络爬虫框架，它带有强大的WebUI、脚本编辑器、任务监控器、项目管理器以及结果处理器，同时支持多种数据库后端、多种消息队列，另外还支持JavaScript渲染页面的爬取
 
-[1\.8\.4\.	Scrapy\-Splash是一个Scrapy中支持JavaScript渲染的工具	3](#_268)
+- Scrapy是一个十分强大的爬虫框架，依赖的库比较多，至少需要依赖的库有Twisted14.0、lxml3.4和pyOpenSSL0.14
 
-[1\.8\.5\.	Scrapy\-Redis是Scrapy的分布式扩展模块	4](#_269)
+- Scrapy-Splash是一个Scrapy中支持JavaScript渲染的工具
 
-[1\.9\.	1\.9\.部署相关库的安装	4](#_124)
+- Scrapy-Redis是Scrapy的分布式扩展模块
 
-[1\.9\.1\.	Docker、Scrapyd\-Client、Scrapyd API、Scrapyrt、Gerapy	4](#_198)
+#### 1.9.部署相关库的安装
 
-[1\.9\.2\.	Docker是一种容器技术，可以将应用和环境等进行打包，形成一个独立的、类似于iOS的App形式的“应用”	4](#_270)
+- Docker、Scrapyd-Client、Scrapyd API、Scrapyrt、Gerapy
 
-[1\.9\.3\.	Scrapyd是一个部署和运行Scrapy项目的工具，可以将写好的Scrapy项目上传到云主机并通过API来控制它的运行	4](#_271)
+- Docker是一种容器技术，可以将应用和环境等进行打包，形成一个独立的、类似于iOS的App形式的“应用”
 
-[1\.9\.4\.	Scrapyrt为Scrapy提供了一个调度的HTTP接口，不需要再执行Scrapy命令而是通过请求一个HTTP接口来调度Scrapy任务了	4](#_272)
+- Scrapyd是一个部署和运行Scrapy项目的工具，可以将写好的Scrapy项目上传到云主机并通过API来控制它的运行
 
-[1\.9\.5\.	Gerapy是一个Scrapy分布式管理模块	4](#_273)
+- Scrapyrt为Scrapy提供了一个调度的HTTP接口，不需要再执行Scrapy命令而是通过请求一个HTTP接口来调度Scrapy任务了
 
-[2\.	第二章 爬虫基础	4](#_102)
+- Gerapy是一个Scrapy分布式管理模块
 
-[2\.1\.	2\.1\.HTTP基本原理	4](#_125)
+### 第二章 爬虫基础
 
-[2\.1\.1\.	URI、URL	4](#_199)
+#### 2.1.HTTP基本原理
 
-[2\.1\.2\.	HTML超文本	4](#_200)
+- URI、URL
 
-[2\.1\.3\.	HTTP、HTTPS	4](#_201)
+- URI统一资源标志符；URL统一资源定位符；
 
-[2\.1\.4\.	请求过程	5](#_202)
+- URL是URI的子集
 
-[2\.1\.5\.	请求	5](#_203)
+- HTML超文本
 
-[2\.1\.6\.	响应	5](#_204)
+- 在浏览器里看到的网页就是超文本解析而成的
 
-[2\.2\.	2\.2\.网页基础	5](#_126)
+- HTTP、HTTPS
 
-[2\.2\.1\.	组成	5](#_205)
+- 访问资源需要的协议类型
 
-[2\.2\.2\.	结构	6](#_206)
+- HTTP用于从网络传输超文本数据到本地浏览器的传送协议，它能保证高效而准确的传送超文本文档
 
-[2\.2\.3\.	节点、节点树	6](#_207)
+- HTTPS是以安全为目标的HTTP通道
 
-[2\.2\.4\.	选择器	6](#_208)
+- 请求过程
 
-[2\.3\.	2\.3\.爬虫的基本原理	6](#_127)
+- 打开Chrome浏览器，右击并选择“检查”项，即可打开浏览器的开发者工具
 
-[2\.3\.1\.	概述	6](#_209)
+- 请求
 
-[2\.3\.2\.	能抓的数据	7](#_210)
+- 请求由客户端向服务端发出，可以分为4部分内容：请求方法、请求地址、请求头、请求体
 
-[2\.3\.3\.	JavaScript渲染页面	7](#_211)
+- 常见的请求方法有两种：GET和POST
 
-[2\.4\.	2\.4\.会话和Cookies	7](#_128)
+- 请求的网址，即统一资源定位符URL
 
-[2\.4\.1\.	静态网页和动态网页	7](#_212)
+- 请求头用来说明服务器要使用的附加信息，比较重要的信息由Cookie、Referer、User-Agent等
 
-[2\.4\.2\.	无状态HTTP	7](#_213)
+- 请求体一般承载的内容是POST请求中的表单数据
 
-[2\.5\.	2\.5\.代理的基本原理	7](#_129)
+- 响应
 
-[2\.5\.1\.	基本原理	7](#_214)
+- 响应，由服务端返回客户端，可以分为三部分：响应状态码、响应头和响应体
 
-[2\.5\.2\.	代理作用	7](#_215)
+- 响应头包含了服务器对请求的应答信息，如Content-Type、Server、Set-Cookie等
 
-[2\.5\.3\.	爬虫代理	8](#_216)
+- 最重要的当属响应体的内容了
 
-[2\.5\.4\.	代理分类	8](#_217)
+#### 2.2.网页基础
 
-[2\.5\.5\.	代理设置	8](#_218)
+- 组成
 
-[3\.	第三章 基本库的使用	8](#_103)
+- HTML相当于骨架，JavaScript相当于肌肉，CSS相当于皮肤
 
-[3\.1\.	最基础的HTTP库有urllib、httplib2、requests、treq等	8](#_274)
+- 网页包括文字、按钮、图片和视频等各种复杂的元素，其基础架构就是HTML
 
-[3\.2\.	3\.1\.使用urllib	8](#_130)
+- CSS即层叠样式表，“层叠”是指当在HTML中引用了数个样式文件，并且样式发生冲突时，浏览器能依据层叠顺序处理，“样式”指网页中文字大小、颜色、元素间距、排列等格式
 
-[3\.2\.1\.	发送请求、处理异常、解析链接、分析Robots协议	8](#_219)
+- 网页里看到的一些交互和动画效果，如下载进度条、提示框、轮播图等就是JavaScript的功劳
 
-[3\.2\.2\.	包含如下4个模块：request最基本的HTTP请求模块，可以用来模拟发送请求；error异常处理模块，可以捕获异常然后进行重试或其他操作以保证程序不会意外终止；parse工具模块，提供了许多URL处理方法比如拆分、解析、合并等；robotparser主要用来识别网站的robots\.txt文件然后判断哪些网站可以爬	8](#_275)
+- 结构
 
-[3\.2\.3\.	高级用法有各种Handler子类继承BaseHandler，如HTTPDefaultErrorHandler用于处理HTTP响应错误，错误都会抛出HTTPError类型的异常；HTTPRedirectHandler用于处理重定向；HTTPCookieProcessor用于处理Cookies；ProxyHandler用于设置代理；HTTPPasswordMgr用于管理密码；HTTPBasicAuthHandler用于管理认证	8](#_276)
+- 节点、节点树
 
-[3\.2\.4\.	parse模块支持如下协议的URL处理：file、ftp、gopher、hdl、http、https、imap、mailto、mms、news、nntp、prospero、rsync、rtsp、rtspu、sftp、sip、sips、snews、svn、svn\+ssh、telnet和wais	9](#_277)
+- 所有标签定义的内容都是节点，他们构成了一个HTML DOM树
 
-[3\.2\.5\.	Robots协议也称爬虫协议、机器人协议，全名叫做网络爬虫排除标准，用来告诉爬虫和搜索引擎哪些页面可以抓取，哪些不可以抓取	9](#_278)
+- W3C DOM标准被分为3个不同的部分：核心DOM针对任何结构化文档的标准模型；XML DOM针对XML文档的标准模型；HTML DOM针对HTML文档的标准模型
 
-[3\.3\.	3\.2\.使用requests	9](#_131)
+- HTML文档中德所有内容都是节点：整个文档是一个文档节点，每个HTML元素是元素节点，HTML元素内的文本是文本节点，每个HTML属性是属性节点，注释是注释节点
 
-[3\.3\.1\.	基本用法：GET请求抓取网页、JSON数据、二进制数据，POST请求添加headers处理响应	9](#_279)
+- 选择器
 
-[3\.3\.2\.	高级用法：文件上传files字段，cookies获取与设置，会话维持Seesion对象，SSL证书验证verify参数，代理设置proxies参数，超时设置timeout参数，身份认证auth类，预请求prepared request对象	9](#_280)
+- 使用CSS选择器来定位节点
 
-[3\.4\.	3\.3\.正则表达式	9](#_132)
+- CSS选择器还支持嵌套选择
 
-[3\.4\.1\.	match\(\)匹配，search\(\)扫描，findall\(\)返回所有，sub\(\)替换，compile\(\)编译	9](#_281)
+#### 2.3.爬虫的基本原理
 
-[3\.5\.	3\.4\.抓取猫眼电影排行	9](#_133)
+- 概述
 
-[4\.	第四章 解析库的使用	9](#_104)
+- 爬虫就是获取网页并提取和保存信息的自动化程序
 
-[4\.1\.	4\.1\.使用XPath	9](#_134)
+- 步骤：获取网页、提取信息、保存数据、自动化程序
 
-[4\.1\.1\.	一门在XML文档中查找信息的语言	9](#_239)
+- 能抓的数据
 
-[4\.1\.2\.	所有节点//\*，子节点/，父节点\.\.，属性匹配\[@class=''\]，文本获取text\(\)，属性获取@href，属性多值匹配li\[contains\(@class, 'itm'\)\]，多属性匹配li\[contains\(@class, 'itm'\) and @name='itm'\]，按序选择\[last\(\)\]、\[position\(\)<3\]，节点轴选择ancestor、descendant、follow\-sibling	9](#_282)
+- 对应各自的URL，是基于HTTP或HTTPS协议的，只要是这种数据，爬虫都可以抓取
 
-[4\.2\.	4\.2\.使用Beautiful Soup	9](#_135)
+- JavaScript渲染页面
 
-[4\.2\.1\.	强大的解析工具，借助网页的结构和属性等特性解析网页	10](#_240)
+#### 2.4.会话和Cookies
 
-[4\.2\.2\.	节点选择器：选择元素soup\.p、soup\.title；提取信息soup\.title\.name、soup\.p\.attrs\['name'\]、soup\.p\.string；嵌套选择soup\.head\.title\.string；关联选择soup\.p\.contents、soup\.p\.children、soup\.a\.parent、soup\.a\.next\_sibling、list\(soup\.a\.parents\)\[0\]\.attrs\['class'\]	10](#_283)
+- 静态网页和动态网页
 
-[4\.2\.3\.	方法选择器：find\_all\(name='ul'\)、find\_all\(attrs=\{'id': 'list\-1'\}\)、find\_all\(text=re\.compile\('link'\)\)；find\(\)、find\_parents\(\)、find\_next\_siblings、find\_next\(\)	10](#_284)
+- 动态网页可以动态解析URL中参数的变化，关联数据库并动态呈现不同页面内容，还可以实现用户登录和注册的功能
 
-[4\.2\.4\.	CSS选择器：select\('li'\)、select\('ul'\)\[0\]\.attrs\['id'\]、select\('ul'\)\[0\]\.get\_text\(\)	10](#_285)
+- 无状态HTTP
 
-[4\.3\.	4\.3\.使用pyquery	10](#_136)
+- HTTP协议对事务处理是没有记忆功能的，也就是说服务器不知道客户端是什么状态
 
-[4\.3\.1\.	多种初始化方式：传入字符串、传入url、传入文件名	10](#_286)
+- 会话Cookie就是把Cookie放在浏览器内存里，浏览器在关闭后该Cookie即失效；持久Cookie则会保存到客户端的硬盘中，下次还可以继续使用，用于保持用户登录状态
 
-[4\.3\.2\.	基本CSS选择器：doc\("\#container \.list li"\)	10](#_287)
+#### 2.5.代理的基本原理
 
-[4\.3\.3\.	查找节点：find\('li'\)、children\('\.active'\)、parent\(\)、siblings\(\)、doc\('li'\)\.items\(\)	10](#_288)
+- 基本原理
 
-[4\.3\.4\.	获取信息：a\.attr\('href'\)、doc\('\.active a'\)\.text\(\)	10](#_289)
+- 服务器会检测某个IP在单位时间内的请求次数，如果超过这个阈值，就会直接拒绝服务，返回一些错误信息
 
-[4\.3\.5\.	节点操作：addClass\('active'\)、attr\('name', 'link'\)、doc\.find\('p'\)\.remove\(\)	10](#_290)
+- 代理服务器的功能是代理网络信息
 
-[4\.3\.6\.	伪类选择器：doc\('li:first\-child'\)、doc\('li:gt\(2\)'\)	10](#_291)
+- 代理作用
 
-[5\.	第五章 数据存储	10](#_105)
+- 代理的作用：突破自身IP的访问限制；访问一些单位或团体内部资源；提高访问速度；隐藏真实IP
 
-[5\.1\.	5\.1\.文件存储	10](#_137)
+- 爬虫代理
 
-[5\.1\.1\.	Text、JSON、CSV	10](#_220)
+- 使用代理隐藏真实的IP，让服务器误以为是代理服务器在请求自己
 
-[5\.1\.2\.	TXT文本存储：with open\(\)、file\.write\(\)、file\.close\(\)	10](#_292)
+- 代理分类
 
-[5\.1\.3\.	JSON文件存储：json\.loads\(\)、json\.dumps\(\)	11](#_293)
+- 根据协议分类：FTP代理、SSL/TLS代理、RTSP代理、Telnet代理、POP3/SMTP代理、SOCKS代理
 
-[5\.1\.4\.	CSV文件存储：csv\.writer\(csvfile\)、writer\.writerow\(\['id', 'name'\]\)、csv\.reader\(csvfile\)	11](#_294)
+- 根据匿名程度区分：高度匿名代理（原封不动的转发）、普通匿名代理、透明代理、间谍代理
 
-[5\.2\.	5\.2\.关系型数据库存储	11](#_138)
+- 代理设置
 
-[5\.2\.1\.	MySQL	11](#_221)
+- 使用网上的免费代理；使用付费代理服务；ADSL拨号
 
-[5\.2\.2\.	连接connect\(\)、获取游标cursor\(\)、执行execute\(\)、关闭close\(\)、事务commit\(\)和rollback\(\)	11](#_295)
+### 第三章 基本库的使用
 
-[5\.3\.	5\.3\.非关系型数据库存储	11](#_139)
+- 最基础的HTTP库有urllib、httplib2、requests、treq等
 
-[5\.3\.1\.	MongoDB、Redis	11](#_222)
+#### 3.1.使用urllib
 
-[5\.3\.2\.	Mongo存储：连接pymongo\.MongoClient\('mongodb://localhost:/27017'\)；指定数据库client\.test；指定集合db\.students；插入collection\.insert\(student\)；查询collection\.find\_one\(\{'name': 'Mike'\}\)；计数collection\.find\(\)\.count\(\)；更新collection\.update\_one\(condition, \{'$inc': \{'age': 1\}\}\)；删除collection\.remove\(\{'name': 'Kevin'\}\)	11](#_296)
+- 发送请求、处理异常、解析链接、分析Robots协议
 
-[5\.3\.3\.	Redis存储：连接StrictRedis\(host='localhost', port=6379, db=0, password='xxx'\)；键操作exists\(name\)、type\(name\)、set\(name, value\)	11](#_297)
+- 包含如下4个模块：request最基本的HTTP请求模块，可以用来模拟发送请求；error异常处理模块，可以捕获异常然后进行重试或其他操作以保证程序不会意外终止；parse工具模块，提供了许多URL处理方法比如拆分、解析、合并等；robotparser主要用来识别网站的robots.txt文件然后判断哪些网站可以爬
 
-[5\.3\.4\.	RedisDump提供两个可执行命令，redis\-dump用于导出数据，redis\-load用于导入数据	11](#_298)
+- 高级用法有各种Handler子类继承BaseHandler，如HTTPDefaultErrorHandler用于处理HTTP响应错误，错误都会抛出HTTPError类型的异常；HTTPRedirectHandler用于处理重定向；HTTPCookieProcessor用于处理Cookies；ProxyHandler用于设置代理；HTTPPasswordMgr用于管理密码；HTTPBasicAuthHandler用于管理认证
 
-[6\.	第六章 Ajax数据爬取	11](#_106)
+- parse模块支持如下协议的URL处理：file、ftp、gopher、hdl、http、https、imap、mailto、mms、news、nntp、prospero、rsync、rtsp、rtspu、sftp、sip、sips、snews、svn、svn+ssh、telnet和wais
 
-[6\.1\.	6\.1\.什么是Ajax	11](#_140)
+- Robots协议也称爬虫协议、机器人协议，全名叫做网络爬虫排除标准，用来告诉爬虫和搜索引擎哪些页面可以抓取，哪些不可以抓取
 
-[6\.1\.1\.	异步的JavaScript和XML	11](#_299)
+#### 3.2.使用requests
 
-[6\.1\.2\.	基本原理：发送Ajax请求到网页更新的过程分为3步发送请求、解析内容、渲染网页	11](#_300)
+- 基本用法：GET请求抓取网页、JSON数据、二进制数据，POST请求添加headers处理响应
 
-[6\.2\.	6\.2\.Ajax分析方法	12](#_141)
+- 高级用法：文件上传files字段，cookies获取与设置，会话维持Seesion对象，SSL证书验证verify参数，代理设置proxies参数，超时设置timeout参数，身份认证auth类，预请求prepared request对象
 
-[6\.2\.1\.	特殊的请求类型xhr	12](#_301)
+#### 3.3.正则表达式
 
-[6\.2\.2\.	点击请求查看Request URL、Request Headers、Response Headers、Response Body	12](#_302)
+- match()匹配，search()扫描，findall()返回所有，sub()替换，compile()编译
 
-[6\.3\.	6\.3\.Ajax结果提取	12](#_142)
+#### 3.4.抓取猫眼电影排行
 
-[6\.4\.	6\.4\.分析Ajax爬取今日头条街拍美图	12](#_143)
+### 第四章 解析库的使用
 
-[7\.	第七章 动态渲染页面爬取	12](#_107)
+#### 4.1.使用XPath
 
-[7\.1\.	Python提供了许多模拟浏览器运行的库，如Selenium、Splash、PyV8、Ghost等	12](#_303)
+- 一门在XML文档中查找信息的语言
 
-[7\.2\.	7\.1\.Selenium的使用	12](#_144)
+- 所有节点//*，子节点/，父节点..，属性匹配[@class='']，文本获取text()，属性获取@href，属性多值匹配li[contains(@class, 'itm')]，多属性匹配li[contains(@class, 'itm') and @name='itm']，按序选择[last()]、[position()<3]，节点轴选择ancestor、descendant、follow-sibling
 
-[7\.2\.1\.	可以驱动浏览器执行特定的动作，可以获取浏览器当前呈现的页面源代码	12](#_223)
+#### 4.2.使用Beautiful Soup
 
-[7\.2\.2\.	基本使用：browser=webdriver\.Chrome\(\);brower\.get\('https://www\.baidu\.com'\);	12](#_304)
+- 强大的解析工具，借助网页的结构和属性等特性解析网页
 
-[7\.2\.3\.	声明浏览器对象：from selenium import webdriver; browser = webdriver\.Firefox\(\)	12](#_305)
+- 节点选择器：选择元素soup.p、soup.title；提取信息soup.title.name、soup.p.attrs['name']、soup.p.string；嵌套选择soup.head.title.string；关联选择soup.p.contents、soup.p.children、soup.a.parent、soup.a.next_sibling、list(soup.a.parents)[0].attrs['class']
 
-[7\.2\.4\.	访问页面：browser\.get\(\)、browser\.close\(\)	12](#_306)
+- 方法选择器：find_all(name='ul')、find_all(attrs={'id': 'list-1'})、find_all(text=re.compile('link'))；find()、find_parents()、find_next_siblings、find_next()
 
-[7\.2\.5\.	查找节点：browser\.find\_element\_by\_id\('q'\)、browser\.find\_elements\_by\_css\_selector\('\.service\-bd li'\)	12](#_307)
+- CSS选择器：select('li')、select('ul')[0].attrs['id']、select('ul')[0].get_text()
 
-[7\.2\.6\.	节点交互：输入文字send\_keys\(\)、清空文字clear\(\)、点击按钮click\(\)	12](#_308)
+#### 4.3.使用pyquery
 
-[7\.2\.7\.	动作链：鼠标拖拽actions = ActionChains\(browser\); actions\.drag\_and\_drop\(source, target\); actions\.perform\(\);	13](#_309)
+- 多种初始化方式：传入字符串、传入url、传入文件名
 
-[7\.2\.8\.	执行JavaScript：browser\.execute\_script\('alert\("hah"\)'\)	13](#_310)
+- 基本CSS选择器：doc("#container .list li")
 
-[7\.2\.9\.	获取节点信息：获取属性get\_attribute\(\)、获取文本值get\_text\(\)、获取id位置标签名等等element\.tag\_name	13](#_311)
+- 查找节点：find('li')、children('.active')、parent()、siblings()、doc('li').items()
 
-[7\.2\.10\.	切换iframe：browser\.switch\_to\.frame\('iframeResult'\)	13](#_312)
+- 获取信息：a.attr('href')、doc('.active a').text()
 
-[7\.2\.11\.	延时等待：browser\.implicitly\_wait\(10\)隐式等待；wait\.until\(EC\.element\_to\_be\_clickable\(By\.CSS\_SELECTOR, '\.btn\-search'\)\)显式等待；	13](#_313)
+- 节点操作：addClass('active')、attr('name', 'link')、doc.find('p').remove()
 
-[7\.2\.12\.	前进后退：browser\.back\(\)、browser\.forward\(\)	13](#_314)
+- 伪类选择器：doc('li:first-child')、doc('li:gt(2)')
 
-[7\.2\.13\.	Cookies：browser\.get\_cookies\(\)、browser\.add\_cookie\(\{'name': 'bob'\}\)	13](#_315)
+### 第五章 数据存储
 
-[7\.2\.14\.	选项卡管理：browser\.switch\_to\_window\(browser\.window\_handles\[1\]\)	13](#_316)
+#### 5.1.文件存储
 
-[7\.2\.15\.	异常处理：try except来捕获异常	13](#_317)
+- Text、JSON、CSV
 
-[7\.3\.	7\.2\.Splash的使用	13](#_145)
+- TXT文本存储：with open()、file.write()、file.close()
 
-[7\.3\.1\.	异步方式处理多个网页渲染过程，获取渲染后页面源代码或截图。通过关闭图片渲染或使用block规则来加速页面渲染速度，可执行特定的JavaScript脚本，可通过Lua脚本来控制页面渲染过程，获取渲染详细过程并通过HAR格式呈现	13](#_224)
+- JSON文件存储：json.loads()、json.dumps()
 
-[7\.3\.2\.	Splash是一个JavaScript渲染服务，是一个带有HTTP API的轻量级浏览器，同时它对接了Python中的Twisted和QT库	13](#_318)
+- CSV文件存储：csv.writer(csvfile)、writer.writerow(['id', 'name'])、csv.reader(csvfile)
 
-[7\.3\.3\.	Splash对象属性：args加载时配置参数、js\_enabled执行开关JavaScript、resource\_timeout加载超时时间、images\_enabled是否加载图片、plugins\_enabled浏览器插件是否开启、scroll\_position控制页面滚动	14](#_319)
+#### 5.2.关系型数据库存储
 
-[7\.3\.4\.	Splash对象的方法：go\(\)请求某个链接、wait\(\)控制页面的等待时间、jsfunc\(\)直接调用JavaScript定义的方法、evaljs\(\)执行JavaScript代码并返回最后的执行结果、runjs\(\)执行JavaScript代码更偏向于执行某些动作或声明某些方法、autoload\(\)设置每个页面自动加载的对象、call\_later\(\)通过设置定时任务和延时时间来实现任务延时执行、http\_get\(\)模拟发送HTTP的GET请求、set\_content\(\)设置页面的内容、html\(\)获取网页的源代码、png\(\)获取PNG格式的网页截图、har\(\)获取页面加载过程描述、get\_cookies\(\)获取当前页面的Cookies、set\_viewport\_size\(\)设置当前浏览器页面的大小、set\_custom\_headers\(\)设置请求头、select\_all\(\)选中所有符合条件的节点、mouse\_click\(\)模拟鼠标点击操作	14](#_320)
+- MySQL
 
-[7\.3\.5\.	Splash API调用：render\.html用于获取JavaScript渲染的页面的HTML代码、render\.png获取网页截图、render\.har\(\)获取页面加载的HAR数据、render\.json\(\)获取接口返回的响应数据、execute\(\)最为强大的接口	14](#_321)
+- 连接connect()、获取游标cursor()、执行execute()、关闭close()、事务commit()和rollback()
 
-[7\.4\.	7\.3\.Splash负载均衡配置	14](#_146)
+#### 5.3.非关系型数据库存储
 
-[7\.4\.1\.	搭建一个负载均衡器来把压力分散到各个服务器上	14](#_322)
+- MongoDB、Redis
 
-[7\.4\.2\.	配置负载均衡：upstream定义服务集群配置、weight指定各个服务的权重	14](#_323)
+- Mongo存储：连接pymongo.MongoClient('mongodb://localhost:/27017')；指定数据库client.test；指定集合db.students；插入collection.insert(student)；查询collection.find_one({'name': 'Mike'})；计数collection.find().count()；更新collection.update_one(condition, {'$inc': {'age': 1}})；删除collection.remove({'name': 'Kevin'})
 
-[7\.5\.	7\.4\.使用Selenium爬取淘宝商品	14](#_147)
+- Redis存储：连接StrictRedis(host='localhost', port=6379, db=0, password='xxx')；键操作exists(name)、type(name)、set(name, value)
 
-[8\.	第八章 验证码的识别	14](#_108)
+- RedisDump提供两个可执行命令，redis-dump用于导出数据，redis-load用于导入数据
 
-[8\.1\.	8\.1\.图形验证码的识别	14](#_148)
+### 第六章 Ajax数据爬取
 
-[8\.1\.1\.	对一些有干扰的图片做一些灰度和二值化处理，会提高图片识别的正确率	14](#_225)
+#### 6.1.什么是Ajax
 
-[8\.1\.2\.	用tessercr库识别该验证码	15](#_324)
+- 异步的JavaScript和XML
 
-[8\.1\.3\.	要将原图先转换为灰度图像，然后再指定二值化阈值	15](#_325)
+- 基本原理：发送Ajax请求到网页更新的过程分为3步发送请求、解析内容、渲染网页
 
-[8\.2\.	8\.2\.极验滑动验证码的识别	15](#_149)
+#### 6.2.Ajax分析方法
 
-[8\.2\.1\.	模拟点击验证按钮识别滑动缺口的位置模拟拖动滑块	15](#_226)
+- 特殊的请求类型xhr
 
-[8\.2\.2\.	识别并通过极验验证码的验证，包括分析识别思路、识别缺口位置、生成滑块拖动路径、模拟实现滑块拼合通过验证等步骤	15](#_326)
+- 点击请求查看Request URL、Request Headers、Response Headers、Response Body
 
-[8\.2\.3\.	极验验证码广泛应用于直播视频、金融服务、电子商务、游戏娱乐、政府企业等各大类型网站	15](#_327)
+#### 6.3.Ajax结果提取
 
-[8\.2\.4\.	极验验证码还增加了机器学习的方法来识别拖动轨迹	15](#_328)
+#### 6.4.分析Ajax爬取今日头条街拍美图
 
-[8\.2\.5\.	官方网站的安全防护有如下几点说明：三角防护之防模拟、三角防护之防伪造、三角防护之防暴力	15](#_329)
+### 第七章 动态渲染页面爬取
 
-[8\.2\.6\.	采用直接模拟浏览器动作的方式来完成验证	15](#_330)
+- Python提供了许多模拟浏览器运行的库，如Selenium、Splash、PyV8、Ghost等
 
-[8\.2\.7\.	验证码图片缺口的四周边缘有明显的断裂边缘，边缘与边缘周围有明显的区别	15](#_331)
+#### 7.1.Selenium的使用
 
-[8\.3\.	8\.3\.点触验证码的识别	15](#_150)
+- 可以驱动浏览器执行特定的动作，可以获取浏览器当前呈现的页面源代码
 
-[8\.3\.1\.	借助在线验证码平台	15](#_227)
+- 基本使用：browser=webdriver.Chrome();brower.get('https://www.baidu.com');
 
-[8\.3\.2\.	12306就是典型的点触验证码	15](#_332)
+- 声明浏览器对象：from selenium import webdriver; browser = webdriver.Firefox()
 
-[8\.3\.3\.	一个专门提供点触验证码服务的站点TouClick	15](#_333)
+- 访问页面：browser.get()、browser.close()
 
-[8\.3\.4\.	识别的思路：一是文字识别；二是图像识别；	15](#_334)
+- 查找节点：browser.find_element_by_id('q')、browser.find_elements_by_css_selector('.service-bd li')
 
-[8\.4\.	8\.4\.微博宫格验证码的识别	15](#_151)
+- 节点交互：输入文字send_keys()、清空文字clear()、点击按钮click()
 
-[8\.4\.1\.	新型交互式验证码，每个宫格之间会有一条指示连线，指示了应该的滑动轨迹	15](#_335)
+- 动作链：鼠标拖拽actions = ActionChains(browser); actions.drag_and_drop(source, target); actions.perform();
 
-[8\.4\.2\.	获取模板、模板匹配、模拟拖动	16](#_336)
+- 执行JavaScript：browser.execute_script('alert("hah")')
 
-[9\.	第九章 代理的使用	16](#_109)
+- 获取节点信息：获取属性get_attribute()、获取文本值get_text()、获取id位置标签名等等element.tag_name
 
-[9\.1\.	9\.1\.代理的设置	16](#_152)
+- 切换iframe：browser.switch_to.frame('iframeResult')
 
-[9\.1\.1\.	response=request\.get\('http://xxx\.;'\)	16](#_228)
+- 延时等待：browser.implicitly_wait(10)隐式等待；wait.until(EC.element_to_be_clickable(By.CSS_SELECTOR, '.btn-search'))显式等待；
 
-[9\.1\.2\.	Selenium同样是可以设置代理，包括两种方式：一种是有界面浏览器如Chrome；另一种是无界面浏览器如PhantomJS	16](#_337)
+- 前进后退：browser.back()、browser.forward()
 
-[9\.2\.	9\.2\.代理池的维护	16](#_153)
+- Cookies：browser.get_cookies()、browser.add_cookie({'name': 'bob'})
 
-[9\.2\.1\.	存储模块、获取模块、检测模块、接口模块	16](#_229)
+- 选项卡管理：browser.switch_to_window(browser.window_handles[1])
 
-[9\.2\.2\.	存储模块使用Redis的有序集合，用来做代理的去重和状态标识，同时它也是中心模块和基础模块，将其他模块串联起来	16](#_338)
+- 异常处理：try except来捕获异常
 
-[9\.2\.3\.	获取模块定时从代理网站获取代理，将获取的代理传递给存储模块，并保存到数据库	16](#_339)
+#### 7.2.Splash的使用
 
-[9\.2\.4\.	检测模块定时通过存储模块获取所有代理，并对代理进行检测，根据不同的检测结果对代理设置不同的标识	16](#_340)
+- 异步方式处理多个网页渲染过程，获取渲染后页面源代码或截图。通过关闭图片渲染或使用block规则来加速页面渲染速度，可执行特定的JavaScript脚本，可通过Lua脚本来控制页面渲染过程，获取渲染详细过程并通过HAR格式呈现
 
-[9\.2\.5\.	接口模块通过Web API提供服务接口，接口通过连接数据库并通过Web形式返回可用的代理	16](#_341)
+- Splash是一个JavaScript渲染服务，是一个带有HTTP API的轻量级浏览器，同时它对接了Python中的Twisted和QT库
 
-[9\.3\.	9\.3\.付费代理的使用	16](#_154)
+- Splash对象属性：args加载时配置参数、js_enabled执行开关JavaScript、resource_timeout加载超时时间、images_enabled是否加载图片、plugins_enabled浏览器插件是否开启、scroll_position控制页面滚动
 
-[9\.3\.1\.	迅代理、阿布云代理	16](#_230)
+- Splash对象的方法：go()请求某个链接、wait()控制页面的等待时间、jsfunc()直接调用JavaScript定义的方法、evaljs()执行JavaScript代码并返回最后的执行结果、runjs()执行JavaScript代码更偏向于执行某些动作或声明某些方法、autoload()设置每个页面自动加载的对象、call_later()通过设置定时任务和延时时间来实现任务延时执行、http_get()模拟发送HTTP的GET请求、set_content()设置页面的内容、html()获取网页的源代码、png()获取PNG格式的网页截图、har()获取页面加载过程描述、get_cookies()获取当前页面的Cookies、set_viewport_size()设置当前浏览器页面的大小、set_custom_headers()设置请求头、select_all()选中所有符合条件的节点、mouse_click()模拟鼠标点击操作
 
-[9\.3\.2\.	讯代理上可供选购的代理类别：优质代理、独享动态、独享秒切、动态混拨、优质定制	16](#_342)
+- Splash API调用：render.html用于获取JavaScript渲染的页面的HTML代码、render.png获取网页截图、render.har()获取页面加载的HAR数据、render.json()获取接口返回的响应数据、execute()最为强大的接口
 
-[9\.4\.	9\.4\.ADSL拨号代理	16](#_155)
+#### 7.3.Splash负载均衡配置
 
-[9\.4\.1\.	代理池可以挑选出许多可用代理，但是常常其稳定性不高、响应速度慢	17](#_343)
+- 搭建一个负载均衡器来把压力分散到各个服务器上
 
-[9\.4\.2\.	要追求更加稳定的代理，就需要购买专有代理或者自己搭建代理服务器	17](#_344)
+- 配置负载均衡：upstream定义服务集群配置、weight指定各个服务的权重
 
-[9\.4\.3\.	ADSL非对称数字用户环路，它的上行和下行带宽不对称，采用频分复用技术把普通的电话线分成了电话、上行和下行3个相对独立的信道，从而避免了相互之间的干扰	17](#_345)
+#### 7.4.使用Selenium爬取淘宝商品
 
-[9\.4\.4\.	ADSL通过拨号的方式上网，需要输入ADSL账号和密码，每次拨号就更换一个IP	17](#_346)
+### 第八章 验证码的识别
 
-[9\.4\.5\.	首先需要成功安装Redis数据库并启动服务，另外还需要安装requests、redis\-py、Tornado库	17](#_347)
+#### 8.1.图形验证码的识别
 
-[9\.4\.6\.	要做的两件事：一是怎样将主机设置为代理服务器，二是怎样实时获取拨号主机的IP	17](#_348)
+- 对一些有干扰的图片做一些灰度和二值化处理，会提高图片识别的正确率
 
-[9\.4\.7\.	设计的架构要考虑支持多主机的问题	17](#_349)
+- 用tessercr库识别该验证码
 
-[9\.4\.8\.	数据库要做的就是定时对每台主机的代理进行更新，而更新时又需要拨号主机的唯一标识，根据主机标识查出这条数据，然后将这条数据对应的代理更新	17](#_350)
+- 要将原图先转换为灰度图像，然后再指定二值化阈值
 
-[9\.5\.	9\.5\.使用代理爬取微信公众号文章	17](#_156)
+#### 8.2.极验滑动验证码的识别
 
-[10\.	第十章 模拟登录	17](#_110)
+- 模拟点击验证按钮识别滑动缺口的位置模拟拖动滑块
 
-[10\.1\.	实际是在客户端生成了Cookies。而Cookies里面保存了SessionID的信息，登录之后的后续请求都会携带生成后的Cookie发送给服务器	17](#_351)
+- 识别并通过极验验证码的验证，包括分析识别思路、识别缺口位置、生成滑块拖动路径、模拟实现滑块拼合通过验证等步骤
 
-[10\.2\.	10\.1\.模拟登录并爬取GitHub	17](#_157)
+- 极验验证码广泛应用于直播视频、金融服务、电子商务、游戏娱乐、政府企业等各大类型网站
 
-[10\.2\.1\.	Headers里面包含了Cookies、Host、Origin、Referer、User\-Agent等信息	18](#_352)
+- 极验验证码还增加了机器学习的方法来识别拖动轨迹
 
-[10\.2\.2\.	Form Data包含了5个字段，commit是固定的字符串Sign in，utf\-8是一个勾选字符，authenticity\_token较长，其初步判断是一个Base64加密的字符串，login是登录的用户名，password是登录的密码	18](#_353)
+- 官方网站的安全防护有如下几点说明：三角防护之防模拟、三角防护之防伪造、三角防护之防暴力
 
-[10\.2\.3\.	访问登录页面要完成两件事：一是通过此页面获取初始的Cookies，而是提取出authenticity\_token	18](#_354)
+- 采用直接模拟浏览器动作的方式来完成验证
 
-[10\.3\.	10\.2\.Cookies池的搭建	18](#_158)
+- 验证码图片缺口的四周边缘有明显的断裂边缘，边缘与边缘周围有明显的区别
 
-[10\.3\.1\.	不登录直接爬取的一些弊端：1、设置了登录限制的页面无法爬取；2、一些页面和接口虽然可以直接请求，但是请求一旦频繁，访问就容易被限制或者IP直接被封	18](#_355)
+#### 8.3.点触验证码的识别
 
-[10\.3\.2\.	Cookies池需要有自动生成Cookies、定时检测Cookies、提供随机Cookies等几大核心功能	18](#_356)
+- 借助在线验证码平台
 
-[10\.3\.3\.	思路：Cookies池中保存了许多账号和登录后的Cookies信息，并且Cookies池还需要定时检测每个Cookies的有效性，如果某Cookies无效，那就删除该Cookies并模拟登陆生成新的Cookies	18](#_357)
+- 12306就是典型的点触验证码
 
-[10\.3\.4\.	存储模块负责存储每个账号的用户名密码以及每个账号对应的Cookies信息，同时还需要提供一些方法来实现方便的存取操作	18](#_358)
+- 一个专门提供点触验证码服务的站点TouClick
 
-[10\.3\.5\.	生成模块负责生成新的Cookies。会从存储模块逐一拿取账号的用户名和密码，然后模拟登录目标页面，判断登陆成功，就将Cookies返回并交给存储模块存储	18](#_359)
+- 识别的思路：一是文字识别；二是图像识别；
 
-[10\.3\.6\.	检测模块需要定时检测数据库中的Cookies。需要设置一个检测链接，不同的站点检测链接不同，检测模块会逐个拿取账号对应的Cookies去请求链接，如果返回的状态是有效的，那么此Cookies没有失效，否则Cookies失效并移除	18](#_360)
+#### 8.4.微博宫格验证码的识别
 
-[10\.3\.7\.	接口模块需要用API来提供对外服务的接口。由于可用的Cookies可能有多个，可以随机返回Cookies的接口，这样保证每个Cookies都有可能被取到。Cookies越多，每个Cookies被取到的概率就会越小，从而减少被封号的风险	19](#_361)
+- 新型交互式验证码，每个宫格之间会有一条指示连线，指示了应该的滑动轨迹
 
-[11\.	第十一章 App的爬取	19](#_111)
+- 获取模板、模板匹配、模拟拖动
 
-[11\.1\.	App的爬取相比Web端爬取更加容易，反爬虫能力没那么强，而且数据大多是以JSON形式传输，解析更加简单	19](#_231)
+### 第九章 代理的使用
 
-[11\.2\.	常用的抓包软件有WireShark、Fiddler、Charles、mitmproxy、AnyProxy等，他们的原理基本是相同的	19](#_402)
+#### 9.1.代理的设置
 
-[11\.3\.	11\.1\.Charles的使用	19](#_159)
+- response=request.get('http://xxx.;')
 
-[11\.3\.1\.	相比Fiddler来说，Charles的功能更强大，而且跨平台支持更好	19](#_403)
+- Selenium同样是可以设置代理，包括两种方式：一种是有界面浏览器如Chrome；另一种是无界面浏览器如PhantomJS
 
-[11\.4\.	11\.2\.mitmproxy的使用	19](#_160)
+#### 9.2.代理池的维护
 
-[11\.4\.1\.	mitmproxy是一个支持HTTP和HTTPS的抓包程序，有类似Fiddler、Charles的功能，只不过它是一个控制台的形式操作	19](#_404)
+- 存储模块、获取模块、检测模块、接口模块
 
-[11\.4\.2\.	mitmproxy有如下几项功能：拦截HTTP和HTTPS请求和响应；保存HTTP会话并进行分析；模拟客户端发起请求，模拟服务器返回响应；利用反向代理将流量转发给指定的服务器；支持Mac和Linux上的透明代理；利用Python对HTTP请求和响应进行实时处理	19](#_405)
+- 存储模块使用Redis的有序集合，用来做代理的去重和状态标识，同时它也是中心模块和基础模块，将其他模块串联起来
 
-[11\.4\.3\.	mitmproxy还提供了命令行式的编辑功能	19](#_406)
+- 获取模块定时从代理网站获取代理，将获取的代理传递给存储模块，并保存到数据库
 
-[11\.4\.4\.	mitmproxy的强大之处体现在它的另一个工具mitmdump	19](#_407)
+- 检测模块定时通过存储模块获取所有代理，并对代理进行检测，根据不同的检测结果对代理设置不同的标识
 
-[11\.5\.	11\.3\.mitm爬取“得到”App电子书信息	19](#_161)
+- 接口模块通过Web API提供服务接口，接口通过连接数据库并通过Web形式返回可用的代理
 
-[11\.6\.	11\.4\.Appium的基本使用	19](#_162)
+#### 9.3.付费代理的使用
 
-[11\.6\.1\.	Appium是一个跨平台移动端自动化测试工具，可以非常便捷地为iOS和Android平台创建自动化测试用例	20](#_408)
+- 迅代理、阿布云代理
 
-[11\.7\.	11\.5\.Appium的基本使用	20](#_163)
+- 讯代理上可供选购的代理类别：优质代理、独享动态、独享秒切、动态混拨、优质定制
 
-[11\.8\.	11\.6\.Appium\+mitmdump爬取京东商品	20](#_164)
+#### 9.4.ADSL拨号代理
 
-[12\.	第十二章 pyspider框架的使用	20](#_112)
+- 代理池可以挑选出许多可用代理，但是常常其稳定性不高、响应速度慢
 
-[12\.1\.	12\.1\.pyspider框架介绍	20](#_165)
+- 要追求更加稳定的代理，就需要购买专有代理或者自己搭建代理服务器
 
-[12\.1\.1\.	国人binux编写的强大网络爬虫系统	20](#_232)
+- ADSL非对称数字用户环路，它的上行和下行带宽不对称，采用频分复用技术把普通的电话线分成了电话、上行和下行3个相对独立的信道，从而避免了相互之间的干扰
 
-[12\.1\.2\.	带有强大的WebUI、脚本编辑器、任务监控器、项目管理器、结果处理器	20](#_233)
+- ADSL通过拨号的方式上网，需要输入ADSL账号和密码，每次拨号就更换一个IP
 
-[12\.1\.3\.	与scrapy的比较：提供了WebUI给编写和调试用；调试非常简便；支持PhantomJS来进行JavaScript渲染页面的采集；内置了pyquery作为选择器；可扩展程度不足；	20](#_399)
+- 首先需要成功安装Redis数据库并启动服务，另外还需要安装requests、redis-py、Tornado库
 
-[12\.1\.4\.	如果要快速实现一个页面的抓取，推荐使用pyspider；如果要应对反爬程度很强、超大规模的抓取，推荐使用scrapy	20](#_234)
+- 要做的两件事：一是怎样将主机设置为代理服务器，二是怎样实时获取拨号主机的IP
 
-[12\.1\.5\.	pyspider的架构主要分为Scheduler（调度器）、Fetcher（抓取器）、Processer（处理器）三个部分，整个爬取过程受到Monitor（监控器）的监控，抓取的结果被Result Worker（结果处理器）处理	20](#_400)
+- 设计的架构要考虑支持多主机的问题
 
-[12\.1\.6\.	Scheduler发起任务调度，Fetcher负责抓取网页内容，Processer负责解析网页内容，然后将生成的Request发给Scheduler进行调度，将生成的提取结果输出保存	20](#_401)
+- 数据库要做的就是定时对每台主机的代理进行更新，而更新时又需要拨号主机的唯一标识，根据主机标识查出这条数据，然后将这条数据对应的代理更新
 
-[12\.2\.	12\.2\.pyspider的基本使用	20](#_166)
+#### 9.5.使用代理爬取微信公众号文章
 
-[12\.3\.	12\.3\.pyspider用法详解	20](#_167)
+### 第十章 模拟登录
 
-[13\.	第十三章 Scrapy框架的使用	20](#_113)
+- 实际是在客户端生成了Cookies。而Cookies里面保存了SessionID的信息，登录之后的后续请求都会携带生成后的Cookie发送给服务器
 
-[13\.1\.	13\.1\.Scrapy框架介绍	21](#_168)
+#### 10.1.模拟登录并爬取GitHub
 
-[13\.1\.1\.	基于Twisted的异步处理框架、功能强大爬取效率高，相关扩展组件多，可配置和可扩展高	21](#_235)
+- Headers里面包含了Cookies、Host、Origin、Referer、User-Agent等信息
 
-[13\.2\.	13\.2\.Scrapy入门	21](#_169)
+- Form Data包含了5个字段，commit是固定的字符串Sign in，utf-8是一个勾选字符，authenticity_token较长，其初步判断是一个Base64加密的字符串，login是登录的用户名，password是登录的密码
 
-[13\.3\.	13\.3\.Selector的用法	21](#_170)
+- 访问登录页面要完成两件事：一是通过此页面获取初始的Cookies，而是提取出authenticity_token
 
-[13\.4\.	13\.4\.Spider的用法	21](#_171)
+#### 10.2.Cookies池的搭建
 
-[13\.5\.	13\.5\.Downloader Middleware的用法	21](#_172)
+- 不登录直接爬取的一些弊端：1、设置了登录限制的页面无法爬取；2、一些页面和接口虽然可以直接请求，但是请求一旦频繁，访问就容易被限制或者IP直接被封
 
-[13\.6\.	13\.6\.Spider Middleware的用法	21](#_173)
+- Cookies池需要有自动生成Cookies、定时检测Cookies、提供随机Cookies等几大核心功能
 
-[13\.7\.	13\.7\.Item Pipeline的用法	21](#_174)
+- 思路：Cookies池中保存了许多账号和登录后的Cookies信息，并且Cookies池还需要定时检测每个Cookies的有效性，如果某Cookies无效，那就删除该Cookies并模拟登陆生成新的Cookies
 
-[13\.8\.	13\.8\.Scrapy对接Seleium	21](#_175)
+- 存储模块负责存储每个账号的用户名密码以及每个账号对应的Cookies信息，同时还需要提供一些方法来实现方便的存取操作
 
-[13\.9\.	13\.9\.Scripy对接Splash	21](#_176)
+- 生成模块负责生成新的Cookies。会从存储模块逐一拿取账号的用户名和密码，然后模拟登录目标页面，判断登陆成功，就将Cookies返回并交给存储模块存储
 
-[13\.10\.	13\.10\.Scrapy通用爬虫	21](#_177)
+- 检测模块需要定时检测数据库中的Cookies。需要设置一个检测链接，不同的站点检测链接不同，检测模块会逐个拿取账号对应的Cookies去请求链接，如果返回的状态是有效的，那么此Cookies没有失效，否则Cookies失效并移除
 
-[13\.11\.	13\.11\.Scrapyrt的使用	21](#_178)
+- 接口模块需要用API来提供对外服务的接口。由于可用的Cookies可能有多个，可以随机返回Cookies的接口，这样保证每个Cookies都有可能被取到。Cookies越多，每个Cookies被取到的概率就会越小，从而减少被封号的风险
 
-[13\.12\.	13\.12\.Scrapy对接Docker	21](#_179)
+### 第十一章 App的爬取
 
-[13\.13\.	13\.13\.Scrapy爬取新浪微博	21](#_180)
+- App的爬取相比Web端爬取更加容易，反爬虫能力没那么强，而且数据大多是以JSON形式传输，解析更加简单
 
-[14\.	第十四章 分布式爬虫	21](#_114)
+- 常用的抓包软件有WireShark、Fiddler、Charles、mitmproxy、AnyProxy等，他们的原理基本是相同的
 
-[14\.1\.	准备工作、搭建Redis服务器、部署代理池和Cookie池、配置Scrapy\-redis、配置存储目标、运行结果	21](#_236)
+#### 11.1.Charles的使用
 
-[14\.2\.	14\.1\.分布式爬虫原理	21](#_181)
+- 相比Fiddler来说，Charles的功能更强大，而且跨平台支持更好
 
-[14\.3\.	14\.2\.Scrapy\-Redis源码解析	21](#_182)
+#### 11.2.mitmproxy的使用
 
-[14\.4\.	14\.3\.Scrapy分布式实现	21](#_183)
+- mitmproxy是一个支持HTTP和HTTPS的抓包程序，有类似Fiddler、Charles的功能，只不过它是一个控制台的形式操作
 
-[14\.5\.	14\.4\.Bloom Filter的对接	22](#_184)
+- mitmproxy有如下几项功能：拦截HTTP和HTTPS请求和响应；保存HTTP会话并进行分析；模拟客户端发起请求，模拟服务器返回响应；利用反向代理将流量转发给指定的服务器；支持Mac和Linux上的透明代理；利用Python对HTTP请求和响应进行实时处理
 
-[15\.	第十五章 分布式爬虫的部署	22](#_115)
+- mitmproxy还提供了命令行式的编辑功能
 
-[15\.1\.	15\.1\.Scrapyd分布式部署	22](#_185)
+- mitmproxy的强大之处体现在它的另一个工具mitmdump
 
-[15\.1\.1\.	Scrapyd提供一系列HTTP接口来帮助我们部署、启动、停止、删除爬虫程序，支持版本管理，可以管理多个爬虫任务	22](#_237)
+#### 11.3.mitm爬取“得到”App电子书信息
 
-[15\.2\.	15\.2\.Scrapyd\-Client的使用	22](#_186)
+#### 11.4.Appium的基本使用
 
-[15\.3\.	15\.3\.Scrapyd对接Docker	22](#_187)
+- Appium是一个跨平台移动端自动化测试工具，可以非常便捷地为iOS和Android平台创建自动化测试用例
 
-[15\.4\.	15\.4\.Scrapyd批量部署	22](#_188)
+#### 11.5.Appium的基本使用
 
-[15\.5\.	15\.5\.Gerapy分布式管理	22](#_189)
+#### 11.6.Appium+mitmdump爬取京东商品
 
-[15\.5\.1\.	Gerapy是一个基于Scrapyd、Scrapyd API、Django、Vue搭建的分布式爬虫管理框架	22](#_238)
+### 第十二章 pyspider框架的使用
 
-# <a id="_____2"></a><a id="_101"></a>第一章 开发环境配置
+#### 12.1.pyspider框架介绍
 
-## <a id="_____4"></a><a id="_116"></a>1\.1\.Python3的安装
+- 国人binux编写的强大网络爬虫系统
 
-### <a id="_____6"></a><a id="_191"></a>windows、linux、mac
+- 带有强大的WebUI、脚本编辑器、任务监控器、项目管理器、结果处理器
 
-### <a id="_____8"></a><a id="_241"></a>windows下安装有2种：通过Anaconda安装；直接下载安装包安装
+- 与scrapy的比较：提供了WebUI给编写和调试用；调试非常简便；支持PhantomJS来进行JavaScript渲染页面的采集；内置了pyquery作为选择器；可扩展程度不足；
 
-### <a id="_____10"></a><a id="_242"></a>Linux下的安装：命令安装；源码安装；Anaconda安装
+- 如果要快速实现一个页面的抓取，推荐使用pyspider；如果要应对反爬程度很强、超大规模的抓取，推荐使用scrapy
 
-### <a id="_____12"></a><a id="_243"></a>Mac下安装：Homebrew；安装包安装；Anaconda安装
+- pyspider的架构主要分为Scheduler（调度器）、Fetcher（抓取器）、Processer（处理器）三个部分，整个爬取过程受到Monitor（监控器）的监控，抓取的结果被Result Worker（结果处理器）处理
 
-## <a id="_____14"></a><a id="_117"></a>1\.2\.请求库的安装
+- Scheduler发起任务调度，Fetcher负责抓取网页内容，Processer负责解析网页内容，然后将生成的Request发给Scheduler进行调度，将生成的提取结果输出保存
 
-### <a id="_____16"></a><a id="_190"></a>requests、Selenium、ChromeDriver、GeckoDriver、PhantomJS、aiohttp
+#### 12.2.pyspider的基本使用
 
-### <a id="_____18"></a><a id="_244"></a>爬虫可以简单分为几步：抓取页面；分析页面；存储页面
+#### 12.3.pyspider用法详解
 
-### <a id="_____20"></a><a id="_245"></a>requests属于第三方库，Python默认不会自带这个库
+### 第十三章 Scrapy框架的使用
 
-### <a id="_____22"></a><a id="_246"></a>Selenium是一个自动化测试工具，利用它我们可以驱动浏览器执行特定的动作，如点击、下拉等操作
+#### 13.1.Scrapy框架介绍
 
-### <a id="_____24"></a><a id="_247"></a>Selenium需要浏览器来配合使用，只有安装ChromeDriver，才能驱动Chrome浏览器完成相应的操作，对于Firefox也可以使用同样的方式完成Selenium的对接
+- 基于Twisted的异步处理框架、功能强大爬取效率高，相关扩展组件多，可配置和可扩展高
 
-### <a id="_____26"></a><a id="_249"></a>目前最新的Chrome浏览器版本已经支持无界面模式了
+#### 13.2.Scrapy入门
 
-### <a id="_____28"></a><a id="_248"></a>PhantomJS是一个无界面的、可脚本编程的WebKit浏览器引擎，它原生支持多种Web标准：DOM操作、CSS选择器、JSON、Canvas以及SVG
+#### 13.3.Selector的用法
 
-### <a id="_____30"></a><a id="_250"></a>aiohttp是一个提供异步Web服务的库，从Python3\.5版本开始，Python加入了async/await关键字，使得回调的写法更加直观和人性化
+#### 13.4.Spider的用法
 
-## <a id="_____32"></a><a id="_118"></a>1\.3\.解析库的安装
+#### 13.5.Downloader Middleware的用法
 
-### <a id="_____34"></a><a id="_192"></a>lxml、Beautiful Soup、pyquery、tesserocr
+#### 13.6.Spider Middleware的用法
 
-### <a id="_____36"></a><a id="_251"></a>lxml是Python的一个解析库，支持HTML和XML的解析，支持XPath解析方式，而且解析效率非常高
+#### 13.7.Item Pipeline的用法
 
-### <a id="_____38"></a><a id="_252"></a>Beautiful Soup是Python的一个HTML或XML的解析库，可以用它来方便的从网页中提取数据
+#### 13.8.Scrapy对接Seleium
 
-### <a id="_____40"></a><a id="_253"></a>pyquery同样是一个强大的网页解析工具，他提供了和jQuery类似的语法来解析HTML文档
+#### 13.9.Scripy对接Splash
 
-### <a id="_____42"></a><a id="_254"></a>tesserocr是Python的一个OCR识别库
+#### 13.10.Scrapy通用爬虫
 
-## <a id="_____44"></a><a id="_119"></a>1\.4\.数据库的安装
+#### 13.11.Scrapyrt的使用
 
-### <a id="_____46"></a><a id="_193"></a>mysql、mongodb、redis
+#### 13.12.Scrapy对接Docker
 
-### <a id="_____48"></a><a id="_255"></a>MySQL是一个轻量级的关系型数据库
+#### 13.13.Scrapy爬取新浪微博
 
-### <a id="_____50"></a><a id="_256"></a>MongoDB是由C\+\+语言编写的非关系型数据库，是一个基于分布式文件存储的开源数据库系统，其内容存储形式类似JSON对象，它的字段值可以包含其他文档、数组及文档数组
+### 第十四章 分布式爬虫
 
-### <a id="_____52"></a><a id="_257"></a>Redis是一个基于内存的高效的非关系型数据库。推荐下载Redis Desktop Manager可视化管理工具，来管理Redis
+#### 准备工作、搭建Redis服务器、部署代理池和Cookie池、配置Scrapy-redis、配置存储目标、运行结果
 
-## <a id="_____54"></a><a id="_120"></a>1\.5\.存储库的安装
+#### 14.1.分布式爬虫原理
 
-### <a id="_____56"></a><a id="_194"></a>PyMySQL、PyMongo、redis\-py、RedisDump
+#### 14.2.Scrapy-Redis源码解析
 
-### <a id="_____58"></a><a id="_258"></a>MySQL需要安装PyMySQL、MongoDB需要安装PyMongo
+#### 14.3.Scrapy分布式实现
 
-### <a id="_____60"></a><a id="_259"></a>对于Redis来说，我们要使用redis\-py库莱与其交互
+#### 14.4.Bloom Filter的对接
 
-### <a id="_____62"></a><a id="_260"></a>RedisDump是一个用于Redis数据导入/导出的工具，是基于Ruby实现的
+### 第十五章 分布式爬虫的部署
 
-## <a id="_____64"></a><a id="_121"></a>1\.6\.Web库的安装
+#### 15.1.Scrapyd分布式部署
 
-### <a id="_____66"></a><a id="_195"></a>Flask、Tornado
+- Scrapyd提供一系列HTTP接口来帮助我们部署、启动、停止、删除爬虫程序，支持版本管理，可以管理多个爬虫任务
 
-### <a id="_____68"></a><a id="_261"></a>Flask是一个轻量级的Web服务程序，它简单、易用、灵活
+#### 15.2.Scrapyd-Client的使用
 
-### <a id="_____70"></a><a id="_262"></a>Tornado是一个支持异步的Web框架，通过使用非阻塞I/O流，可以支撑成千上万的开放连接，效率非常高
+#### 15.3.Scrapyd对接Docker
 
-## <a id="_____72"></a><a id="_122"></a>1\.7\.App爬取相关库的安装
+#### 15.4.Scrapyd批量部署
 
-### <a id="_____74"></a><a id="_196"></a>Charles、mitmproxy、Appium
+#### 15.5.Gerapy分布式管理
 
-### <a id="_____76"></a><a id="_263"></a>Charles是一个网络抓包工具，相比Fiddler，其功能更为强大，而且跨平台支持得更好，可以选用它作为主要的移动端抓包工具
+- Gerapy是一个基于Scrapyd、Scrapyd API、Django、Vue搭建的分布式爬虫管理框架
 
-### <a id="_____78"></a><a id="_264"></a>mitmproxy是一个支持HTTP和HTTPS的抓包程序，类似Fiddler、Charles的功能，只不过它通过控制台的形式操作
 
-### <a id="_____80"></a><a id="_265"></a>Appium是移动端的自动化测试工具，类似前面所说的Selenium，利用它可以驱动Android、iOS等设备完成自动化测试，比如模拟点击、滑动、输入等操作
-
-## <a id="_____82"></a><a id="_123"></a>1\.8\.爬虫框架的安装
-
-### <a id="_____84"></a><a id="_197"></a>pyspider、Scrapyd、Scrapy\-Splash、Scripy\-Redis
-
-### <a id="_____86"></a><a id="_266"></a>pyspider是国人binux编写的强大的网络爬虫框架，它带有强大的WebUI、脚本编辑器、任务监控器、项目管理器以及结果处理器，同时支持多种数据库后端、多种消息队列，另外还支持JavaScript渲染页面的爬取
-
-### <a id="_____88"></a><a id="_267"></a>Scrapy是一个十分强大的爬虫框架，依赖的库比较多，至少需要依赖的库有Twisted14\.0、lxml3\.4和pyOpenSSL0\.14
-
-### <a id="_____90"></a><a id="_268"></a>Scrapy\-Splash是一个Scrapy中支持JavaScript渲染的工具
-
-### <a id="_____92"></a><a id="_269"></a>Scrapy\-Redis是Scrapy的分布式扩展模块
-
-## <a id="_____94"></a><a id="_124"></a>1\.9\.部署相关库的安装
-
-### <a id="_____96"></a><a id="_198"></a>Docker、Scrapyd\-Client、Scrapyd API、Scrapyrt、Gerapy
-
-### <a id="_____98"></a><a id="_270"></a>Docker是一种容器技术，可以将应用和环境等进行打包，形成一个独立的、类似于iOS的App形式的“应用”
-
-### <a id="_____100"></a><a id="_271"></a>Scrapyd是一个部署和运行Scrapy项目的工具，可以将写好的Scrapy项目上传到云主机并通过API来控制它的运行
-
-### <a id="_____102"></a><a id="_272"></a>Scrapyrt为Scrapy提供了一个调度的HTTP接口，不需要再执行Scrapy命令而是通过请求一个HTTP接口来调度Scrapy任务了
-
-### <a id="_____104"></a><a id="_273"></a>Gerapy是一个Scrapy分布式管理模块
-
-# <a id="_____106"></a><a id="_102"></a>第二章 爬虫基础
-
-## <a id="_____108"></a><a id="_125"></a>2\.1\.HTTP基本原理
-
-### <a id="_____110"></a><a id="_199"></a>URI、URL
-
-#### <a id="_____112"></a><a id="_362"></a>URI统一资源标志符；URL统一资源定位符；
-
-#### <a id="_____114"></a><a id="_363"></a>URL是URI的子集
-
-### <a id="_____116"></a><a id="_200"></a>HTML超文本
-
-#### <a id="_____118"></a><a id="_364"></a>在浏览器里看到的网页就是超文本解析而成的
-
-### <a id="_____120"></a><a id="_201"></a>HTTP、HTTPS
-
-#### <a id="_____122"></a><a id="_365"></a>访问资源需要的协议类型
-
-#### <a id="_____124"></a><a id="_366"></a>HTTP用于从网络传输超文本数据到本地浏览器的传送协议，它能保证高效而准确的传送超文本文档
-
-#### <a id="_____126"></a><a id="_367"></a>HTTPS是以安全为目标的HTTP通道
-
-### <a id="_____128"></a><a id="_202"></a>请求过程
-
-#### <a id="_____130"></a><a id="_368"></a>打开Chrome浏览器，右击并选择“检查”项，即可打开浏览器的开发者工具
-
-### <a id="_____132"></a><a id="_203"></a>请求
-
-#### <a id="_____134"></a><a id="_369"></a>请求由客户端向服务端发出，可以分为4部分内容：请求方法、请求地址、请求头、请求体
-
-#### <a id="_____136"></a><a id="_370"></a>常见的请求方法有两种：GET和POST
-
-#### <a id="_____138"></a><a id="_371"></a>请求的网址，即统一资源定位符URL
-
-#### <a id="_____140"></a><a id="_372"></a>请求头用来说明服务器要使用的附加信息，比较重要的信息由Cookie、Referer、User\-Agent等
-
-#### <a id="_____142"></a><a id="_373"></a>请求体一般承载的内容是POST请求中的表单数据
-
-### <a id="_____144"></a><a id="_204"></a>响应
-
-#### <a id="_____146"></a><a id="_374"></a>响应，由服务端返回客户端，可以分为三部分：响应状态码、响应头和响应体
-
-#### <a id="_____148"></a><a id="_375"></a>响应头包含了服务器对请求的应答信息，如Content\-Type、Server、Set\-Cookie等
-
-#### <a id="_____150"></a><a id="_376"></a>最重要的当属响应体的内容了
-
-## <a id="_____152"></a><a id="_126"></a>2\.2\.网页基础
-
-### <a id="_____154"></a><a id="_205"></a>组成
-
-#### <a id="_____156"></a><a id="_377"></a>HTML相当于骨架，JavaScript相当于肌肉，CSS相当于皮肤
-
-#### <a id="_____158"></a><a id="_378"></a>网页包括文字、按钮、图片和视频等各种复杂的元素，其基础架构就是HTML
-
-#### <a id="_____160"></a><a id="_379"></a>CSS即层叠样式表，“层叠”是指当在HTML中引用了数个样式文件，并且样式发生冲突时，浏览器能依据层叠顺序处理，“样式”指网页中文字大小、颜色、元素间距、排列等格式
-
-#### <a id="_____162"></a><a id="_380"></a>网页里看到的一些交互和动画效果，如下载进度条、提示框、轮播图等就是JavaScript的功劳
-
-### <a id="_____164"></a><a id="_206"></a>结构
-
-### <a id="_____166"></a><a id="_207"></a>节点、节点树
-
-#### <a id="_____168"></a><a id="_381"></a>所有标签定义的内容都是节点，他们构成了一个HTML DOM树
-
-#### <a id="_____170"></a><a id="_382"></a>W3C DOM标准被分为3个不同的部分：核心DOM针对任何结构化文档的标准模型；XML DOM针对XML文档的标准模型；HTML DOM针对HTML文档的标准模型
-
-#### <a id="_____172"></a><a id="_383"></a>HTML文档中德所有内容都是节点：整个文档是一个文档节点，每个HTML元素是元素节点，HTML元素内的文本是文本节点，每个HTML属性是属性节点，注释是注释节点
-
-### <a id="_____174"></a><a id="_208"></a>选择器
-
-#### <a id="_____176"></a><a id="_384"></a>使用CSS选择器来定位节点
-
-#### <a id="_____178"></a><a id="_385"></a>CSS选择器还支持嵌套选择
-
-## <a id="_____180"></a><a id="_127"></a>2\.3\.爬虫的基本原理
-
-### <a id="_____182"></a><a id="_209"></a>概述
-
-#### <a id="_____184"></a><a id="_386"></a>爬虫就是获取网页并提取和保存信息的自动化程序
-
-#### <a id="_____186"></a><a id="_387"></a>步骤：获取网页、提取信息、保存数据、自动化程序
-
-### <a id="_____188"></a><a id="_210"></a>能抓的数据
-
-#### <a id="_____190"></a><a id="_388"></a>对应各自的URL，是基于HTTP或HTTPS协议的，只要是这种数据，爬虫都可以抓取
-
-### <a id="_____192"></a><a id="_211"></a>JavaScript渲染页面
-
-## <a id="_____194"></a><a id="_128"></a>2\.4\.会话和Cookies
-
-### <a id="_____196"></a><a id="_212"></a>静态网页和动态网页
-
-#### <a id="_____198"></a><a id="_389"></a>动态网页可以动态解析URL中参数的变化，关联数据库并动态呈现不同页面内容，还可以实现用户登录和注册的功能
-
-### <a id="_____200"></a><a id="_213"></a>无状态HTTP
-
-#### <a id="_____202"></a><a id="_390"></a>HTTP协议对事务处理是没有记忆功能的，也就是说服务器不知道客户端是什么状态
-
-#### <a id="_____204"></a><a id="_391"></a>会话Cookie就是把Cookie放在浏览器内存里，浏览器在关闭后该Cookie即失效；持久Cookie则会保存到客户端的硬盘中，下次还可以继续使用，用于保持用户登录状态
-
-## <a id="_____206"></a><a id="_129"></a>2\.5\.代理的基本原理
-
-### <a id="_____208"></a><a id="_214"></a>基本原理
-
-#### <a id="_____210"></a><a id="_392"></a>服务器会检测某个IP在单位时间内的请求次数，如果超过这个阈值，就会直接拒绝服务，返回一些错误信息
-
-#### <a id="_____212"></a><a id="_393"></a>代理服务器的功能是代理网络信息
-
-### <a id="_____214"></a><a id="_215"></a>代理作用
-
-#### <a id="_____216"></a><a id="_394"></a>代理的作用：突破自身IP的访问限制；访问一些单位或团体内部资源；提高访问速度；隐藏真实IP
-
-### <a id="_____218"></a><a id="_216"></a>爬虫代理
-
-#### <a id="_____220"></a><a id="_395"></a>使用代理隐藏真实的IP，让服务器误以为是代理服务器在请求自己
-
-### <a id="_____222"></a><a id="_217"></a>代理分类
-
-#### <a id="_____224"></a><a id="_396"></a>根据协议分类：FTP代理、SSL/TLS代理、RTSP代理、Telnet代理、POP3/SMTP代理、SOCKS代理
-
-#### <a id="_____226"></a><a id="_397"></a>根据匿名程度区分：高度匿名代理（原封不动的转发）、普通匿名代理、透明代理、间谍代理
-
-### <a id="_____228"></a><a id="_218"></a>代理设置
-
-#### <a id="_____230"></a><a id="_398"></a>使用网上的免费代理；使用付费代理服务；ADSL拨号
-
-# <a id="_____232"></a><a id="_103"></a>第三章 基本库的使用
-
-## <a id="_____234"></a><a id="_274"></a>最基础的HTTP库有urllib、httplib2、requests、treq等
-
-## <a id="_____236"></a><a id="_130"></a>3\.1\.使用urllib
-
-### <a id="_____238"></a><a id="_219"></a>发送请求、处理异常、解析链接、分析Robots协议
-
-### <a id="_____240"></a><a id="_275"></a>包含如下4个模块：request最基本的HTTP请求模块，可以用来模拟发送请求；error异常处理模块，可以捕获异常然后进行重试或其他操作以保证程序不会意外终止；parse工具模块，提供了许多URL处理方法比如拆分、解析、合并等；robotparser主要用来识别网站的robots\.txt文件然后判断哪些网站可以爬
-
-### <a id="_____242"></a><a id="_276"></a>高级用法有各种Handler子类继承BaseHandler，如HTTPDefaultErrorHandler用于处理HTTP响应错误，错误都会抛出HTTPError类型的异常；HTTPRedirectHandler用于处理重定向；HTTPCookieProcessor用于处理Cookies；ProxyHandler用于设置代理；HTTPPasswordMgr用于管理密码；HTTPBasicAuthHandler用于管理认证
-
-### <a id="_____244"></a><a id="_277"></a>parse模块支持如下协议的URL处理：file、ftp、gopher、hdl、http、https、imap、mailto、mms、news、nntp、prospero、rsync、rtsp、rtspu、sftp、sip、sips、snews、svn、svn\+ssh、telnet和wais
-
-### <a id="_____246"></a><a id="_278"></a>Robots协议也称爬虫协议、机器人协议，全名叫做网络爬虫排除标准，用来告诉爬虫和搜索引擎哪些页面可以抓取，哪些不可以抓取
-
-## <a id="_____248"></a><a id="_131"></a>3\.2\.使用requests
-
-### <a id="_____250"></a><a id="_279"></a>基本用法：GET请求抓取网页、JSON数据、二进制数据，POST请求添加headers处理响应
-
-### <a id="_____252"></a><a id="_280"></a>高级用法：文件上传files字段，cookies获取与设置，会话维持Seesion对象，SSL证书验证verify参数，代理设置proxies参数，超时设置timeout参数，身份认证auth类，预请求prepared request对象
-
-## <a id="_____254"></a><a id="_132"></a>3\.3\.正则表达式
-
-### <a id="_____256"></a><a id="_281"></a>match\(\)匹配，search\(\)扫描，findall\(\)返回所有，sub\(\)替换，compile\(\)编译
-
-## <a id="_____258"></a><a id="_133"></a>3\.4\.抓取猫眼电影排行
-
-# <a id="_____260"></a><a id="_104"></a>第四章 解析库的使用
-
-## <a id="_____262"></a><a id="_134"></a>4\.1\.使用XPath
-
-### <a id="_____264"></a><a id="_239"></a>一门在XML文档中查找信息的语言
-
-### <a id="_____266"></a><a id="_282"></a>所有节点//\*，子节点/，父节点\.\.，属性匹配\[@class=''\]，文本获取text\(\)，属性获取@href，属性多值匹配li\[contains\(@class, 'itm'\)\]，多属性匹配li\[contains\(@class, 'itm'\) and @name='itm'\]，按序选择\[last\(\)\]、\[position\(\)<3\]，节点轴选择ancestor、descendant、follow\-sibling
-
-## <a id="_____268"></a><a id="_135"></a>4\.2\.使用Beautiful Soup
-
-### <a id="_____270"></a><a id="_240"></a>强大的解析工具，借助网页的结构和属性等特性解析网页
-
-### <a id="_____272"></a><a id="_283"></a>节点选择器：选择元素soup\.p、soup\.title；提取信息soup\.title\.name、soup\.p\.attrs\['name'\]、soup\.p\.string；嵌套选择soup\.head\.title\.string；关联选择soup\.p\.contents、soup\.p\.children、soup\.a\.parent、soup\.a\.next\_sibling、list\(soup\.a\.parents\)\[0\]\.attrs\['class'\]
-
-### <a id="_____274"></a><a id="_284"></a>方法选择器：find\_all\(name='ul'\)、find\_all\(attrs=\{'id': 'list\-1'\}\)、find\_all\(text=re\.compile\('link'\)\)；find\(\)、find\_parents\(\)、find\_next\_siblings、find\_next\(\)
-
-### <a id="_____276"></a><a id="_285"></a>CSS选择器：select\('li'\)、select\('ul'\)\[0\]\.attrs\['id'\]、select\('ul'\)\[0\]\.get\_text\(\)
-
-## <a id="_____278"></a><a id="_136"></a>4\.3\.使用pyquery
-
-### <a id="_____280"></a><a id="_286"></a>多种初始化方式：传入字符串、传入url、传入文件名
-
-### <a id="_____282"></a><a id="_287"></a>基本CSS选择器：doc\("\#container \.list li"\)
-
-### <a id="_____284"></a><a id="_288"></a>查找节点：find\('li'\)、children\('\.active'\)、parent\(\)、siblings\(\)、doc\('li'\)\.items\(\)
-
-### <a id="_____286"></a><a id="_289"></a>获取信息：a\.attr\('href'\)、doc\('\.active a'\)\.text\(\)
-
-### <a id="_____288"></a><a id="_290"></a>节点操作：addClass\('active'\)、attr\('name', 'link'\)、doc\.find\('p'\)\.remove\(\)
-
-### <a id="_____290"></a><a id="_291"></a>伪类选择器：doc\('li:first\-child'\)、doc\('li:gt\(2\)'\)
-
-# <a id="_____292"></a><a id="_105"></a>第五章 数据存储
-
-## <a id="_____294"></a><a id="_137"></a>5\.1\.文件存储
-
-### <a id="_____296"></a><a id="_220"></a>Text、JSON、CSV
-
-### <a id="_____298"></a><a id="_292"></a>TXT文本存储：with open\(\)、file\.write\(\)、file\.close\(\)
-
-### <a id="_____300"></a><a id="_293"></a>JSON文件存储：json\.loads\(\)、json\.dumps\(\)
-
-### <a id="_____302"></a><a id="_294"></a>CSV文件存储：csv\.writer\(csvfile\)、writer\.writerow\(\['id', 'name'\]\)、csv\.reader\(csvfile\)
-
-## <a id="_____304"></a><a id="_138"></a>5\.2\.关系型数据库存储
-
-### <a id="_____306"></a><a id="_221"></a>MySQL
-
-### <a id="_____308"></a><a id="_295"></a>连接connect\(\)、获取游标cursor\(\)、执行execute\(\)、关闭close\(\)、事务commit\(\)和rollback\(\)
-
-## <a id="_____310"></a><a id="_139"></a>5\.3\.非关系型数据库存储
-
-### <a id="_____312"></a><a id="_222"></a>MongoDB、Redis
-
-### <a id="_____314"></a><a id="_296"></a>Mongo存储：连接pymongo\.MongoClient\('mongodb://localhost:/27017'\)；指定数据库client\.test；指定集合db\.students；插入collection\.insert\(student\)；查询collection\.find\_one\(\{'name': 'Mike'\}\)；计数collection\.find\(\)\.count\(\)；更新collection\.update\_one\(condition, \{'$inc': \{'age': 1\}\}\)；删除collection\.remove\(\{'name': 'Kevin'\}\)
-
-### <a id="_____316"></a><a id="_297"></a>Redis存储：连接StrictRedis\(host='localhost', port=6379, db=0, password='xxx'\)；键操作exists\(name\)、type\(name\)、set\(name, value\)
-
-### <a id="_____318"></a><a id="_298"></a>RedisDump提供两个可执行命令，redis\-dump用于导出数据，redis\-load用于导入数据
-
-# <a id="_____320"></a><a id="_106"></a>第六章 Ajax数据爬取
-
-## <a id="_____322"></a><a id="_140"></a>6\.1\.什么是Ajax
-
-### <a id="_____324"></a><a id="_299"></a>异步的JavaScript和XML
-
-### <a id="_____326"></a><a id="_300"></a>基本原理：发送Ajax请求到网页更新的过程分为3步发送请求、解析内容、渲染网页
-
-## <a id="_____328"></a><a id="_141"></a>6\.2\.Ajax分析方法
-
-### <a id="_____330"></a><a id="_301"></a>特殊的请求类型xhr
-
-### <a id="_____332"></a><a id="_302"></a>点击请求查看Request URL、Request Headers、Response Headers、Response Body
-
-## <a id="_____334"></a><a id="_142"></a>6\.3\.Ajax结果提取
-
-## <a id="_____336"></a><a id="_143"></a>6\.4\.分析Ajax爬取今日头条街拍美图
-
-# <a id="_____338"></a><a id="_107"></a>第七章 动态渲染页面爬取
-
-## <a id="_____340"></a><a id="_303"></a>Python提供了许多模拟浏览器运行的库，如Selenium、Splash、PyV8、Ghost等
-
-## <a id="_____342"></a><a id="_144"></a>7\.1\.Selenium的使用
-
-### <a id="_____344"></a><a id="_223"></a>可以驱动浏览器执行特定的动作，可以获取浏览器当前呈现的页面源代码
-
-### <a id="_____346"></a><a id="_304"></a>基本使用：browser=webdriver\.Chrome\(\);brower\.get\('https://www\.baidu\.com'\);
-
-### <a id="_____348"></a><a id="_305"></a>声明浏览器对象：from selenium import webdriver; browser = webdriver\.Firefox\(\)
-
-### <a id="_____350"></a><a id="_306"></a>访问页面：browser\.get\(\)、browser\.close\(\)
-
-### <a id="_____352"></a><a id="_307"></a>查找节点：browser\.find\_element\_by\_id\('q'\)、browser\.find\_elements\_by\_css\_selector\('\.service\-bd li'\)
-
-### <a id="_____354"></a><a id="_308"></a>节点交互：输入文字send\_keys\(\)、清空文字clear\(\)、点击按钮click\(\)
-
-### <a id="_____356"></a><a id="_309"></a>动作链：鼠标拖拽actions = ActionChains\(browser\); actions\.drag\_and\_drop\(source, target\); actions\.perform\(\);
-
-### <a id="_____358"></a><a id="_310"></a>执行JavaScript：browser\.execute\_script\('alert\("hah"\)'\)
-
-### <a id="_____360"></a><a id="_311"></a>获取节点信息：获取属性get\_attribute\(\)、获取文本值get\_text\(\)、获取id位置标签名等等element\.tag\_name
-
-### <a id="_____362"></a><a id="_312"></a>切换iframe：browser\.switch\_to\.frame\('iframeResult'\)
-
-### <a id="_____364"></a><a id="_313"></a>延时等待：browser\.implicitly\_wait\(10\)隐式等待；wait\.until\(EC\.element\_to\_be\_clickable\(By\.CSS\_SELECTOR, '\.btn\-search'\)\)显式等待；
-
-### <a id="_____366"></a><a id="_314"></a>前进后退：browser\.back\(\)、browser\.forward\(\)
-
-### <a id="_____368"></a><a id="_315"></a>Cookies：browser\.get\_cookies\(\)、browser\.add\_cookie\(\{'name': 'bob'\}\)
-
-### <a id="_____370"></a><a id="_316"></a>选项卡管理：browser\.switch\_to\_window\(browser\.window\_handles\[1\]\)
-
-### <a id="_____372"></a><a id="_317"></a>异常处理：try except来捕获异常
-
-## <a id="_____374"></a><a id="_145"></a>7\.2\.Splash的使用
-
-### <a id="_____376"></a><a id="_224"></a>异步方式处理多个网页渲染过程，获取渲染后页面源代码或截图。通过关闭图片渲染或使用block规则来加速页面渲染速度，可执行特定的JavaScript脚本，可通过Lua脚本来控制页面渲染过程，获取渲染详细过程并通过HAR格式呈现
-
-### <a id="_____378"></a><a id="_318"></a>Splash是一个JavaScript渲染服务，是一个带有HTTP API的轻量级浏览器，同时它对接了Python中的Twisted和QT库
-
-### <a id="_____380"></a><a id="_319"></a>Splash对象属性：args加载时配置参数、js\_enabled执行开关JavaScript、resource\_timeout加载超时时间、images\_enabled是否加载图片、plugins\_enabled浏览器插件是否开启、scroll\_position控制页面滚动
-
-### <a id="_____382"></a><a id="_320"></a>Splash对象的方法：go\(\)请求某个链接、wait\(\)控制页面的等待时间、jsfunc\(\)直接调用JavaScript定义的方法、evaljs\(\)执行JavaScript代码并返回最后的执行结果、runjs\(\)执行JavaScript代码更偏向于执行某些动作或声明某些方法、autoload\(\)设置每个页面自动加载的对象、call\_later\(\)通过设置定时任务和延时时间来实现任务延时执行、http\_get\(\)模拟发送HTTP的GET请求、set\_content\(\)设置页面的内容、html\(\)获取网页的源代码、png\(\)获取PNG格式的网页截图、har\(\)获取页面加载过程描述、get\_cookies\(\)获取当前页面的Cookies、set\_viewport\_size\(\)设置当前浏览器页面的大小、set\_custom\_headers\(\)设置请求头、select\_all\(\)选中所有符合条件的节点、mouse\_click\(\)模拟鼠标点击操作
-
-### <a id="_____384"></a><a id="_321"></a>Splash API调用：render\.html用于获取JavaScript渲染的页面的HTML代码、render\.png获取网页截图、render\.har\(\)获取页面加载的HAR数据、render\.json\(\)获取接口返回的响应数据、execute\(\)最为强大的接口
-
-## <a id="_____386"></a><a id="_146"></a>7\.3\.Splash负载均衡配置
-
-### <a id="_____388"></a><a id="_322"></a>搭建一个负载均衡器来把压力分散到各个服务器上
-
-### <a id="_____390"></a><a id="_323"></a>配置负载均衡：upstream定义服务集群配置、weight指定各个服务的权重
-
-## <a id="_____392"></a><a id="_147"></a>7\.4\.使用Selenium爬取淘宝商品
-
-# <a id="_____394"></a><a id="_108"></a>第八章 验证码的识别
-
-## <a id="_____396"></a><a id="_148"></a>8\.1\.图形验证码的识别
-
-### <a id="_____398"></a><a id="_225"></a>对一些有干扰的图片做一些灰度和二值化处理，会提高图片识别的正确率
-
-### <a id="_____400"></a><a id="_324"></a>用tessercr库识别该验证码
-
-### <a id="_____402"></a><a id="_325"></a>要将原图先转换为灰度图像，然后再指定二值化阈值
-
-## <a id="_____404"></a><a id="_149"></a>8\.2\.极验滑动验证码的识别
-
-### <a id="_____406"></a><a id="_226"></a>模拟点击验证按钮识别滑动缺口的位置模拟拖动滑块
-
-### <a id="_____408"></a><a id="_326"></a>识别并通过极验验证码的验证，包括分析识别思路、识别缺口位置、生成滑块拖动路径、模拟实现滑块拼合通过验证等步骤
-
-### <a id="_____410"></a><a id="_327"></a>极验验证码广泛应用于直播视频、金融服务、电子商务、游戏娱乐、政府企业等各大类型网站
-
-### <a id="_____412"></a><a id="_328"></a>极验验证码还增加了机器学习的方法来识别拖动轨迹
-
-### <a id="_____414"></a><a id="_329"></a>官方网站的安全防护有如下几点说明：三角防护之防模拟、三角防护之防伪造、三角防护之防暴力
-
-### <a id="_____416"></a><a id="_330"></a>采用直接模拟浏览器动作的方式来完成验证
-
-### <a id="_____418"></a><a id="_331"></a>验证码图片缺口的四周边缘有明显的断裂边缘，边缘与边缘周围有明显的区别
-
-## <a id="_____420"></a><a id="_150"></a>8\.3\.点触验证码的识别
-
-### <a id="_____422"></a><a id="_227"></a>借助在线验证码平台
-
-### <a id="_____424"></a><a id="_332"></a>12306就是典型的点触验证码
-
-### <a id="_____426"></a><a id="_333"></a>一个专门提供点触验证码服务的站点TouClick
-
-### <a id="_____428"></a><a id="_334"></a>识别的思路：一是文字识别；二是图像识别；
-
-## <a id="_____430"></a><a id="_151"></a>8\.4\.微博宫格验证码的识别
-
-### <a id="_____432"></a><a id="_335"></a>新型交互式验证码，每个宫格之间会有一条指示连线，指示了应该的滑动轨迹
-
-### <a id="_____434"></a><a id="_336"></a>获取模板、模板匹配、模拟拖动
-
-# <a id="_____436"></a><a id="_109"></a>第九章 代理的使用
-
-## <a id="_____438"></a><a id="_152"></a>9\.1\.代理的设置
-
-### <a id="_____440"></a><a id="_228"></a>response=request\.get\('http://xxx\.;'\)
-
-### <a id="_____442"></a><a id="_337"></a>Selenium同样是可以设置代理，包括两种方式：一种是有界面浏览器如Chrome；另一种是无界面浏览器如PhantomJS
-
-## <a id="_____444"></a><a id="_153"></a>9\.2\.代理池的维护
-
-### <a id="_____446"></a><a id="_229"></a>存储模块、获取模块、检测模块、接口模块
-
-### <a id="_____448"></a><a id="_338"></a>存储模块使用Redis的有序集合，用来做代理的去重和状态标识，同时它也是中心模块和基础模块，将其他模块串联起来
-
-### <a id="_____450"></a><a id="_339"></a>获取模块定时从代理网站获取代理，将获取的代理传递给存储模块，并保存到数据库
-
-### <a id="_____452"></a><a id="_340"></a>检测模块定时通过存储模块获取所有代理，并对代理进行检测，根据不同的检测结果对代理设置不同的标识
-
-### <a id="_____454"></a><a id="_341"></a>接口模块通过Web API提供服务接口，接口通过连接数据库并通过Web形式返回可用的代理
-
-## <a id="_____456"></a><a id="_154"></a>9\.3\.付费代理的使用
-
-### <a id="_____458"></a><a id="_230"></a>迅代理、阿布云代理
-
-### <a id="_____460"></a><a id="_342"></a>讯代理上可供选购的代理类别：优质代理、独享动态、独享秒切、动态混拨、优质定制
-
-## <a id="_____462"></a><a id="_155"></a>9\.4\.ADSL拨号代理
-
-### <a id="_____464"></a><a id="_343"></a>代理池可以挑选出许多可用代理，但是常常其稳定性不高、响应速度慢
-
-### <a id="_____466"></a><a id="_344"></a>要追求更加稳定的代理，就需要购买专有代理或者自己搭建代理服务器
-
-### <a id="_____468"></a><a id="_345"></a>ADSL非对称数字用户环路，它的上行和下行带宽不对称，采用频分复用技术把普通的电话线分成了电话、上行和下行3个相对独立的信道，从而避免了相互之间的干扰
-
-### <a id="_____470"></a><a id="_346"></a>ADSL通过拨号的方式上网，需要输入ADSL账号和密码，每次拨号就更换一个IP
-
-### <a id="_____472"></a><a id="_347"></a>首先需要成功安装Redis数据库并启动服务，另外还需要安装requests、redis\-py、Tornado库
-
-### <a id="_____474"></a><a id="_348"></a>要做的两件事：一是怎样将主机设置为代理服务器，二是怎样实时获取拨号主机的IP
-
-### <a id="_____476"></a><a id="_349"></a>设计的架构要考虑支持多主机的问题
-
-### <a id="_____478"></a><a id="_350"></a>数据库要做的就是定时对每台主机的代理进行更新，而更新时又需要拨号主机的唯一标识，根据主机标识查出这条数据，然后将这条数据对应的代理更新
-
-## <a id="_____480"></a><a id="_156"></a>9\.5\.使用代理爬取微信公众号文章
-
-# <a id="_____482"></a><a id="_110"></a>第十章 模拟登录
-
-## <a id="_____484"></a><a id="_351"></a>实际是在客户端生成了Cookies。而Cookies里面保存了SessionID的信息，登录之后的后续请求都会携带生成后的Cookie发送给服务器
-
-## <a id="_____486"></a><a id="_157"></a>10\.1\.模拟登录并爬取GitHub
-
-### <a id="_____488"></a><a id="_352"></a>Headers里面包含了Cookies、Host、Origin、Referer、User\-Agent等信息
-
-### <a id="_____490"></a><a id="_353"></a>Form Data包含了5个字段，commit是固定的字符串Sign in，utf\-8是一个勾选字符，authenticity\_token较长，其初步判断是一个Base64加密的字符串，login是登录的用户名，password是登录的密码
-
-### <a id="_____492"></a><a id="_354"></a>访问登录页面要完成两件事：一是通过此页面获取初始的Cookies，而是提取出authenticity\_token
-
-## <a id="_____494"></a><a id="_158"></a>10\.2\.Cookies池的搭建
-
-### <a id="_____496"></a><a id="_355"></a>不登录直接爬取的一些弊端：1、设置了登录限制的页面无法爬取；2、一些页面和接口虽然可以直接请求，但是请求一旦频繁，访问就容易被限制或者IP直接被封
-
-### <a id="_____498"></a><a id="_356"></a>Cookies池需要有自动生成Cookies、定时检测Cookies、提供随机Cookies等几大核心功能
-
-### <a id="_____500"></a><a id="_357"></a>思路：Cookies池中保存了许多账号和登录后的Cookies信息，并且Cookies池还需要定时检测每个Cookies的有效性，如果某Cookies无效，那就删除该Cookies并模拟登陆生成新的Cookies
-
-### <a id="_____502"></a><a id="_358"></a>存储模块负责存储每个账号的用户名密码以及每个账号对应的Cookies信息，同时还需要提供一些方法来实现方便的存取操作
-
-### <a id="_____504"></a><a id="_359"></a>生成模块负责生成新的Cookies。会从存储模块逐一拿取账号的用户名和密码，然后模拟登录目标页面，判断登陆成功，就将Cookies返回并交给存储模块存储
-
-### <a id="_____506"></a><a id="_360"></a>检测模块需要定时检测数据库中的Cookies。需要设置一个检测链接，不同的站点检测链接不同，检测模块会逐个拿取账号对应的Cookies去请求链接，如果返回的状态是有效的，那么此Cookies没有失效，否则Cookies失效并移除
-
-### <a id="_____508"></a><a id="_361"></a>接口模块需要用API来提供对外服务的接口。由于可用的Cookies可能有多个，可以随机返回Cookies的接口，这样保证每个Cookies都有可能被取到。Cookies越多，每个Cookies被取到的概率就会越小，从而减少被封号的风险
-
-# <a id="_____510"></a><a id="_111"></a>第十一章 App的爬取
-
-## <a id="_____512"></a><a id="_231"></a>App的爬取相比Web端爬取更加容易，反爬虫能力没那么强，而且数据大多是以JSON形式传输，解析更加简单
-
-## <a id="_____514"></a><a id="_402"></a>常用的抓包软件有WireShark、Fiddler、Charles、mitmproxy、AnyProxy等，他们的原理基本是相同的
-
-## <a id="_____516"></a><a id="_159"></a>11\.1\.Charles的使用
-
-### <a id="_____518"></a><a id="_403"></a>相比Fiddler来说，Charles的功能更强大，而且跨平台支持更好
-
-## <a id="_____520"></a><a id="_160"></a>11\.2\.mitmproxy的使用
-
-### <a id="_____522"></a><a id="_404"></a>mitmproxy是一个支持HTTP和HTTPS的抓包程序，有类似Fiddler、Charles的功能，只不过它是一个控制台的形式操作
-
-### <a id="_____524"></a><a id="_405"></a>mitmproxy有如下几项功能：拦截HTTP和HTTPS请求和响应；保存HTTP会话并进行分析；模拟客户端发起请求，模拟服务器返回响应；利用反向代理将流量转发给指定的服务器；支持Mac和Linux上的透明代理；利用Python对HTTP请求和响应进行实时处理
-
-### <a id="_____526"></a><a id="_406"></a>mitmproxy还提供了命令行式的编辑功能
-
-### <a id="_____528"></a><a id="_407"></a>mitmproxy的强大之处体现在它的另一个工具mitmdump
-
-## <a id="_____530"></a><a id="_161"></a>11\.3\.mitm爬取“得到”App电子书信息
-
-## <a id="_____532"></a><a id="_162"></a>11\.4\.Appium的基本使用
-
-### <a id="_____534"></a><a id="_408"></a>Appium是一个跨平台移动端自动化测试工具，可以非常便捷地为iOS和Android平台创建自动化测试用例
-
-## <a id="_____536"></a><a id="_163"></a>11\.5\.Appium的基本使用
-
-## <a id="_____538"></a><a id="_164"></a>11\.6\.Appium\+mitmdump爬取京东商品
-
-# <a id="_____540"></a><a id="_112"></a>第十二章 pyspider框架的使用
-
-## <a id="_____542"></a><a id="_165"></a>12\.1\.pyspider框架介绍
-
-### <a id="_____544"></a><a id="_232"></a>国人binux编写的强大网络爬虫系统
-
-### <a id="_____546"></a><a id="_233"></a>带有强大的WebUI、脚本编辑器、任务监控器、项目管理器、结果处理器
-
-### <a id="_____548"></a><a id="_399"></a>与scrapy的比较：提供了WebUI给编写和调试用；调试非常简便；支持PhantomJS来进行JavaScript渲染页面的采集；内置了pyquery作为选择器；可扩展程度不足；
-
-### <a id="_____550"></a><a id="_234"></a>如果要快速实现一个页面的抓取，推荐使用pyspider；如果要应对反爬程度很强、超大规模的抓取，推荐使用scrapy
-
-### <a id="_____552"></a><a id="_400"></a>pyspider的架构主要分为Scheduler（调度器）、Fetcher（抓取器）、Processer（处理器）三个部分，整个爬取过程受到Monitor（监控器）的监控，抓取的结果被Result Worker（结果处理器）处理
-
-### <a id="_____554"></a><a id="_401"></a>Scheduler发起任务调度，Fetcher负责抓取网页内容，Processer负责解析网页内容，然后将生成的Request发给Scheduler进行调度，将生成的提取结果输出保存
-
-## <a id="_____556"></a><a id="_166"></a>12\.2\.pyspider的基本使用
-
-## <a id="_____558"></a><a id="_167"></a>12\.3\.pyspider用法详解
-
-# <a id="_____560"></a><a id="_113"></a>第十三章 Scrapy框架的使用
-
-## <a id="_____562"></a><a id="_168"></a>13\.1\.Scrapy框架介绍
-
-### <a id="_____564"></a><a id="_235"></a>基于Twisted的异步处理框架、功能强大爬取效率高，相关扩展组件多，可配置和可扩展高
-
-## <a id="_____566"></a><a id="_169"></a>13\.2\.Scrapy入门
-
-## <a id="_____568"></a><a id="_170"></a>13\.3\.Selector的用法
-
-## <a id="_____570"></a><a id="_171"></a>13\.4\.Spider的用法
-
-## <a id="_____572"></a><a id="_172"></a>13\.5\.Downloader Middleware的用法
-
-## <a id="_____574"></a><a id="_173"></a>13\.6\.Spider Middleware的用法
-
-## <a id="_____576"></a><a id="_174"></a>13\.7\.Item Pipeline的用法
-
-## <a id="_____578"></a><a id="_175"></a>13\.8\.Scrapy对接Seleium
-
-## <a id="_____580"></a><a id="_176"></a>13\.9\.Scripy对接Splash
-
-## <a id="_____582"></a><a id="_177"></a>13\.10\.Scrapy通用爬虫
-
-## <a id="_____584"></a><a id="_178"></a>13\.11\.Scrapyrt的使用
-
-## <a id="_____586"></a><a id="_179"></a>13\.12\.Scrapy对接Docker
-
-## <a id="_____588"></a><a id="_180"></a>13\.13\.Scrapy爬取新浪微博
-
-# <a id="_____590"></a><a id="_114"></a>第十四章 分布式爬虫
-
-## <a id="_____592"></a><a id="_236"></a>准备工作、搭建Redis服务器、部署代理池和Cookie池、配置Scrapy\-redis、配置存储目标、运行结果
-
-## <a id="_____594"></a><a id="_181"></a>14\.1\.分布式爬虫原理
-
-## <a id="_____596"></a><a id="_182"></a>14\.2\.Scrapy\-Redis源码解析
-
-## <a id="_____598"></a><a id="_183"></a>14\.3\.Scrapy分布式实现
-
-## <a id="_____600"></a><a id="_184"></a>14\.4\.Bloom Filter的对接
-
-# <a id="_____602"></a><a id="_115"></a>第十五章 分布式爬虫的部署
-
-## <a id="_____604"></a><a id="_185"></a>15\.1\.Scrapyd分布式部署
-
-### <a id="_____606"></a><a id="_237"></a>Scrapyd提供一系列HTTP接口来帮助我们部署、启动、停止、删除爬虫程序，支持版本管理，可以管理多个爬虫任务
-
-## <a id="_____608"></a><a id="_186"></a>15\.2\.Scrapyd\-Client的使用
-
-## <a id="_____610"></a><a id="_187"></a>15\.3\.Scrapyd对接Docker
-
-## <a id="_____612"></a><a id="_188"></a>15\.4\.Scrapyd批量部署
-
-## <a id="_____614"></a><a id="_189"></a>15\.5\.Gerapy分布式管理
-
-### <a id="_____616"></a><a id="_238"></a>Gerapy是一个基于Scrapyd、Scrapyd API、Django、Vue搭建的分布式爬虫管理框架
-
+### 写在后面
+- pdf书籍、笔记思维导图、资料打包下载地址：暂无
+- 思维导图在线查看：[点击打开](/bigdata_notes/attachment/C.《Python3网络爬虫开发实战》_崔庆才_201804.svg)
+- 得到电子书地址：暂无

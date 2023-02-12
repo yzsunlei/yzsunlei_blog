@@ -52,7 +52,7 @@ const getAllFile = (dir) => {
 }
 
 const sourceDir = 'docs/.vuepress/dist'
-const targetDir = "bigfed_notes"
+const targetDir = "bigdata_notes"
 getAllFile(sourceDir).then((files) => {
   putOss(sourceDir, targetDir, files);
 })

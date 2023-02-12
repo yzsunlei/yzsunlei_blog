@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.jpg
-heroText: 大前端
+heroText: 大数智
 tagline: 让工作、生活充满节奏感
 actionText: 马上开始 →
 actionLink: /01.basis/

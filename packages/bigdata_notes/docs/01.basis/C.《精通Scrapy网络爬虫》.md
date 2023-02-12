@@ -1,570 +1,295 @@
-<a id="_____"></a><a id="_Toc515962800"></a>《精通Scrapy网络爬虫》
 
-[1\.	第1章 初识Scrapy	1](#_101)
+### 写在前面
+- 书籍介绍：暂无。
+- 我的简评：暂无。
+- ！！福利：文末有书籍地址、笔记思维导图、相关资料下载地址哦
 
-[1\.1\.	1、网络爬虫是什么	1](#_115)
+### 第1章 初识Scrapy
 
-[1\.1\.1\.	网络爬虫是指在互联网上自动爬取网站内容信息的程序，也被称为网络蜘蛛或网络机器人	1](#_160)
+#### 1、网络爬虫是什么
 
-[1\.1\.2\.	大型的爬虫程序广泛应用于搜索引擎、数据挖掘等领域，个人用户或企业也可以利用爬虫收集对自身有价值的数据	1](#_161)
+- 网络爬虫是指在互联网上自动爬取网站内容信息的程序，也被称为网络蜘蛛或网络机器人
 
-[1\.1\.3\.	一个网络爬虫程序的基本执行流程可以总结为以下循环：下载页面；提取页面中的数据；提取页面中的链接	1](#_162)
+- 大型的爬虫程序广泛应用于搜索引擎、数据挖掘等领域，个人用户或企业也可以利用爬虫收集对自身有价值的数据
 
-[1\.1\.4\.	设计爬虫程序时，还要考虑防止重复爬取相同页面（URL去重）、网页搜索策略（深度优先或广度优先等）、爬虫访问边界限定等一系列问题	1](#_163)
+- 一个网络爬虫程序的基本执行流程可以总结为以下循环：下载页面；提取页面中的数据；提取页面中的链接
 
-[1\.2\.	2、Scrapy简介及安装	1](#_116)
+- 设计爬虫程序时，还要考虑防止重复爬取相同页面（URL去重）、网页搜索策略（深度优先或广度优先等）、爬虫访问边界限定等一系列问题
 
-[1\.2\.1\.	Scrapy简单易用、灵活易拓展、开发社区活跃，并且是跨平台的	1](#_164)
+#### 2、Scrapy简介及安装
 
-[1\.3\.	3、编写第一个Scrapy爬虫	1](#_117)
+- Scrapy简单易用、灵活易拓展、开发社区活跃，并且是跨平台的
 
-[2\.	第2章 编写Spider	1](#_102)
+#### 3、编写第一个Scrapy爬虫
 
-[2\.1\.	1、Scrapy框架结构及工作原理	1](#_118)
+### 第2章 编写Spider
 
-[2\.1\.1\.	Scrapy框架中的各个组件：ENGINE引擎，框架的核心，其他所有组件在其控制下协同工作；SCHEDULER调度器，负责对SPIDER提交的下载请求进行调度；DOWNLOADER下载器，负责下载页面（发送HTTP请求/接收HTTP响应）；SPIDER爬虫，负责提取页面中的数据，并产生对新页面的下载请求；MIDDELWARE中间件，负责对Request对象和Response对象进行处理；ITEM PIPELINE数据管道，负责对爬取到的数据进行处理	1](#_165)
+#### 1、Scrapy框架结构及工作原理
 
-[2\.1\.2\.	框架数据流中的3个对象：REQUEST（Scrapy中的HTTP请求对象）、RESPONSE（Scrapy中的HTTP响应对象）、ITEM（从页面中爬取的一项数据）	2](#_166)
+- Scrapy框架中的各个组件：ENGINE引擎，框架的核心，其他所有组件在其控制下协同工作；SCHEDULER调度器，负责对SPIDER提交的下载请求进行调度；DOWNLOADER下载器，负责下载页面（发送HTTP请求/接收HTTP响应）；SPIDER爬虫，负责提取页面中的数据，并产生对新页面的下载请求；MIDDELWARE中间件，负责对Request对象和Response对象进行处理；ITEM PIPELINE数据管道，负责对爬取到的数据进行处理
 
-[2\.2\.	2、Request和Response对象	2](#_119)
+- 框架数据流中的3个对象：REQUEST（Scrapy中的HTTP请求对象）、RESPONSE（Scrapy中的HTTP响应对象）、ITEM（从页面中爬取的一项数据）
 
-[2\.2\.1\.	Request对象用来描述一个HTTP请求。可以根据需求访问Request对象的属性，常用的几个：url、method、headers、body、meta	2](#_167)
+#### 2、Request和Response对象
 
-[2\.2\.2\.	Response对象描述一个HTTP响应，Response只是基类，根据响应内容的不同有如下子类：TextResponse、HtmlRespnse、XmlResponse。	2](#_168)
+- Request对象用来描述一个HTTP请求。可以根据需求访问Request对象的属性，常用的几个：url、method、headers、body、meta
 
-[2\.2\.3\.	HtmlResponse对象有很多属性，最常用的3个方法：xpath、css、urljoin	2](#_169)
+- Response对象描述一个HTTP响应，Response只是基类，根据响应内容的不同有如下子类：TextResponse、HtmlRespnse、XmlResponse。
 
-[2\.3\.	3、Spider开发流程	2](#_120)
+- HtmlResponse对象有很多属性，最常用的3个方法：xpath、css、urljoin
 
-[2\.3\.1\.	Spider基类实现了以下内容：供Scrapy引擎调用的接口；供用户使用的实用工具函数；供用户访问的属性；	2](#_170)
+#### 3、Spider开发流程
 
-[2\.3\.2\.	实现一个Spider只需要完成下面4个步骤：继承scrapy\.Spider、为Spider取名、设定起始爬取点、实现页面解析函数	2](#_171)
+- Spider基类实现了以下内容：供Scrapy引擎调用的接口；供用户使用的实用工具函数；供用户访问的属性；
 
-[2\.3\.3\.	爬虫设定起始爬取点的两种方式：定义start\_urls属性、实现start\_request方法	2](#_172)
+- 实现一个Spider只需要完成下面4个步骤：继承scrapy.Spider、为Spider取名、设定起始爬取点、实现页面解析函数
 
-[2\.3\.4\.	页面解析函数是实现Spider中最核心的部分需要完成以下两项工作：使用选择器提取页面中的数据，将数据封装后提交给Scrapy引擎；使用选择器或LinkExtractor提取页面中的链接，用其构造新的Request对象并提交给Scrapy引擎	2](#_173)
+- 爬虫设定起始爬取点的两种方式：定义start_urls属性、实现start_request方法
 
-[3\.	第3章 使用Selector提取数据	2](#_103)
+- 页面解析函数是实现Spider中最核心的部分需要完成以下两项工作：使用选择器提取页面中的数据，将数据封装后提交给Scrapy引擎；使用选择器或LinkExtractor提取页面中的链接，用其构造新的Request对象并提交给Scrapy引擎
 
-[3\.1\.	1、Selector对象	2](#_121)
+### 第3章 使用Selector提取数据
 
-[3\.1\.1\.	Python中常用以下模块处理文本解析：BeautifulSoup、lxml	3](#_174)
+#### 1、Selector对象
 
-[3\.1\.2\.	Selector类的实现位于scrapy\.selector模块	3](#_175)
+- Python中常用以下模块处理文本解析：BeautifulSoup、lxml
 
-[3\.1\.3\.	调用Selector对象的xpath方法或css方法可以选中文档中的某个或某些部分	3](#_176)
+- Selector类的实现位于scrapy.selector模块
 
-[3\.1\.4\.	调用Selector或SelectorLis对象的以下方法可将选中的内容提取：extract\(\)、re\(\)、extract\_first\(\)、re\_first\(\)	3](#_177)
+- 调用Selector对象的xpath方法或css方法可以选中文档中的某个或某些部分
 
-[3\.2\.	2、Response内置Selector	3](#_122)
+- 调用Selector或SelectorLis对象的以下方法可将选中的内容提取：extract()、re()、extract_first()、re_first()
 
-[3\.2\.1\.	几乎不需要手动创建Selector对象，Response对象内部会以自身为参数自动创建Selector对象，并将该Selector对象缓存	3](#_178)
+#### 2、Response内置Selector
 
-[3\.2\.2\.	Response对象还提供了xpath和css方法	3](#_179)
+- 几乎不需要手动创建Selector对象，Response对象内部会以自身为参数自动创建Selector对象，并将该Selector对象缓存
 
-[3\.3\.	3、XPath	3](#_123)
+- Response对象还提供了xpath和css方法
 
-[3\.3\.1\.	XPath即XML路径语言，是一种用来确定xml文档中某部分位置的语言	3](#_180)
+#### 3、XPath
 
-[3\.3\.2\.	XPath还提供许多函数，如数字、字符串、时间、日期、统计等	3](#_181)
+- XPath即XML路径语言，是一种用来确定xml文档中某部分位置的语言
 
-[3\.4\.	4、CSS选择器	3](#_124)
+- XPath还提供许多函数，如数字、字符串、时间、日期、统计等
 
-[3\.4\.1\.	CSS即层叠样式表，其选择器是一种用来确定HTML文档中某部分位置的语言	3](#_182)
+#### 4、CSS选择器
 
-[3\.4\.2\.	当我们调用Selector对象的CSS方法时，在其内部会使用Python库cssselect将CSS选择器表达式翻译成XPath表达式，然后调用Selector对象的XPATH方法	3](#_183)
+- CSS即层叠样式表，其选择器是一种用来确定HTML文档中某部分位置的语言
 
-[4\.	第4章 使用Item 封装数据	3](#_104)
+- 当我们调用Selector对象的CSS方法时，在其内部会使用Python库cssselect将CSS选择器表达式翻译成XPath表达式，然后调用Selector对象的XPATH方法
 
-[4\.1\.	1、Item和Field	3](#_125)
+### 第4章 使用Item 封装数据
 
-[4\.1\.1\.	Scrapy提供以下两个类，用户可以使用它们自定义数据类，封装爬取到的数据	4](#_184)
+#### 1、Item和Field
 
-[4\.2\.	2、拓展Item子类	4](#_126)
+- Scrapy提供以下两个类，用户可以使用它们自定义数据类，封装爬取到的数据
 
-[4\.3\.	3、Field元数据	4](#_127)
+#### 2、拓展Item子类
 
-[4\.3\.1\.	一项数据由Spider提交给Scrapy引擎后，可能会被递送给其他组件（Item Pipeline、Exporter）处理	4](#_185)
+#### 3、Field元数据
 
-[5\.	第5章 使用Item Pipeline处理数据	4](#_105)
+- 一项数据由Spider提交给Scrapy引擎后，可能会被递送给其他组件（Item Pipeline、Exporter）处理
 
-[5\.1\.	1、Item Pipeline	4](#_128)
+### 第5章 使用Item Pipeline处理数据
 
-[5\.1\.1\.	在Scrapy中，Item Pipeline是处理数据的组件，一个Item Pipeline就是一个包含特定接口上的类，通常只负责一种功能的数据处理，在一个项目中可以同时启用多个Item Pipeline，他们按指定次序级联起来，形成一条数据处理流水线	4](#_186)
+#### 1、Item Pipeline
 
-[5\.1\.2\.	Item Pipeline的几种典型应用：清洗数据、验证数据的有效性、过滤掉重复的数据、将数据存入数据库	4](#_187)
+- 在Scrapy中，Item Pipeline是处理数据的组件，一个Item Pipeline就是一个包含特定接口上的类，通常只负责一种功能的数据处理，在一个项目中可以同时启用多个Item Pipeline，他们按指定次序级联起来，形成一条数据处理流水线
 
-[5\.1\.3\.	process\_item方法是Item Pipeline的核心	4](#_188)
+- Item Pipeline的几种典型应用：清洗数据、验证数据的有效性、过滤掉重复的数据、将数据存入数据库
 
-[5\.1\.4\.	还有3个比较常用的方法，可根据需求选择实现：open\_spider（通常用于在开始处理数据之前完成某些初始化工作）；close\_spider（通常用于在处理完所有数据之后完成某些清理工作）；from\_crawer（通过crawler\.settings读取配置，根据配置创建Item Pipeline对象）	4](#_189)
+- process_item方法是Item Pipeline的核心
 
-[5\.2\.	2、更多例子	4](#_129)
+- 还有3个比较常用的方法，可根据需求选择实现：open_spider（通常用于在开始处理数据之前完成某些初始化工作）；close_spider（通常用于在处理完所有数据之后完成某些清理工作）；from_crawer（通过crawler.settings读取配置，根据配置创建Item Pipeline对象）
 
-[5\.2\.1\.	过滤重复数据	4](#_190)
+#### 2、更多例子
 
-[5\.2\.2\.	将数据存入MongoDB	4](#_191)
+- 过滤重复数据
 
-[6\.	第6章 使用LinkExtractor提取链接	5](#_106)
+- 将数据存入MongoDB
 
-[6\.1\.	1、使用LinkExtractor	5](#_130)
+### 第6章 使用LinkExtractor提取链接
 
-[6\.1\.1\.	提取链接有使用Selector和使用LinkExtractor两种方法	5](#_192)
+#### 1、使用LinkExtractor
 
-[6\.1\.2\.	Scrapy提供了一个专门用于提取链接的类LinkExtractor，在提取大量链接或提取规则比较复杂时，使用LinkExtractor更加方便	5](#_193)
+- 提取链接有使用Selector和使用LinkExtractor两种方法
 
-[6\.2\.	2、描述提取规则	5](#_131)
+- Scrapy提供了一个专门用于提取链接的类LinkExtractor，在提取大量链接或提取规则比较复杂时，使用LinkExtractor更加方便
 
-[6\.2\.1\.	LinkExtractor构造器的所有参数都有默认值，如果构造对象时不传递任何参数（使用默认值），就提取页面中的所有链接	5](#_194)
+#### 2、描述提取规则
 
-[6\.2\.2\.	allow提取绝对url与正则表达式匹配的链接，deny相反；allow\_domains提取指定域名的链接，deny\_domains相反；restrict\_xpaths提取XPath表达式选中区域下的链接；restrcit\_css提取CSS选择器选中区域下的链接；tags提取指定标签内的链接；attrs提取指定属性内的链接；process\_value接收一个回调函数	5](#_195)
+- LinkExtractor构造器的所有参数都有默认值，如果构造对象时不传递任何参数（使用默认值），就提取页面中的所有链接
 
-[7\.	第7章 使用Exporter导出数据	5](#_107)
+- allow提取绝对url与正则表达式匹配的链接，deny相反；allow_domains提取指定域名的链接，deny_domains相反；restrict_xpaths提取XPath表达式选中区域下的链接；restrcit_css提取CSS选择器选中区域下的链接；tags提取指定标签内的链接；attrs提取指定属性内的链接；process_value接收一个回调函数
 
-[7\.1\.	1、指定如何导出数据	5](#_132)
+### 第7章 使用Exporter导出数据
 
-[7\.1\.1\.	负责导出数据的组件被称为Exporter（导出器），Scrapy内部实现了多个Exporter，每个Exporter实现一种数据格式的导出，支持的数据格式如下：JSON、JSON lines、CSV、XML、Pickle、Marshal	5](#_196)
+#### 1、指定如何导出数据
 
-[7\.1\.2\.	导出数据时，需向Scrapy提供以下信息：导出文件路径、导出数据格式	5](#_197)
+- 负责导出数据的组件被称为Exporter（导出器），Scrapy内部实现了多个Exporter，每个Exporter实现一种数据格式的导出，支持的数据格式如下：JSON、JSON lines、CSV、XML、Pickle、Marshal
 
-[7\.1\.3\.	可以通过以下两种方式指定爬虫如何导出数据：命令行参数指定、配置文件指定	5](#_198)
+- 导出数据时，需向Scrapy提供以下信息：导出文件路径、导出数据格式
 
-[7\.2\.	2、添加导出数据格式	5](#_133)
+- 可以通过以下两种方式指定爬虫如何导出数据：命令行参数指定、配置文件指定
 
-[7\.2\.1\.	BaseItemExporter定义了一些抽象接口待子类实现	6](#_199)
+#### 2、添加导出数据格式
 
-[8\.	第8章 项目练习	6](#_108)
+- BaseItemExporter定义了一些抽象接口待子类实现
 
-[8\.1\.	1、项目需求	6](#_134)
+### 第8章 项目练习
 
-[8\.2\.	2、页面分析	6](#_135)
+#### 1、项目需求
 
-[8\.3\.	3、编码实现	6](#_136)
+#### 2、页面分析
 
-[9\.	第9章 下载文件和图片	6](#_109)
+#### 3、编码实现
 
-[9\.1\.	1、FilesPipeline和ImagesPipeline	6](#_137)
+### 第9章 下载文件和图片
 
-[9\.1\.1\.	Scrapy框架内部提供了两个Item Pipeline，专门用于下载文件和图片：FilesPipeline、ImagesPipeline	6](#_200)
+#### 1、FilesPipeline和ImagesPipeline
 
-[9\.1\.2\.	下载结果信息包括以下内容：path文件下载到本地的路径、checksum文件的校验和、url文件的地址	6](#_201)
+- Scrapy框架内部提供了两个Item Pipeline，专门用于下载文件和图片：FilesPipeline、ImagesPipeline
 
-[9\.2\.	2、项目实战：爬取matplotlib	6](#_138)
+- 下载结果信息包括以下内容：path文件下载到本地的路径、checksum文件的校验和、url文件的地址
 
-[9\.2\.1\.	matplotlib是一个非常著名的Python绘图库，广泛应用于科学计算和数据分析等领域	6](#_202)
+#### 2、项目实战：爬取matplotlib
 
-[9\.3\.	3、项目实战：下载360图片	6](#_139)
+- matplotlib是一个非常著名的Python绘图库，广泛应用于科学计算和数据分析等领域
 
-[10\.	第10章 模拟登录	6](#_110)
+#### 3、项目实战：下载360图片
 
-[10\.1\.	1、登录实质	6](#_140)
+### 第10章 模拟登录
 
-[10\.1\.1\.	响应头部中长长的Set\-Cookie字段就是网站服务器程序保存在客户端（浏览器）的cookie信息，其中包含标识用户身份的session信息，之后对该网站发送的其他HTTP请求都会带上这个身份证（session）信息，服务器程序通过这个身份证识别出发送请求的用户，从而决定响应怎样的页面	6](#_203)
+#### 1、登录实质
 
-[10\.1\.2\.	其核心是向服务器发送含有表单数据的HTTP请求（通常是POST）	7](#_205)
+- 响应头部中长长的Set-Cookie字段就是网站服务器程序保存在客户端（浏览器）的cookie信息，其中包含标识用户身份的session信息，之后对该网站发送的其他HTTP请求都会带上这个身份证（session）信息，服务器程序通过这个身份证识别出发送请求的用户，从而决定响应怎样的页面
 
-[10\.2\.	2、Scrapy模拟登录	7](#_141)
+- 其核心是向服务器发送含有表单数据的HTTP请求（通常是POST）
 
-[10\.2\.1\.	Scrapy提供了一个FormRequest类（Request的子类），专门用于构造含有表单数据的请求，FormRequest的构造器方法有一个formdata参数，接收字典形式的表单数据	7](#_204)
+#### 2、Scrapy模拟登录
 
-[10\.3\.	3、识别验证码	7](#_142)
+- Scrapy提供了一个FormRequest类（Request的子类），专门用于构造含有表单数据的请求，FormRequest的构造器方法有一个formdata参数，接收字典形式的表单数据
 
-[10\.3\.1\.	OCR是光学字符识别的缩写，用于在图像中提取文本信息，tesseract是利用该技术实现的一个验证码识别库，在Python中可以通过第三方库pytesseract调用它	7](#_206)
+#### 3、识别验证码
 
-[10\.3\.2\.	有些付费平台提供了HTTP服务接口，用户可以通过HTTP请求将验证码图片发送给平台，平台识别后将结果通过HTTP响应返回	7](#_207)
+- OCR是光学字符识别的缩写，用于在图像中提取文本信息，tesseract是利用该技术实现的一个验证码识别库，在Python中可以通过第三方库pytesseract调用它
 
-[10\.3\.3\.	人工识别验证码也是可行的，其实现也非常简单：在Scrapy下载完验证码图片后，调用Image\.show方法将图片显示出来，然后调用Python内置的input函数，等待用户肉眼识别后输入识别结果	7](#_208)
+- 有些付费平台提供了HTTP服务接口，用户可以通过HTTP请求将验证码图片发送给平台，平台识别后将结果通过HTTP响应返回
 
-[10\.4\.	4、Cookie登录	7](#_143)
+- 人工识别验证码也是可行的，其实现也非常简单：在Scrapy下载完验证码图片后，调用Image.show方法将图片显示出来，然后调用Python内置的input函数，等待用户肉眼识别后输入识别结果
 
-[10\.4\.1\.	不用管各种浏览器将Cookie以哪种形式存储在哪里，使用第三方Python库browsercookie便可以获取Chrome和Firefox浏览器中的Cookie	7](#_209)
+#### 4、Cookie登录
 
-[10\.4\.2\.	Scrapy爬虫所使用的Cookie由内置下载中间件CookiesMiddleware自动处理	7](#_210)
+- 不用管各种浏览器将Cookie以哪种形式存储在哪里，使用第三方Python库browsercookie便可以获取Chrome和Firefox浏览器中的Cookie
 
-[10\.4\.3\.	BrowserCookiesMiddleware的实现核心思想是：在构造BrowserCookiesMiddleware对象时，使用browsercookie将浏览器中的Cookie提取，存储到CookieJar字典self\.jars中	7](#_211)
+- Scrapy爬虫所使用的Cookie由内置下载中间件CookiesMiddleware自动处理
 
-[11\.	第11章 爬取动态页面	7](#_111)
+- BrowserCookiesMiddleware的实现核心思想是：在构造BrowserCookiesMiddleware对象时，使用browsercookie将浏览器中的Cookie提取，存储到CookieJar字典self.jars中
 
-[11\.1\.	1、Splash渲染引擎	8](#_144)
+### 第11章 爬取动态页面
 
-[11\.1\.1\.	Splash是Scrapy官方推荐的JavaScript渲染引擎，他是使用Webkit开发的轻量级无界面浏览器，提供基于HTTP接口的JavaScript渲染服务	8](#_212)
+#### 1、Splash渲染引擎
 
-[11\.1\.2\.	它支持的功能有：为用户返回经过渲染的HTML页面或页面截图；并发渲染多个页面；关闭图片加载，加速渲染；在页面中执行用户自定义的JavaScript代码；执行用户自定义的渲染脚本（lua），功能类似于PhantomJS	8](#_213)
+- Splash是Scrapy官方推荐的JavaScript渲染引擎，他是使用Webkit开发的轻量级无界面浏览器，提供基于HTTP接口的JavaScript渲染服务
 
-[11\.1\.3\.	JavaScript页面渲染服务是Splash中最基础的服务	8](#_214)
+- 它支持的功能有：为用户返回经过渲染的HTML页面或页面截图；并发渲染多个页面；关闭图片加载，加速渲染；在页面中执行用户自定义的JavaScript代码；执行用户自定义的渲染脚本（lua），功能类似于PhantomJS
 
-[11\.1\.4\.	可以将execute端点的服务看作一个可用lua语言编程的浏览器，功能类似于PhantomJS	8](#_215)
+- JavaScript页面渲染服务是Splash中最基础的服务
 
-[11\.1\.5\.	splash对象常用的属性和方法：args、js\_enabled、images\_enabled、go、wait、evaljs、runjs、url、html、get\_cookies	8](#_216)
+- 可以将execute端点的服务看作一个可用lua语言编程的浏览器，功能类似于PhantomJS
 
-[11\.2\.	2、在Scrapy中使用Splash	8](#_145)
+- splash对象常用的属性和方法：args、js_enabled、images_enabled、go、wait、evaljs、runjs、url、html、get_cookies
 
-[11\.2\.1\.	python库中scrapy\-splash是非常好的选择	8](#_217)
+#### 2、在Scrapy中使用Splash
 
-[11\.2\.2\.	SplashRequest构造器方法中德一些常用参数：url、headers、cookies、args、cache\_args、endpoint、splash\_url	8](#_218)
+- python库中scrapy-splash是非常好的选择
 
-[11\.3\.	3、项目实战：爬取toscrape中的名人名言	8](#_146)
+- SplashRequest构造器方法中德一些常用参数：url、headers、cookies、args、cache_args、endpoint、splash_url
 
-[11\.4\.	4、项目实战：爬取京东商城中德书籍信息	8](#_147)
+#### 3、项目实战：爬取toscrape中的名人名言
 
-[12\.	第12章 存入数据库	8](#_112)
+#### 4、项目实战：爬取京东商城中德书籍信息
 
-[12\.1\.	1、SQLite	8](#_148)
+### 第12章 存入数据库
 
-[12\.1\.1\.	SQLite是一个文件型轻量级数据库，处理速度非常快，在数据量不是很大的情况下，使用SQLite就够了	8](#_219)
+#### 1、SQLite
 
-[12\.1\.2\.	在Python中访问SQLite数据库可使用Python标准库中的sqlite3模块	9](#_220)
+- SQLite是一个文件型轻量级数据库，处理速度非常快，在数据量不是很大的情况下，使用SQLite就够了
 
-[12\.2\.	2、MySQL	9](#_149)
+- 在Python中访问SQLite数据库可使用Python标准库中的sqlite3模块
 
-[12\.2\.1\.	MySQL是一个应用及其广泛的关系型数据库，它是开源免费的，可以支持大型数据库，在个人用户和中小企业中成为技术首选	9](#_221)
+#### 2、MySQL
 
-[12\.2\.2\.	在Python2中访问MySQL数据库可以使用第三方库MySQL\-Python，在Python3中可以使用另一个第三方库mysqlclient作为替代	9](#_222)
+- MySQL是一个应用及其广泛的关系型数据库，它是开源免费的，可以支持大型数据库，在个人用户和中小企业中成为技术首选
 
-[12\.2\.3\.	Scrapy框架自身是使用另一个Python框架爱=Twisted编写的程序，Twisted是一个事件驱动型的异步网络框架，鼓励用户编写异步代码	9](#_223)
+- 在Python2中访问MySQL数据库可以使用第三方库MySQL-Python，在Python3中可以使用另一个第三方库mysqlclient作为替代
 
-[12\.2\.4\.	Twisted中提供了以异步方式多线程访问数据库的模块adbapi，使用该模块可以显著提高程序访问数据库的效率	9](#_224)
+- Scrapy框架自身是使用另一个Python框架爱=Twisted编写的程序，Twisted是一个事件驱动型的异步网络框架，鼓励用户编写异步代码
 
-[12\.3\.	3、MongoDB	9](#_150)
+- Twisted中提供了以异步方式多线程访问数据库的模块adbapi，使用该模块可以显著提高程序访问数据库的效率
 
-[12\.3\.1\.	MongoDB是一个面向文档的非关系型数据库（NoSQL），它功能强大、灵活、易于扩展	9](#_225)
+#### 3、MongoDB
 
-[12\.3\.2\.	在Python中可以使用第三方库pymongo访问MongoDB数据库	9](#_226)
+- MongoDB是一个面向文档的非关系型数据库（NoSQL），它功能强大、灵活、易于扩展
 
-[12\.4\.	4、Redis	9](#_151)
+- 在Python中可以使用第三方库pymongo访问MongoDB数据库
 
-[12\.4\.1\.	Redis是一个使用ANSIC编写的高性能Key\-Value数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘	9](#_227)
+#### 4、Redis
 
-[12\.4\.2\.	在Python可以使用第三方库redis\-py访问Redis数据库	9](#_228)
+- Redis是一个使用ANSIC编写的高性能Key-Value数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘
 
-[13\.	第13章 使用HTTP代理	9](#_113)
+- 在Python可以使用第三方库redis-py访问Redis数据库
 
-[13\.1\.	1、HttpProxyMiddleware	9](#_152)
+### 第13章 使用HTTP代理
 
-[13\.1\.1\.	HTTP代理服务器可以比作客户端与Web服务器（网站）之间的一个信息中转站，客户端发送的HTTP请求和Web服务器返回的HTTP响应通过代理服务器转发给对象	10](#_229)
+#### 1、HttpProxyMiddleware
 
-[13\.1\.2\.	Scrapy内部提供了一个下载中间件HttpProxyMiddleware，专门用于给Scrapy爬虫设置代理	10](#_230)
+- HTTP代理服务器可以比作客户端与Web服务器（网站）之间的一个信息中转站，客户端发送的HTTP请求和Web服务器返回的HTTP响应通过代理服务器转发给对象
 
-[13\.1\.3\.	HttpProxyMiddleware默认便是启动的，它会在系统环境变量中搜索当前系统代理，作为Scrapy爬虫使用的代理	10](#_231)
+- Scrapy内部提供了一个下载中间件HttpProxyMiddleware，专门用于给Scrapy爬虫设置代理
 
-[13\.1\.4\.	一般我们使用的是无须身份验证的代理服务器，还有一些代理服务器需要用户提供账号、密码进行身份验证，验证成功后才提供代理服务	10](#_232)
+- HttpProxyMiddleware默认便是启动的，它会在系统环境变量中搜索当前系统代理，作为Scrapy爬虫使用的代理
 
-[13\.2\.	2、使用多个代理	10](#_153)
+- 一般我们使用的是无须身份验证的代理服务器，还有一些代理服务器需要用户提供账号、密码进行身份验证，验证成功后才提供代理服务
 
-[13\.2\.1\.	如果想使用多个代理，可以在构造每一个Request对象时，通过meta参数的proxy字段手动设置代理	10](#_233)
+#### 2、使用多个代理
 
-[13\.3\.	3、获取免费代理	10](#_154)
+- 如果想使用多个代理，可以在构造每一个Request对象时，通过meta参数的proxy字段手动设置代理
 
-[13\.3\.1\.	通过Google或百度找到一些免费代理服务器信息的网站	10](#_234)
+#### 3、获取免费代理
 
-[13\.4\.	4、实现随机代理	10](#_155)
+- 通过Google或百度找到一些免费代理服务器信息的网站
 
-[13\.5\.	5、项目实战：爬取豆瓣电影信息	10](#_156)
+#### 4、实现随机代理
 
-[14\.	第14章 分布式爬取	10](#_114)
+#### 5、项目实战：爬取豆瓣电影信息
 
-[14\.1\.	分布式爬取的思想是“人多力量大”，在网络中的多台计算机上同时运行爬虫程序，共同完成一个大型爬取任务	10](#_235)
+### 第14章 分布式爬取
 
-[14\.2\.	Scrapy本身并不是一个为分布式爬取而设计的框架，但第三方库scrapy\-redis为其拓展了分布式爬取的功能，两者结合便是一个分布式Scrapy爬虫框架	10](#_236)
+- 分布式爬取的思想是“人多力量大”，在网络中的多台计算机上同时运行爬虫程序，共同完成一个大型爬取任务
 
-[14\.3\.	在分布式爬虫框架中，需要使用某种通信机制协调各个爬虫的工作，让每一个爬虫明确自己的任务，其中包括：当前的爬取任务，即下载\+提取数据（分配任务）；当前爬取任务是否已经被其他爬虫执行过（任务去重）；如何存储爬取到的数据（数据存储）	11](#_237)
+- Scrapy本身并不是一个为分布式爬取而设计的框架，但第三方库scrapy-redis为其拓展了分布式爬取的功能，两者结合便是一个分布式Scrapy爬虫框架
 
-[14\.4\.	1、Redis的使用	11](#_157)
+- 在分布式爬虫框架中，需要使用某种通信机制协调各个爬虫的工作，让每一个爬虫明确自己的任务，其中包括：当前的爬取任务，即下载+提取数据（分配任务）；当前爬取任务是否已经被其他爬虫执行过（任务去重）；如何存储爬取到的数据（数据存储）
 
-[14\.4\.1\.	Redis是一个非常快的非关系型数据库，使用内存作为主存储，其中德值可以分为以下5种类型：字符串string、哈希hash、列表list、集合set、有序集合zset	11](#_238)
+#### 1、Redis的使用
 
-[14\.4\.2\.	安装redis，在ubuntu上使用apt\-get install redis\-server	11](#_239)
+- Redis是一个非常快的非关系型数据库，使用内存作为主存储，其中德值可以分为以下5种类型：字符串string、哈希hash、列表list、集合set、有序集合zset
 
-[14\.4\.3\.	在Python中可以使用第三方库redis\-py访问Redis数据库	11](#_240)
+- 安装redis，在ubuntu上使用apt-get install redis-server
 
-[14\.5\.	2、scrapy\-redis源码分析	11](#_158)
+- 在Python中可以使用第三方库redis-py访问Redis数据库
 
-[14\.5\.1\.	scrapy\-redis为多个爬虫分配爬取任务的方式：让所有爬虫共享一个存在于Redis数据库中德请求队列（替代各爬虫独立的请求队列），每个爬虫从请求队列中获取请求，下载并解析页面后，将解析出的新请求再添加到请求队列中，因此每个爬虫即是下载任务的生产者又是消费者	11](#_241)
+#### 2、scrapy-redis源码分析
 
-[14\.5\.2\.	为实现多个爬虫的任务分配，scrapy\-redis重新实现了以下组件：基于redis的请求队列（优先队列、FIFO、LIFO）；基于Redis的请求去重过滤器（过滤掉重复的请求）；基于以上两个组件的调度器	11](#_242)
+- scrapy-redis为多个爬虫分配爬取任务的方式：让所有爬虫共享一个存在于Redis数据库中德请求队列（替代各爬虫独立的请求队列），每个爬虫从请求队列中获取请求，下载并解析页面后，将解析出的新请求再添加到请求队列中，因此每个爬虫即是下载任务的生产者又是消费者
 
-[14\.6\.	3、使用scrapy\-redis进行分布式爬取	11](#_159)
+- 为实现多个爬虫的任务分配，scrapy-redis重新实现了以下组件：基于redis的请求队列（优先队列、FIFO、LIFO）；基于Redis的请求去重过滤器（过滤掉重复的请求）；基于以上两个组件的调度器
 
-# <a id="_____2"></a><a id="_101"></a>第1章 初识Scrapy
+#### 3、使用scrapy-redis进行分布式爬取
 
-## <a id="_____4"></a><a id="_115"></a>1、网络爬虫是什么
 
-### <a id="_____6"></a><a id="_160"></a>网络爬虫是指在互联网上自动爬取网站内容信息的程序，也被称为网络蜘蛛或网络机器人
-
-### <a id="_____8"></a><a id="_161"></a>大型的爬虫程序广泛应用于搜索引擎、数据挖掘等领域，个人用户或企业也可以利用爬虫收集对自身有价值的数据
-
-### <a id="_____10"></a><a id="_162"></a>一个网络爬虫程序的基本执行流程可以总结为以下循环：下载页面；提取页面中的数据；提取页面中的链接
-
-### <a id="_____12"></a><a id="_163"></a>设计爬虫程序时，还要考虑防止重复爬取相同页面（URL去重）、网页搜索策略（深度优先或广度优先等）、爬虫访问边界限定等一系列问题
-
-## <a id="_____14"></a><a id="_116"></a>2、Scrapy简介及安装
-
-### <a id="_____16"></a><a id="_164"></a>Scrapy简单易用、灵活易拓展、开发社区活跃，并且是跨平台的
-
-## <a id="_____18"></a><a id="_117"></a>3、编写第一个Scrapy爬虫
-
-# <a id="_____20"></a><a id="_102"></a>第2章 编写Spider
-
-## <a id="_____22"></a><a id="_118"></a>1、Scrapy框架结构及工作原理
-
-### <a id="_____24"></a><a id="_165"></a>Scrapy框架中的各个组件：ENGINE引擎，框架的核心，其他所有组件在其控制下协同工作；SCHEDULER调度器，负责对SPIDER提交的下载请求进行调度；DOWNLOADER下载器，负责下载页面（发送HTTP请求/接收HTTP响应）；SPIDER爬虫，负责提取页面中的数据，并产生对新页面的下载请求；MIDDELWARE中间件，负责对Request对象和Response对象进行处理；ITEM PIPELINE数据管道，负责对爬取到的数据进行处理
-
-### <a id="_____26"></a><a id="_166"></a>框架数据流中的3个对象：REQUEST（Scrapy中的HTTP请求对象）、RESPONSE（Scrapy中的HTTP响应对象）、ITEM（从页面中爬取的一项数据）
-
-## <a id="_____28"></a><a id="_119"></a>2、Request和Response对象
-
-### <a id="_____30"></a><a id="_167"></a>Request对象用来描述一个HTTP请求。可以根据需求访问Request对象的属性，常用的几个：url、method、headers、body、meta
-
-### <a id="_____32"></a><a id="_168"></a>Response对象描述一个HTTP响应，Response只是基类，根据响应内容的不同有如下子类：TextResponse、HtmlRespnse、XmlResponse。
-
-### <a id="_____34"></a><a id="_169"></a>HtmlResponse对象有很多属性，最常用的3个方法：xpath、css、urljoin
-
-## <a id="_____36"></a><a id="_120"></a>3、Spider开发流程
-
-### <a id="_____38"></a><a id="_170"></a>Spider基类实现了以下内容：供Scrapy引擎调用的接口；供用户使用的实用工具函数；供用户访问的属性；
-
-### <a id="_____40"></a><a id="_171"></a>实现一个Spider只需要完成下面4个步骤：继承scrapy\.Spider、为Spider取名、设定起始爬取点、实现页面解析函数
-
-### <a id="_____42"></a><a id="_172"></a>爬虫设定起始爬取点的两种方式：定义start\_urls属性、实现start\_request方法
-
-### <a id="_____44"></a><a id="_173"></a>页面解析函数是实现Spider中最核心的部分需要完成以下两项工作：使用选择器提取页面中的数据，将数据封装后提交给Scrapy引擎；使用选择器或LinkExtractor提取页面中的链接，用其构造新的Request对象并提交给Scrapy引擎
-
-# <a id="_____46"></a><a id="_103"></a>第3章 使用Selector提取数据
-
-## <a id="_____48"></a><a id="_121"></a>1、Selector对象
-
-### <a id="_____50"></a><a id="_174"></a>Python中常用以下模块处理文本解析：BeautifulSoup、lxml
-
-### <a id="_____52"></a><a id="_175"></a>Selector类的实现位于scrapy\.selector模块
-
-### <a id="_____54"></a><a id="_176"></a>调用Selector对象的xpath方法或css方法可以选中文档中的某个或某些部分
-
-### <a id="_____56"></a><a id="_177"></a>调用Selector或SelectorLis对象的以下方法可将选中的内容提取：extract\(\)、re\(\)、extract\_first\(\)、re\_first\(\)
-
-## <a id="_____58"></a><a id="_122"></a>2、Response内置Selector
-
-### <a id="_____60"></a><a id="_178"></a>几乎不需要手动创建Selector对象，Response对象内部会以自身为参数自动创建Selector对象，并将该Selector对象缓存
-
-### <a id="_____62"></a><a id="_179"></a>Response对象还提供了xpath和css方法
-
-## <a id="_____64"></a><a id="_123"></a>3、XPath
-
-### <a id="_____66"></a><a id="_180"></a>XPath即XML路径语言，是一种用来确定xml文档中某部分位置的语言
-
-### <a id="_____68"></a><a id="_181"></a>XPath还提供许多函数，如数字、字符串、时间、日期、统计等
-
-## <a id="_____70"></a><a id="_124"></a>4、CSS选择器
-
-### <a id="_____72"></a><a id="_182"></a>CSS即层叠样式表，其选择器是一种用来确定HTML文档中某部分位置的语言
-
-### <a id="_____74"></a><a id="_183"></a>当我们调用Selector对象的CSS方法时，在其内部会使用Python库cssselect将CSS选择器表达式翻译成XPath表达式，然后调用Selector对象的XPATH方法
-
-# <a id="_____76"></a><a id="_104"></a>第4章 使用Item 封装数据
-
-## <a id="_____78"></a><a id="_125"></a>1、Item和Field
-
-### <a id="_____80"></a><a id="_184"></a>Scrapy提供以下两个类，用户可以使用它们自定义数据类，封装爬取到的数据
-
-## <a id="_____82"></a><a id="_126"></a>2、拓展Item子类
-
-## <a id="_____84"></a><a id="_127"></a>3、Field元数据
-
-### <a id="_____86"></a><a id="_185"></a>一项数据由Spider提交给Scrapy引擎后，可能会被递送给其他组件（Item Pipeline、Exporter）处理
-
-# <a id="_____88"></a><a id="_105"></a>第5章 使用Item Pipeline处理数据
-
-## <a id="_____90"></a><a id="_128"></a>1、Item Pipeline
-
-### <a id="_____92"></a><a id="_186"></a>在Scrapy中，Item Pipeline是处理数据的组件，一个Item Pipeline就是一个包含特定接口上的类，通常只负责一种功能的数据处理，在一个项目中可以同时启用多个Item Pipeline，他们按指定次序级联起来，形成一条数据处理流水线
-
-### <a id="_____94"></a><a id="_187"></a>Item Pipeline的几种典型应用：清洗数据、验证数据的有效性、过滤掉重复的数据、将数据存入数据库
-
-### <a id="_____96"></a><a id="_188"></a>process\_item方法是Item Pipeline的核心
-
-### <a id="_____98"></a><a id="_189"></a>还有3个比较常用的方法，可根据需求选择实现：open\_spider（通常用于在开始处理数据之前完成某些初始化工作）；close\_spider（通常用于在处理完所有数据之后完成某些清理工作）；from\_crawer（通过crawler\.settings读取配置，根据配置创建Item Pipeline对象）
-
-## <a id="_____100"></a><a id="_129"></a>2、更多例子
-
-### <a id="_____102"></a><a id="_190"></a>过滤重复数据
-
-### <a id="_____104"></a><a id="_191"></a>将数据存入MongoDB
-
-# <a id="_____106"></a><a id="_106"></a>第6章 使用LinkExtractor提取链接
-
-## <a id="_____108"></a><a id="_130"></a>1、使用LinkExtractor
-
-### <a id="_____110"></a><a id="_192"></a>提取链接有使用Selector和使用LinkExtractor两种方法
-
-### <a id="_____112"></a><a id="_193"></a>Scrapy提供了一个专门用于提取链接的类LinkExtractor，在提取大量链接或提取规则比较复杂时，使用LinkExtractor更加方便
-
-## <a id="_____114"></a><a id="_131"></a>2、描述提取规则
-
-### <a id="_____116"></a><a id="_194"></a>LinkExtractor构造器的所有参数都有默认值，如果构造对象时不传递任何参数（使用默认值），就提取页面中的所有链接
-
-### <a id="_____118"></a><a id="_195"></a>allow提取绝对url与正则表达式匹配的链接，deny相反；allow\_domains提取指定域名的链接，deny\_domains相反；restrict\_xpaths提取XPath表达式选中区域下的链接；restrcit\_css提取CSS选择器选中区域下的链接；tags提取指定标签内的链接；attrs提取指定属性内的链接；process\_value接收一个回调函数
-
-# <a id="_____120"></a><a id="_107"></a>第7章 使用Exporter导出数据
-
-## <a id="_____122"></a><a id="_132"></a>1、指定如何导出数据
-
-### <a id="_____124"></a><a id="_196"></a>负责导出数据的组件被称为Exporter（导出器），Scrapy内部实现了多个Exporter，每个Exporter实现一种数据格式的导出，支持的数据格式如下：JSON、JSON lines、CSV、XML、Pickle、Marshal
-
-### <a id="_____126"></a><a id="_197"></a>导出数据时，需向Scrapy提供以下信息：导出文件路径、导出数据格式
-
-### <a id="_____128"></a><a id="_198"></a>可以通过以下两种方式指定爬虫如何导出数据：命令行参数指定、配置文件指定
-
-## <a id="_____130"></a><a id="_133"></a>2、添加导出数据格式
-
-### <a id="_____132"></a><a id="_199"></a>BaseItemExporter定义了一些抽象接口待子类实现
-
-# <a id="_____134"></a><a id="_108"></a>第8章 项目练习
-
-## <a id="_____136"></a><a id="_134"></a>1、项目需求
-
-## <a id="_____138"></a><a id="_135"></a>2、页面分析
-
-## <a id="_____140"></a><a id="_136"></a>3、编码实现
-
-# <a id="_____142"></a><a id="_109"></a>第9章 下载文件和图片
-
-## <a id="_____144"></a><a id="_137"></a>1、FilesPipeline和ImagesPipeline
-
-### <a id="_____146"></a><a id="_200"></a>Scrapy框架内部提供了两个Item Pipeline，专门用于下载文件和图片：FilesPipeline、ImagesPipeline
-
-### <a id="_____148"></a><a id="_201"></a>下载结果信息包括以下内容：path文件下载到本地的路径、checksum文件的校验和、url文件的地址
-
-## <a id="_____150"></a><a id="_138"></a>2、项目实战：爬取matplotlib
-
-### <a id="_____152"></a><a id="_202"></a>matplotlib是一个非常著名的Python绘图库，广泛应用于科学计算和数据分析等领域
-
-## <a id="_____154"></a><a id="_139"></a>3、项目实战：下载360图片
-
-# <a id="_____156"></a><a id="_110"></a>第10章 模拟登录
-
-## <a id="_____158"></a><a id="_140"></a>1、登录实质
-
-### <a id="_____160"></a><a id="_203"></a>响应头部中长长的Set\-Cookie字段就是网站服务器程序保存在客户端（浏览器）的cookie信息，其中包含标识用户身份的session信息，之后对该网站发送的其他HTTP请求都会带上这个身份证（session）信息，服务器程序通过这个身份证识别出发送请求的用户，从而决定响应怎样的页面
-
-### <a id="_____162"></a><a id="_205"></a>其核心是向服务器发送含有表单数据的HTTP请求（通常是POST）
-
-## <a id="_____164"></a><a id="_141"></a>2、Scrapy模拟登录
-
-### <a id="_____166"></a><a id="_204"></a>Scrapy提供了一个FormRequest类（Request的子类），专门用于构造含有表单数据的请求，FormRequest的构造器方法有一个formdata参数，接收字典形式的表单数据
-
-## <a id="_____168"></a><a id="_142"></a>3、识别验证码
-
-### <a id="_____170"></a><a id="_206"></a>OCR是光学字符识别的缩写，用于在图像中提取文本信息，tesseract是利用该技术实现的一个验证码识别库，在Python中可以通过第三方库pytesseract调用它
-
-### <a id="_____172"></a><a id="_207"></a>有些付费平台提供了HTTP服务接口，用户可以通过HTTP请求将验证码图片发送给平台，平台识别后将结果通过HTTP响应返回
-
-### <a id="_____174"></a><a id="_208"></a>人工识别验证码也是可行的，其实现也非常简单：在Scrapy下载完验证码图片后，调用Image\.show方法将图片显示出来，然后调用Python内置的input函数，等待用户肉眼识别后输入识别结果
-
-## <a id="_____176"></a><a id="_143"></a>4、Cookie登录
-
-### <a id="_____178"></a><a id="_209"></a>不用管各种浏览器将Cookie以哪种形式存储在哪里，使用第三方Python库browsercookie便可以获取Chrome和Firefox浏览器中的Cookie
-
-### <a id="_____180"></a><a id="_210"></a>Scrapy爬虫所使用的Cookie由内置下载中间件CookiesMiddleware自动处理
-
-### <a id="_____182"></a><a id="_211"></a>BrowserCookiesMiddleware的实现核心思想是：在构造BrowserCookiesMiddleware对象时，使用browsercookie将浏览器中的Cookie提取，存储到CookieJar字典self\.jars中
-
-# <a id="_____184"></a><a id="_111"></a>第11章 爬取动态页面
-
-## <a id="_____186"></a><a id="_144"></a>1、Splash渲染引擎
-
-### <a id="_____188"></a><a id="_212"></a>Splash是Scrapy官方推荐的JavaScript渲染引擎，他是使用Webkit开发的轻量级无界面浏览器，提供基于HTTP接口的JavaScript渲染服务
-
-### <a id="_____190"></a><a id="_213"></a>它支持的功能有：为用户返回经过渲染的HTML页面或页面截图；并发渲染多个页面；关闭图片加载，加速渲染；在页面中执行用户自定义的JavaScript代码；执行用户自定义的渲染脚本（lua），功能类似于PhantomJS
-
-### <a id="_____192"></a><a id="_214"></a>JavaScript页面渲染服务是Splash中最基础的服务
-
-### <a id="_____194"></a><a id="_215"></a>可以将execute端点的服务看作一个可用lua语言编程的浏览器，功能类似于PhantomJS
-
-### <a id="_____196"></a><a id="_216"></a>splash对象常用的属性和方法：args、js\_enabled、images\_enabled、go、wait、evaljs、runjs、url、html、get\_cookies
-
-## <a id="_____198"></a><a id="_145"></a>2、在Scrapy中使用Splash
-
-### <a id="_____200"></a><a id="_217"></a>python库中scrapy\-splash是非常好的选择
-
-### <a id="_____202"></a><a id="_218"></a>SplashRequest构造器方法中德一些常用参数：url、headers、cookies、args、cache\_args、endpoint、splash\_url
-
-## <a id="_____204"></a><a id="_146"></a>3、项目实战：爬取toscrape中的名人名言
-
-## <a id="_____206"></a><a id="_147"></a>4、项目实战：爬取京东商城中德书籍信息
-
-# <a id="_____208"></a><a id="_112"></a>第12章 存入数据库
-
-## <a id="_____210"></a><a id="_148"></a>1、SQLite
-
-### <a id="_____212"></a><a id="_219"></a>SQLite是一个文件型轻量级数据库，处理速度非常快，在数据量不是很大的情况下，使用SQLite就够了
-
-### <a id="_____214"></a><a id="_220"></a>在Python中访问SQLite数据库可使用Python标准库中的sqlite3模块
-
-## <a id="_____216"></a><a id="_149"></a>2、MySQL
-
-### <a id="_____218"></a><a id="_221"></a>MySQL是一个应用及其广泛的关系型数据库，它是开源免费的，可以支持大型数据库，在个人用户和中小企业中成为技术首选
-
-### <a id="_____220"></a><a id="_222"></a>在Python2中访问MySQL数据库可以使用第三方库MySQL\-Python，在Python3中可以使用另一个第三方库mysqlclient作为替代
-
-### <a id="_____222"></a><a id="_223"></a>Scrapy框架自身是使用另一个Python框架爱=Twisted编写的程序，Twisted是一个事件驱动型的异步网络框架，鼓励用户编写异步代码
-
-### <a id="_____224"></a><a id="_224"></a>Twisted中提供了以异步方式多线程访问数据库的模块adbapi，使用该模块可以显著提高程序访问数据库的效率
-
-## <a id="_____226"></a><a id="_150"></a>3、MongoDB
-
-### <a id="_____228"></a><a id="_225"></a>MongoDB是一个面向文档的非关系型数据库（NoSQL），它功能强大、灵活、易于扩展
-
-### <a id="_____230"></a><a id="_226"></a>在Python中可以使用第三方库pymongo访问MongoDB数据库
-
-## <a id="_____232"></a><a id="_151"></a>4、Redis
-
-### <a id="_____234"></a><a id="_227"></a>Redis是一个使用ANSIC编写的高性能Key\-Value数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘
-
-### <a id="_____236"></a><a id="_228"></a>在Python可以使用第三方库redis\-py访问Redis数据库
-
-# <a id="_____238"></a><a id="_113"></a>第13章 使用HTTP代理
-
-## <a id="_____240"></a><a id="_152"></a>1、HttpProxyMiddleware
-
-### <a id="_____242"></a><a id="_229"></a>HTTP代理服务器可以比作客户端与Web服务器（网站）之间的一个信息中转站，客户端发送的HTTP请求和Web服务器返回的HTTP响应通过代理服务器转发给对象
-
-### <a id="_____244"></a><a id="_230"></a>Scrapy内部提供了一个下载中间件HttpProxyMiddleware，专门用于给Scrapy爬虫设置代理
-
-### <a id="_____246"></a><a id="_231"></a>HttpProxyMiddleware默认便是启动的，它会在系统环境变量中搜索当前系统代理，作为Scrapy爬虫使用的代理
-
-### <a id="_____248"></a><a id="_232"></a>一般我们使用的是无须身份验证的代理服务器，还有一些代理服务器需要用户提供账号、密码进行身份验证，验证成功后才提供代理服务
-
-## <a id="_____250"></a><a id="_153"></a>2、使用多个代理
-
-### <a id="_____252"></a><a id="_233"></a>如果想使用多个代理，可以在构造每一个Request对象时，通过meta参数的proxy字段手动设置代理
-
-## <a id="_____254"></a><a id="_154"></a>3、获取免费代理
-
-### <a id="_____256"></a><a id="_234"></a>通过Google或百度找到一些免费代理服务器信息的网站
-
-## <a id="_____258"></a><a id="_155"></a>4、实现随机代理
-
-## <a id="_____260"></a><a id="_156"></a>5、项目实战：爬取豆瓣电影信息
-
-# <a id="_____262"></a><a id="_114"></a>第14章 分布式爬取
-
-## <a id="_____264"></a><a id="_235"></a>分布式爬取的思想是“人多力量大”，在网络中的多台计算机上同时运行爬虫程序，共同完成一个大型爬取任务
-
-## <a id="_____266"></a><a id="_236"></a>Scrapy本身并不是一个为分布式爬取而设计的框架，但第三方库scrapy\-redis为其拓展了分布式爬取的功能，两者结合便是一个分布式Scrapy爬虫框架
-
-## <a id="_____268"></a><a id="_237"></a>在分布式爬虫框架中，需要使用某种通信机制协调各个爬虫的工作，让每一个爬虫明确自己的任务，其中包括：当前的爬取任务，即下载\+提取数据（分配任务）；当前爬取任务是否已经被其他爬虫执行过（任务去重）；如何存储爬取到的数据（数据存储）
-
-## <a id="_____270"></a><a id="_157"></a>1、Redis的使用
-
-### <a id="_____272"></a><a id="_238"></a>Redis是一个非常快的非关系型数据库，使用内存作为主存储，其中德值可以分为以下5种类型：字符串string、哈希hash、列表list、集合set、有序集合zset
-
-### <a id="_____274"></a><a id="_239"></a>安装redis，在ubuntu上使用apt\-get install redis\-server
-
-### <a id="_____276"></a><a id="_240"></a>在Python中可以使用第三方库redis\-py访问Redis数据库
-
-## <a id="_____278"></a><a id="_158"></a>2、scrapy\-redis源码分析
-
-### <a id="_____280"></a><a id="_241"></a>scrapy\-redis为多个爬虫分配爬取任务的方式：让所有爬虫共享一个存在于Redis数据库中德请求队列（替代各爬虫独立的请求队列），每个爬虫从请求队列中获取请求，下载并解析页面后，将解析出的新请求再添加到请求队列中，因此每个爬虫即是下载任务的生产者又是消费者
-
-### <a id="_____282"></a><a id="_242"></a>为实现多个爬虫的任务分配，scrapy\-redis重新实现了以下组件：基于redis的请求队列（优先队列、FIFO、LIFO）；基于Redis的请求去重过滤器（过滤掉重复的请求）；基于以上两个组件的调度器
-
-## <a id="_____284"></a><a id="_159"></a>3、使用scrapy\-redis进行分布式爬取
-
+### 写在后面
+- pdf书籍、笔记思维导图、资料打包下载地址：暂无
+- 思维导图在线查看：[点击打开](/bigdata_notes/attachment/C.《精通Scrapy网络爬虫》.svg)
+- 得到电子书地址：暂无

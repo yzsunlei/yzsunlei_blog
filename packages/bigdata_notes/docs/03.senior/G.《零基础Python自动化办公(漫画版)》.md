@@ -1,134 +1,77 @@
-<a id="_____"></a><a id="_Toc515962800"></a>《零基础Python自动化办公（漫画版）》
 
-[1\.	Excel做表自动化	1](#_101)
+### 写在前面
+- 书籍介绍：暂无。
+- 我的简评：暂无。
+- ！！福利：文末有书籍地址、笔记思维导图、相关资料下载地址哦
 
-[1\.1\.	xlrd读取Excel文件数据	1](#_109)
+### Excel做表自动化
 
-[1\.2\.	xlwt将数据写入Excel文件	1](#_110)
+- xlrd读取Excel文件数据
 
-[1\.3\.	xlutils复制Excel	1](#_111)
+- xlwt将数据写入Excel文件
 
-[1\.4\.	使用openpyxl写入数据	1](#_112)
+- xlutils复制Excel
 
-[1\.5\.	使用openpyxl读取大批量数据	1](#_113)
+- 使用openpyxl写入数据
 
-[1\.6\.	pandas读取Excel中的数据	1](#_114)
+- 使用openpyxl读取大批量数据
 
-[1\.7\.	pandas处理excel数据	1](#_115)
+- pandas读取Excel中的数据
 
-[1\.8\.	pandas绘制图表	1](#_116)
+- pandas处理excel数据
 
-[2\.	Word文档自动化	1](#_102)
+- pandas绘制图表
 
-[2\.1\.	使用Python\-docx读取docx	1](#_117)
+### Word文档自动化
 
-[2\.2\.	使用docx\-mailmerge替换模版	1](#_118)
+- 使用Python\-docx读取docx
 
-[3\.	PPT自动化	1](#_103)
+- 使用docx\-mailmerge替换模版
 
-[3\.1\.	安装Python\-pptx	1](#_119)
+### PPT自动化
 
-[4\.	PDF文档自动化	1](#_104)
+- 安装Python\-pptx
 
-[4\.1\.	pdfminer3k了解一下	1](#_120)
+### PDF文档自动化
 
-[4\.2\.	使用Pypdf2拆分与合并PDF	1](#_121)
+- pdfminer3k了解一下
 
-[4\.3\.	wkhtmltopdf将网站内容转为PDF	1](#_122)
+- 使用Pypdf2拆分与合并PDF
 
-[5\.	文件自动化	1](#_105)
+- wkhtmltopdf将网站内容转为PDF
 
-[5\.1\.	使用os库	2](#_123)
+### 文件自动化
 
-[5\.2\.	使用shutil模块	2](#_124)
+- 使用os库
 
-[6\.	网站自动化	2](#_106)
+- 使用shutil模块
 
-[6\.1\.	requests使用	2](#_125)
+### 网站自动化
 
-[6\.2\.	BeautifulSoup使用	2](#_126)
+- requests使用
 
-[6\.3\.	Xpath使用	2](#_127)
+- BeautifulSoup使用
 
-[6\.4\.	Selenium	2](#_128)
+- Xpath使用
 
-[6\.5\.	chromeDriver	2](#_129)
+- Selenium
 
-[7\.	邮件自动化	2](#_107)
+- chromeDriver
 
-[7\.1\.	使用yagamil完成邮件发送	2](#_130)
+### 邮件自动化
 
-[7\.2\.	使用Twilio发送免费短信	2](#_131)
+- 使用yagamil完成邮件发送
 
-[8\.	桌面软件自动化	2](#_108)
+- 使用Twilio发送免费短信
 
-[8\.1\.	windows计划任务	2](#_132)
+### 桌面软件自动化
 
-[8\.2\.	pyautogui控制鼠标键盘	2](#_133)
+- windows计划任务
 
-# <a id="_____2"></a><a id="_101"></a>Excel做表自动化
+- pyautogui控制鼠标键盘
 
-## <a id="_____4"></a><a id="_109"></a>xlrd读取Excel文件数据
 
-## <a id="_____6"></a><a id="_110"></a>xlwt将数据写入Excel文件
-
-## <a id="_____8"></a><a id="_111"></a>xlutils复制Excel
-
-## <a id="_____10"></a><a id="_112"></a>使用openpyxl写入数据
-
-## <a id="_____12"></a><a id="_113"></a>使用openpyxl读取大批量数据
-
-## <a id="_____14"></a><a id="_114"></a>pandas读取Excel中的数据
-
-## <a id="_____16"></a><a id="_115"></a>pandas处理excel数据
-
-## <a id="_____18"></a><a id="_116"></a>pandas绘制图表
-
-# <a id="_____20"></a><a id="_102"></a>Word文档自动化
-
-## <a id="_____22"></a><a id="_117"></a>使用Python\-docx读取docx
-
-## <a id="_____24"></a><a id="_118"></a>使用docx\-mailmerge替换模版
-
-# <a id="_____26"></a><a id="_103"></a>PPT自动化
-
-## <a id="_____28"></a><a id="_119"></a>安装Python\-pptx
-
-# <a id="_____30"></a><a id="_104"></a>PDF文档自动化
-
-## <a id="_____32"></a><a id="_120"></a>pdfminer3k了解一下
-
-## <a id="_____34"></a><a id="_121"></a>使用Pypdf2拆分与合并PDF
-
-## <a id="_____36"></a><a id="_122"></a>wkhtmltopdf将网站内容转为PDF
-
-# <a id="_____38"></a><a id="_105"></a>文件自动化
-
-## <a id="_____40"></a><a id="_123"></a>使用os库
-
-## <a id="_____42"></a><a id="_124"></a>使用shutil模块
-
-# <a id="_____44"></a><a id="_106"></a>网站自动化
-
-## <a id="_____46"></a><a id="_125"></a>requests使用
-
-## <a id="_____48"></a><a id="_126"></a>BeautifulSoup使用
-
-## <a id="_____50"></a><a id="_127"></a>Xpath使用
-
-## <a id="_____52"></a><a id="_128"></a>Selenium
-
-## <a id="_____54"></a><a id="_129"></a>chromeDriver
-
-# <a id="_____56"></a><a id="_107"></a>邮件自动化
-
-## <a id="_____58"></a><a id="_130"></a>使用yagamil完成邮件发送
-
-## <a id="_____60"></a><a id="_131"></a>使用Twilio发送免费短信
-
-# <a id="_____62"></a><a id="_108"></a>桌面软件自动化
-
-## <a id="_____64"></a><a id="_132"></a>windows计划任务
-
-## <a id="_____66"></a><a id="_133"></a>pyautogui控制鼠标键盘
-
+### 写在后面
+- pdf书籍、笔记思维导图、资料打包下载地址：暂无
+- 思维导图在线查看：[点击打开](/bigdata_notes/attachment/G.《零基础Python自动化办公(漫画版)》.svg)
+- 得到电子书地址：暂无
