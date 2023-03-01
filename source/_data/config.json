@@ -1,10 +1,10 @@
 {
-  "fed-engineering":{
-    "title": "前端工程化",
+  "bigfed":{
+    "title": "大前端",
     "subtitle": "",
     "shortDesc": "",
-    "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "模块化、组件化、规范化、自动化",
+    "keywords": "大前端",
+    "description": "大前端",
     "coverImg": "/medias/featureimages/5.jpg",
     "btn": {
       "name": "Github",
@@ -12,31 +12,31 @@
       "url": "https://github.com/yzsunlei",
       "yuque": "https://yuque.com/yzsunlei",
       "text": "开始阅读",
-      "doc": "/fed-engineering/intro"
+      "doc": "/bigfed_blogs"
     }
   },
-  "fed-construction":{
-    "title": "前端基建",
+  "bigdata":{
+    "title": "大数智",
     "subtitle": "",
     "shortDesc": "",
-    "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "脚手架、组件库、低代码编辑器、业务监控",
+    "keywords": "大数智",
+    "description": "大数智",
     "coverImg": "/medias/featureimages/6.jpg",
     "btn": {
       "name": "Github",
       "icon": "fab fa-github-alt",
-      "url": "https://github.com/yzsunlei",
-      "yuque": "https://yuque.com/yzsunlei",
+      "url": "https://github.com/jishu88-net",
+      "yuque": "https://yuque.com/jishu88-net",
       "text": "开始阅读",
-      "doc": "/fed-construction/intro"
+      "doc": "/bigdata_notes"
     }
   },
-  "fed-multiport":{
-    "title": "前端跨端技术",
+  "softskill":{
+    "title": "软技能",
     "subtitle": "",
     "shortDesc": "",
-    "keywords": "Eggjs,Webpack,easywebpack,Egg React SSR,Egg Vue SSR, Web IDE, Flutter, React Native",
-    "description": "跨移动端、跨服务端、跨桌面端、跨硬件端",
+    "keywords": "软技能",
+    "description": "软技能",
     "coverImg": "/medias/featureimages/7.jpg",
     "btn": {
       "name": "Github",
@@ -44,7 +44,7 @@
       "url": "https://github.com/yzsunlei",
       "yuque": "https://yuque.com/yzsunlei",
       "text": "开始阅读",
-      "doc": "/fed-multiport/intro"
+      "doc": "/softskill_notes"
     }
   }
 }

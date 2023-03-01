@@ -1,6 +1,6 @@
 [
   {
-    "title": "前端工程化专题",
+    "title": "大前端",
     "expand": true,
     "coverImg": null,
     "children": [
@@ -8,7 +8,7 @@
     ]
   },
   {
-    "title": "前端基建专题",
+    "title": "大数智",
     "expand": true,
     "coverImg": null,
     "children": [
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "title": "前端跨端专题",
+    "title": "软技能",
     "expand": true,
     "coverImg": null,
     "children": [

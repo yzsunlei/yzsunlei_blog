@@ -4,17 +4,17 @@ menu:
   首页:
     url: /
     icon: fas fa-home
-  前端工程化:
-    url: /fed-engineering
+  大前端:
+    url: /bigfed
     icon: fas fa-building
-  前端基建:
-    url: /fed-construction
+  大数智:
+    url: /bigdata
     icon: fas fa-cubes
-  跨端技术:
-    url: /fed-multiport
+  软技能:
+    url: /softskill
     icon: fas fa-window-restore
-  前端笔记:
-    url: http://notes.yzsunlei.com/index.html
+  更多链接:
+    url: /
     icon: fas fa-history
   旧版博客:
     url: https://2020.yzsunlei.com
@@ -82,7 +82,7 @@ cover:
 dream:
   enable: false
   showTitle: true
-  title: 前端工程体系
+  title: 工程体系
   text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
 
 # Whether to display the musics.
@@ -207,30 +207,30 @@ clicklove:
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
   avatar: /medias/avatar.jpg
-  career: 大前端工程师
+  career: 工程师
   introduction: 伟大的事业不是靠力气速度和身体的敏捷完成的，而是靠性格意志和知识的力量完成的。
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
-easyProjects:
-  enable: true
-  data:
-    fed-engineering:
-      icon: fas fa-cube
-      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: /fed-engineering
-      desc: 前端工程化专题
-    fed-construction :
-      icon: fas fa-cube
-      iconBackground: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
-      url: /fed-construction
-      desc: 前端基建专题
-    fed-multiport :
-      icon: fas fa-cube
-      iconBackground: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
-      url: /fed-multiport
-      desc: 前端跨端专题
+# easyProjects:
+#   enable: true
+#   data:
+#     fed-engineering:
+#       icon: fas fa-cube
+#       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+#       url: /fed-engineering
+#       desc: 前端工程化专题
+#     fed-construction :
+#       icon: fas fa-cube
+#       iconBackground: 'linear-gradient(to bottom right, #FFEB3B 0%, #FFF176 100%)'
+#       url: /fed-construction
+#       desc: 前端基建专题
+#     fed-multiport :
+#       icon: fas fa-cube
+#       iconBackground: 'linear-gradient(to bottom right, #9900FF 0%, #CC66FF 100%)'
+#       url: /fed-multiport
+#       desc: 前端跨端专题
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -514,9 +514,9 @@ subtitle:
   startDelay: 20 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 100 # 删除速度
-  sub1: 前端工程化 - 提高开发效率，减少不必要的重复工作时间
-  sub2: 前端基建 - 只为了能更好的活在未来
-  sub3: 跨端技术 - 拥抱大前端，技术无边界
+  sub1: 大前端 - 把握现在
+  sub2: 大数智 - 面向未来
+  sub3: 软技能 - 认知自我
 
 # 手机二级菜单.
 navMenu:
