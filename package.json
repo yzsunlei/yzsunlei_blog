@@ -4,24 +4,9 @@
   "private": true,
   "author": "sky",
   "scripts": {
-    "dev": "npm run server",
-    "start": "npm run server",
+    "dev": "hexo server",
     "build": "hexo generate",
-    "deploy:alioss": "node deployToAliyun.js",
-    "deploy:tencentCos": "node deployTotencentCos.js",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server",
-    "res": "SPACE=res node lib/sync.js",
-    "ves": "SPACE=ves node lib/sync.js",
-    "easy": "SPACE=easywebpack node lib/sync.js",
-    "vue": "SPACE=egg-vue node lib/sync.js",
-    "react": "SPACE=egg-react node lib/sync.js",
-    "team": "SPACE=blog node lib/sync.js",
-    "blog": "TEAM=hubcarl SPACE=blog node lib/sync.js",
-    "easyjs": "node lib/sync.js",
-    "sky": "TEAM=hubcarl node lib/sync.js",
-    "release": "npm run build && git add --all && git commit -m 'build' && git push"
+    "deploy": "node deployToAliyun.js"
   },
   "hexo": {
     "version": "4.2.1"

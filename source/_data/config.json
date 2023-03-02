@@ -4,7 +4,7 @@
     "subtitle": "",
     "shortDesc": "",
     "keywords": "大前端",
-    "description": "大前端",
+    "description": "基础系列（HTML5、CSS3、ES6、HTTP）；进阶系列（设计模式、异步编程、Vue&React、Koa&Mongo）；资深系列（算法、微服务、DevOps、ServerLess）；",
     "coverImg": "/medias/featureimages/5.jpg",
     "btn": {
       "name": "Github",
@@ -20,7 +20,7 @@
     "subtitle": "",
     "shortDesc": "",
     "keywords": "大数智",
-    "description": "大数智",
+    "description": "基础系列（Python、Django、Tornado、Flask）；进阶系列（数据分析、数据挖掘、自动化测试、量化金融）；资深系列（推荐系统、自动化运维、机器学习、人工智能）；",
     "coverImg": "/medias/featureimages/6.jpg",
     "btn": {
       "name": "Github",
@@ -36,7 +36,7 @@
     "subtitle": "",
     "shortDesc": "",
     "keywords": "软技能",
-    "description": "软技能",
+    "description": "职场系列（职业技能、自我营销、团队管理、自由职业）；情感系列（亲密关系、情感沟通、家庭亲情、情商提升）；精神系列（积极乐观、心智成长、执行方法、习惯养成）；思维系列（学习方法、思维表达、传道授业、演讲交流）；认知系列（自我认知、社会认知、世界认知、思维开拓）；",
     "coverImg": "/medias/featureimages/7.jpg",
     "btn": {
       "name": "Github",
