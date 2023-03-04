@@ -124,7 +124,9 @@ var coverListCount = coverList.length;
                             <%= cover.title %>
                         </div>
                         <div class="description center-align">
-                            <%= cover.description %>
+                            <% cover.description.split("；").forEach(function(p) { %>
+                                <h5> <%- p %> </h5>
+                            <% }); %>
                         </div>
                     </div>
                 </div>

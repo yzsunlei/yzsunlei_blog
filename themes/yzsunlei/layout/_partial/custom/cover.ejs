@@ -23,8 +23,8 @@
     }
 
     #page {
-        height:500px;
-        min-height: 500px;
+        height:600px;
+        min-height: 600px;
         width:100%;
     }
 </style>
@@ -42,9 +42,11 @@
                         <h4 class="subtitle center-align">
                             <%= site.data.config[page.space].subtitle %>
                         </h4>
-                        <h6 class="description center-align">
-                            <%= site.data.config[page.space].description %>
-                        </h6>
+                        <% site.data.config[page.space].description.split("；").forEach(function(p) { %>
+                            <h6 class="description center-align">
+                                <%- p %>
+                            </h6>
+                        <% }); %>
                     </div>
                 </div>
             </div>
