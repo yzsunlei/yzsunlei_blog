@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.jpg
-heroText: Serverless专题
+heroText: 低代码专题
 tagline: 让工作、生活充满节奏感
 actionText: 马上开始 →
 actionLink: /

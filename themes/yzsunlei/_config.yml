@@ -14,12 +14,24 @@ menu:
       - name: 博文写作
         url: /bigfed_blogs/
         icon: fas fa-anchor
+      - name: 学习导航
+        url: /bigfed_nav/
+        icon: fas fa-anchor
+      - name: 低代码专题
+        url: /bigfed_lowcode/
+        icon: fas fa-anchor
+      - name: Serverless专题
+        url: /bigfed_serverless/
+        icon: fas fa-anchor
   大数智:
     url: /bigdata
     icon: fas fa-cubes
     children:
       - name: 学习笔记
         url: /bigdata_notes/
+        icon: fas fa-anchor
+      - name: 学习导航
+        url: /bigdata_nav/
         icon: fas fa-anchor
   软技能:
     url: /softskill

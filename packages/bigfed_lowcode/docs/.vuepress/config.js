@@ -1,10 +1,10 @@
 module.exports = {
   base: "/bigfed_lowcode/",
-  title: "小磊哥er的低代码专题",
+  title: "小磊哥er的大前端低代码专题",
   themeConfig: {
     nav: [
       {
-        text: "首页",
+        text: "总览",
         link: "/",
       },
       {
@@ -44,6 +44,7 @@ module.exports = {
         ]
       }
     ],
+    search: false,
     sidebar: 'auto',
     sidebarDepth: 1
   },

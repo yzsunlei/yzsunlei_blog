@@ -1,10 +1,10 @@
 module.exports = {
   base: "/bigfed_serverless/",
-  title: "小磊哥er的Serverless专题",
+  title: "小磊哥er的大前端Serverless专题",
   themeConfig: {
     nav: [
       {
-        text: "首页",
+        text: "总览",
         link: "/",
       },
       {
@@ -38,6 +38,7 @@ module.exports = {
         ]
       }
     ],
+    search: false,
     sidebar: 'auto',
     sidebarDepth: 1
   },

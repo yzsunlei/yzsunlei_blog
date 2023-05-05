@@ -1,7 +1,7 @@
 {
   "name": "bigfed_serverless",
   "version": "1.0.0",
-  "description": "Serverless专题",
+  "description": "小磊哥er的大前端Serverless专题",
   "main": "index.js",
   "author": "yzsunlei",
   "scripts": {
