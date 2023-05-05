@@ -1,0 +1,19 @@
+{
+  "name": "bigdata_automation",
+  "version": "1.0.0",
+  "description": "小磊哥er的大数智办公自动化专题",
+  "main": "index.js",
+  "author": "yzsunlei",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "node deployToAliyun.js"
+  },
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.3.3",
+    "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "ali-oss": "^6.17.1"
+  }
+}
