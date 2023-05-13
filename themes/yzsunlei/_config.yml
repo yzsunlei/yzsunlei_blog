@@ -20,9 +20,9 @@ menu:
       - name: 低代码专题
         url: /bigfed_lowcode/
         icon: fas fa-anchor
-      - name: Serverless专题
-        url: /bigfed_serverless/
-        icon: fas fa-anchor
+      # - name: Serverless专题
+      #   url: /bigfed_serverless/
+      #   icon: fas fa-anchor
   大数智:
     url: /bigdata
     icon: fas fa-cubes
@@ -33,6 +33,12 @@ menu:
       - name: 学习导航
         url: /bigdata_nav/
         icon: fas fa-anchor
+      - name: 办公自动化专题
+        url: /bigfed_automation/
+        icon: fas fa-anchor
+      # - name: 数据采集专题
+      #   url: /bigfed_spider/
+      #   icon: fas fa-anchor
   软技能:
     url: /softskill
     icon: fas fa-window-restore
