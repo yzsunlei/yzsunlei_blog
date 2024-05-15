@@ -2,5 +2,5 @@
 
 Document & Blog
 
-- https://www.yzsunlei.com
+- https://2023.yzsunlei.com
 - https://yzsunlei.gitee.io
